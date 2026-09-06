@@ -1,0 +1,56 @@
+\documentclass[11pt]{article}
+\input{../exam-style.tex}
+\begin{document}
+\solutionheader{Practice Exam 1 --- Version A}{1--5}
+\solution{1--4}{Multiple-choice answers and reasoning}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+\item \textbf{C.} A positive rescaling by 100 multiplies standard deviation by 100 and variance by $100^2$. A confuses the two scaling rules, B confuses standardized quantities with raw summaries, and D reverses the rules.
+\item \textbf{C.} A singleton has zero area under a continuous density, so $\mathbb P(X=2)=0$. B mistakes the height $1/4$ for a point probability. Neither A's $1/2$ nor D's sample frequency follows from the stated continuous model.
+\item \textbf{D.} The slope is $r s_y/s_x=0$, and the intercept is mean height, 67. The line predicts 67 at every sibling count. This statement concerns the fitted linear prediction; average height at different sibling counts could still follow a curved pattern. A and B misapply the regression construction; C overlooks that the supplied correlation determines its slope.
+\item \textbf{B.} A cause must occur early enough to affect its outcome, but time order alone cannot rule out other changes or confounding. A and D overstate causal support; C incorrectly denies that observational data can describe changes.
+\end{enumerate}
+
+\solution{5}{Summaries, units, and scope}
+\begin{parts}
+\item The sorted values are $2,3,3,5,7$. Their sum is 20, so $\bar x=4$. The median is 3. Excluding the overall median gives $Q_1=(2+3)/2=5/2$ and $Q_3=(5+7)/2=6$, so IQR is $7/2$ dollars.
+\item Squared deviations from 4 sum to $4+1+1+1+9=16$. Thus $s^2=16/4=4$ dollars squared and $s=2$ dollars. The fences are
+\[\frac52-\frac32\frac72=-\frac{11}{4},\qquad 6+\frac32\frac72=\frac{45}{4}.\]
+All five values lie within them, so none is flagged.
+\item The transformed mean is $1+2(4)=9$, median $1+2(3)=7$, and standard deviation $|2|(2)=4$, in the transformed units. A positive linear transformation moves the center with both its intercept and scale but changes spread only through the scale.
+\item The records describe transactions, not distinct customers: one customer could generate more than one record. Five transactions at one shop on one morning do not establish a citywide or time-general description. Also, calling the mean ``typical'' without specifying the summary can hide the difference between mean 4 and median 3. Two well-explained limitations, including the unit distinction, satisfy the question.
+\end{parts}
+
+\solution{6}{Areas, tails, and unit changes}
+\begin{parts}
+\item Draw a rectangle of height $1/4$ on $[0,2]$ and height $1/8$ on $[2,6]$. Total area is $2(1/4)+4(1/8)=1$. Exactly half the area lies below 2, so the median is 2. The area between 1 and 4 is
+\[(2-1)\frac14+(4-2)\frac18=\frac12.\]
+The low right-hand rectangle covers a greater horizontal length than the left-hand one, so height alone does not determine its mass.
+\item The cutoff has $z=(60-50)/10=1$. The upper-tail probability is $1-\Phi(1)=1-0.8413=0.1587$. Using 0.8413 alone would give the lower tail.
+\item The 25th percentile is $c=50+10(-0.6745)=43.255$ dollars. Under the model, one quarter of spending lies below this cutoff. Its being below 50 is consistent with its percentile being below 50\%.
+\item In cents the mean is 5,000 and standard deviation is 1,000. The standardized position of 6,000 is $(6000-5000)/1000=1$. A positive change of units preserves the event and its standardized position, so the upper-tail fraction is unchanged.
+\end{parts}
+
+\solution{7}{Reading and reversing a fitted line}
+\begin{parts}
+\item The slope is $(-1/2)(4/2)=-1$ and intercept $10-(-1)(4)=14$. Hence $\widehat y=14-x$. Another dollar of service charge is associated with one dollar less purchases per customer in this fitted sample relationship. The intercept predicts 14 dollars at zero service charge, which is outside the observed charge range 1 to 7; a practical interpretation at zero would require extrapolation.
+\item At $x=5$, fitted purchases are $\widehat y=9$. The residual is $11-9=2$ dollars: purchases exceed their fitted value by 2 dollars.
+\item $r^2=1/4$. One quarter of the sample variation in purchases about their mean is represented by fitted values. This is not a fraction of purchases caused by the charge; observational association alone supplies no causal attribution.
+\item For $x$ on $y$, the slope is $r s_x/s_y=(-1/2)(2/4)=-1/4$ and the intercept is $4-(-1/4)(10)=13/2$. Thus
+\[\widehat x=\frac{13}{2}-\frac14 y.\]
+Algebraically solving the first fitted equation gives $x=14-y$, a different line. The first regression minimizes squared residuals in purchases; the second minimizes squared residuals in service charges. Exchanging the response changes the fitting problem. Both fitted lines pass through the corresponding pair of sample means.
+\end{parts}
+
+\solution{8}{Two causal stories consistent with the same data}
+\begin{parts}
+\item Treated mean earnings are $(16+12)/2=14$ and untreated mean earnings are $(8+12)/2=10$, giving a difference of 4 thousand dollars. Participants have higher observed mean earnings by that amount in these records.
+\item $Y_i(1)$ is worker $i$'s earnings under the specified course and $Y_i(0)$ under no course. For A and B the missing value is $Y_i(0)$; for C and D it is $Y_i(1)$.
+\item One pair of compatible tables is:
+\begin{center}\begin{tabular}{ccccc}\toprule
+&\multicolumn{2}{c}{Zero effect for every worker}&\multicolumn{2}{c}{Effect 4 for every worker}\\
+Worker&$Y_i(0)$&$Y_i(1)$&$Y_i(0)$&$Y_i(1)$\\\midrule
+A&16&16&12&16\\B&12&12&8&12\\C&8&8&8&12\\D&12&12&12&16\\\bottomrule
+\end{tabular}\end{center}
+In both tables A and B reveal treated outcomes 16 and 12, and C and D reveal untreated outcomes 8 and 12. The respective ATEs are 0 and 4. In the zero-effect world the observed difference is entirely a baseline group difference; in the constant-effect-4 world the groups' baseline means happen to match.
+\item The same observed data permit different causal effects because missing counterfactuals are unrestricted by these records alone. A plausible pre-treatment common cause is prior skill, which could affect both participation and future earnings. Family resources or prior employment opportunities may also work if the connection to both variables is explained. The exercise shows lack of identification from the observed difference alone, not that every proposed causal story is equally plausible.
+\end{parts}
+\end{document}

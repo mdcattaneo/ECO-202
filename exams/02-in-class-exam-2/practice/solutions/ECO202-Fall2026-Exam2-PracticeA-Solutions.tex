@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+\input{../exam-style.tex}
+\begin{document}
+\solutionheader{Practice Exam 2 --- Version A}{6--9}
+\section*{Multiple-choice key}
+\begin{tabular}{clp{0.75\linewidth}}\toprule
+Question & Answer & Reason and distractor audit \\\midrule
+1 & D & The target is a numerical feature of all city residents. A is a sample count; B is a respondent statistic; C describes the response process, not population transit use. \\[5pt]
+2 & B & Pair formation uses baseline information and treatment is randomized within pairs. A uses chosen treatment and outcomes; C concerns sampling, not assignment; D is deterministic assignment. \\[5pt]
+3 & A & Additivity gives $\mathbb P(\Omega)=\mathbb P(\Omega)+\mathbb P(\varnothing)$, hence the empty event has probability zero. B confuses the empty event with the full space; C and D contradict this model identity. \\[5pt]
+4 & A & Disjointness gives zero intersection, whereas independence would require the strictly positive product. B forgets the positive union; C confuses the definitions; D is false because the conditioning probabilities are positive. \\\bottomrule
+\end{tabular}
+
+\solution{5}{A workforce survey}
+\begin{parts}
+\item The unit is a person who worked for the firm. The target contains all 100 people who worked there at any time last year; the frame is the 80 current employees; the selected sample is the 40 randomly selected current employees; the responding sample is the 20 who answer.
+\item The parameter is the complete target-population mean
+\[
+\mu=\frac{80(5)+20(15)}{100}=7\text{ hours}.
+\]
+The respondent sample statistic is $\bar y=120/20=6$ hours.
+\item Excluding former employees produces undercoverage, also described here as survivorship selection. The excluded group has the higher mean, so this frame restriction lowers the mean from 7 to 5. Differential nonresponse favors longer-overtime current employees and tends to raise the respondent mean relative to the current-employee frame. These mechanisms act in opposite directions at different stages. The observed respondent mean is nevertheless 6, below the target mean 7 in the supplied complete records. This final comparison follows from those numbers; the names of competing mechanisms alone would not establish their net size.
+\item Even an accurate census of all 80 current employees yields their mean, 5 hours. The former employees remain excluded, so the desired mean across all 100 is not recovered. The proposal removes sampling and nonresponse errors within the current roster under the stated complete-response assumption, but it does not fix undercoverage of the target.
+\end{parts}
+
+\solution{6}{Blocking a training experiment}
+\begin{parts}
+\item This is randomized block assignment, with low and high prior earnings as pre-treatment blocks. Treatment is the training offer; control is no offer. Blocking assigns treatments among already enrolled people. Stratified sampling instead selects people from a population into a study.
+\item Each block supplies six equally likely pairs, with independent selections, so there are $6\times6=36$ equally likely offer assignments, each of probability $1/36$. Offering all four low-earnings people is possible under completely randomized selection of four from eight, with probability $1/70$, but is impossible under this block design.
+\item Equal cell sizes give offered mean $(8+12)/2=10$ and control mean $(5+11)/2=8$. The difference is 2 thousand dollars. It estimates the average causal effect of the offer under the experiment's implementation; chance assignment variation means a realized difference need not equal the fixed average effect for the eight units. Volunteer recruitment also does not establish generalization to all workers.
+\item Differential outcome-related attrition selects the responding groups after random assignment and can destroy the original comparability. A difference among remaining respondents need not identify the original offer effect. Useful responses include collecting outcomes for all assigned units through administrative records or intensive follow-up regardless of assignment. A promise to ``control for variables'' does not by itself solve missing outcomes related to their unobserved values.
+\end{parts}
+
+\solution{7}{A small sample space}
+\begin{parts}
+\item The six equally likely unordered samples are
+\[
+\Omega=\lbrace AB,AC,AD,BC,BD,CD\rbrace,
+\]
+each of probability $1/6$. The events are
+\[
+U=\lbrace AB,AC,AD,BC,BD\rbrace,\qquad
+V=\lbrace AB,AD,BD\rbrace.
+\]
+\item $\mathbb P(U)=5/6$, $\mathbb P(V)=3/6=1/2$, and $U\cap V=V$, giving $\mathbb P(U\cap V)=1/2$. Since $(5/6)(1/2)=5/12\ne1/2$, the events are not independent. Learning that C is absent ensures that at least one of A or B is selected.
+\item Conditioning on A leaves $AB,AC,AD$, equally likely. Only $AB$ includes B, so the answer is $1/3$. B's unconditional inclusion probability is $1/2$; conditioning on A uses one of the two sample slots and leaves only one of the three remaining people to be selected.
+\item The exact probability C is absent is $1/2$ under the specified SRS mechanism. A finite simulation can yield a frequency $53/100$ rather than $1/2$ because its realized samples fluctuate. This discrepancy alone neither disproves the model probability nor proves an implementation error. The simulation frequency is a random approximation under the mechanism, not a redefinition of its exact probability.
+\end{parts}
+
+\solution{8}{A card with a hidden side}
+\begin{parts}
+\item Label cards 1--6 and label each physical side a or b. The 12 elementary outcomes are $(1,a),(1,b),\ldots,(6,a),(6,b)$, each of probability $(1/6)(1/2)=1/12$. The two RR cards supply four red-revealing outcomes and the three BR cards supply three more, for seven total. Three outcomes both use a mixed card and reveal red.
+\item $\mathbb P(R)=7/12$, $\mathbb P(M)=3/6=1/2$, and $\mathbb P(R\cap M)=3/12=1/4$. Independence would require $(7/12)(1/2)=7/24$, which differs from $1/4=6/24$. Therefore they are not independent. Equivalently, $\mathbb P(R\mid M)=1/2\ne7/12$.
+\item Among the seven equally likely red-revealing outcomes, four come from RR cards and have a red hidden side. Thus
+\[
+\mathbb P(\text{hidden red}\mid\text{revealed red})=\frac47.
+\]
+Bayes gives the same result: $\mathbb P(\mathrm{RR}\mid R)=[(2/6)(1)]/(7/12)=4/7$.
+\item The five compatible cards are not equally likely after observing red. Each RR card reveals red with probability 1; each BR card does so with probability $1/2$. Therefore each RR card has twice the conditional probability of each BR card (respectively $2/7$ and $1/7$). The BB card becomes impossible. The probability of a blue hidden side is $3/7$, coming from BR cards, and $4/7+3/7=1$.
+\end{parts}
+\end{document}

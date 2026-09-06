@@ -7,7 +7,7 @@ This repository contains the student-facing materials for ECO 202 at Princeton U
 - [Class guide and calendar index](classes/)
 - [Ungraded practice index](classes/PRACTICE.md)
 - [Weekly precept notes](precepts/)
-- [Released in-class exams and solutions](exams/)
+- [Practice exams and released in-class exams](exams/)
 - [Individual empirical project](project/)
 - [Shared empirical assets](assets/)
 
@@ -29,7 +29,7 @@ The instructor's reference setup uses VS Code, Markdown, Codex, and R, but stude
 ## Additional course areas
 
 - [`precepts/`](precepts/) will contain weekly notes prepared by the teaching assistants. These notes support the class sequence and its ungraded practice; they do not replace the class guides as the common learning spine.
-- [`exams/`](exams/) will contain an in-class exam and its instructor-approved solution only after that exam has been administered and approved for release. It contains no advance assessment material.
+- [`exams/`](exams/) provides two ungraded practice exams per module, with separate worked solutions inside each exam folder's `practice/solutions/` folder. PDFs include adjacent LaTeX sources and [local build instructions](exams/README.md#latex-sources-and-compilation) for optional source study. Use the papers for a timed unaided attempt before solution study. Real exams and their solutions are released only after administration and explicit instructor approval; practice exams do not disclose future real papers.
 - [`project/`](project/) will contain the final project's approved brief, rubric, templates, reproducibility guidance, resources, and submission instructions as they are released. Student work is not submitted through the public repository unless the instructor explicitly says otherwise.
 
 ## Fall 2026 sequence
@@ -59,6 +59,6 @@ The full calendar, holidays, four in-class exam dates, project deadline, grading
 
 ## Assessment and authority
 
-All class practice is ungraded and not submitted. AI is permitted as a learning resource for class preparation, study, precept follow-up, and ungraded practice, but students should preserve regular opportunities for unaided work. The four in-class exams prohibit AI and all other outside assistance; released exam files become study resources only after administration. The individual empirical project permits and encourages AI subject to the project-specific documentation, reproducibility, verification, attribution, privacy, and individual-responsibility requirements.
+All class practice and practice exams are ungraded and not submitted. AI is permitted as a learning resource for class preparation, study, precept follow-up, and ungraded practice, but students should preserve regular opportunities for unaided work. The four in-class exams prohibit books, notes, calculators, AI, and other electronics, subject to University-authorized accommodations. Practice exams support preparation before administration; real exam files become study resources only after administration and approved release. Do not use AI during a timed unaided practice attempt. The individual empirical project permits and encourages AI subject to the project-specific documentation, reproducibility, verification, attribution, privacy, and individual-responsibility requirements.
 
 The syllabus, Canvas, and official instructor announcements govern deadlines, submissions, and course administration. Repository materials may be corrected or refined during the semester; an explicit instructor correction supersedes an earlier version. Copyrighted readings are distributed separately through Canvas, Princeton Library Course Reserves, or another approved channel.

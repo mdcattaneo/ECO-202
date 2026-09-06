@@ -1,0 +1,15 @@
+# Safety net for interrupted/manual builds; successful builds remove debris.
+# Keep TeX sources, PDFs, README files, and shared dependencies.
+**/build/
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*-preview.png
+__pycache__/

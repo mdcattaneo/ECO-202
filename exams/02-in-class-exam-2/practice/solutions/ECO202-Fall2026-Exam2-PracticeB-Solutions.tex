@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\input{../exam-style.tex}
+\begin{document}
+\solutionheader{Practice Exam 2 --- Version B}{6--9}
+\section*{Multiple-choice key}
+\begin{tabular}{clp{0.75\linewidth}}\toprule
+Question & Answer & Reason and distractor audit \\\midrule
+1 & C & A large response count does not establish the selection mechanism or generalizability. A assumes bias vanishes; B replaces voluntary selection with SRS; D expands the population scope without a design argument. \\[5pt]
+2 & D & Analysis by assigned offer preserves the chance allocation and targets the offer effect. A selects a result rather than following the design; B replaces assignment with self-selected attendance; C conditions on compliance. \\[5pt]
+3 & D & ``Neither'' requires both complements, equivalently the complement of the union. A means at least one fails, B means both occur, and C means at least one occurs. \\[5pt]
+4 & B & Total probability gives $(1/3)(1/2)+(2/3)(1/4)=1/3$. A adds conditional rates without weights; C retains only the $B$ branch; D averages the two rates with incorrect equal group weights. \\\bottomrule
+\end{tabular}
+
+\solution{5}{Unequal representation in a probability sample}
+\begin{parts}
+\item There are $2\times4=8$ possible pairs, each containing one small and one large firm. Independence and uniform selection give probability $(1/2)(1/4)=1/8$ for each. An SRS of two has 15 equally likely pairs, each of probability $1/15$, including same-size pairs that this design cannot produce.
+\item Each small firm has inclusion probability $1/2$ and each large firm $1/4$. Probability sampling requires a specified chance mechanism with known selection probabilities; it does not require equal individual probabilities. This is stratified sampling, not an SRS, because not every pair has the same probability. For example $S_1S_2$ has probability zero here and $1/15$ under SRS.
+\item The population mean is
+\[
+\mu=\frac{2(2)+4(10)}6=\frac{44}6=\frac{22}3.
+\]
+Every selected pair has unweighted mean $(2+10)/2=6$, which is below $22/3$. Small firms are $1/3$ of the population but $1/2$ of every sample; the unweighted sample mean overrepresents the lower-employment stratum. A probability sample can be valid while an unweighted summary fails to match the population composition.
+\item Firms that closed are excluded: undercoverage or survivorship bias relative to all firms operating last year. Direction depends on how employment among the excluded firms compares with employment among included firms, using a consistently defined reference period. Closure alone does not establish that comparison.
+\end{parts}
+
+\solution{6}{Designing an encouragement experiment}
+\begin{parts}
+\item Each household is an experimental unit. The two factors are report receipt (yes/no) and reminder receipt (yes/no). The four complete conditions are neither, report only, reminder only, and both. Neither encouragement is the natural control for comparisons against no encouragement.
+\item One valid procedure randomly permutes the 80 distinct household labels, then assigns the first 20 to neither, the next 20 to report only, the next 20 to reminder only, and the last 20 to both. The permutation must be uniform, giving a completely randomized balanced allocation. The four groups provide contemporaneous comparisons, the random permutation supplies randomization, and 20 households per condition provide replication.
+\item The report-only minus neither difference is $90-100=-10$ units of electricity per household. It estimates a reduction of 10 units from assigning a report when no reminder is assigned, for these experimental units under the experiment's implementation. It is an average comparison, not evidence that every household reduced use by exactly 10 units or even that every individual benefited.
+\item Assignment determines treatment among enrolled units, not entry into the study; volunteering does not become random sampling. Randomization also balances baseline characteristics across possible assignments, not exactly in each realized one. A useful modification forms pre-treatment usage blocks and randomizes within each block, allocating households to the four conditions with similar planned proportions. For example, two blocks of 40 could each assign 10 to each condition. This limits imbalance on the blocking characteristic while preserving random assignment.
+\end{parts}
+
+\solution{7}{Conditional probabilities remain probabilities}
+\begin{parts}
+\item The identity $(C\cup D)\cap F=(C\cap F)\cup(D\cap F)$ holds. Because $C$ and $D$ are disjoint, the two intersections are disjoint. Thus additivity and the conditional definition give
+\begin{align*}
+\mathbb P(C\cup D\mid F)
+&=\frac{\mathbb P((C\cup D)\cap F)}{\mathbb P(F)}\\
+&=\frac{\mathbb P(C\cap F)+\mathbb P(D\cap F)}{\mathbb P(F)}\\
+&=\mathbb P(C\mid F)+\mathbb P(D\mid F).
+\end{align*}
+The positive denominator makes these conditionals well defined. Without disjointness, the common intersection would be counted twice.
+\item The probabilities are $(1/8)/(1/2)=1/4$, $(1/4)/(1/2)=1/2$, and their sum $3/4$.
+\item The requested conditional complement is $1-3/4=1/4$. All these probabilities refer to the restricted universe $F$. The unconditional probability $\mathbb P(C\cup D)$ uses a different universe and is not specified by the given intersections with $F$ alone.
+\item $\mathbb P(F\mid C)=(1/8)/(1/4)=1/2$. Also $\mathbb P(C)\mathbb P(F)=(1/4)(1/2)=1/8=\mathbb P(C\cap F)$, so $C$ and $F$ are independent. Their forward and reverse conditionals are $\mathbb P(C\mid F)=1/4$ and $\mathbb P(F\mid C)=1/2$. Independence means each equals its own event's marginal probability; it does not mean the two different event probabilities equal each other.
+\end{parts}
+
+\solution{8}{Applications, waitlists, and admission}
+\begin{parts}
+\item Multiplying each group probability by its initial-decision conditional probability yields
+\begin{center}
+\begin{tabular}{lrrrr}\toprule
+ & Initially admitted & Waitlisted & Rejected & Total \\\midrule
+H & $1/8$ & $1/8$ & $0$ & $1/4$ \\
+L & $0$ & $3/16$ & $9/16$ & $3/4$ \\\midrule
+Total & $1/8$ & $5/16$ & $9/16$ & $1$ \\\bottomrule
+\end{tabular}
+\end{center}
+A tree with the same branch probabilities and products is equivalent.
+\item The total waitlist probability is $1/8+3/16=5/16$. Hence $\mathbb P(\mathrm H\mid\text{waitlisted})=(1/8)/(5/16)=2/5$.
+\item All initially admitted applicants remain admitted; $1/5$ of the waitlisted applicants are eventually admitted. These paths are disjoint, so
+\[
+\mathbb P(\text{eventually admitted})=\frac18+\frac15\frac5{16}=\frac3{16}.
+\]
+\item The H-and-eventually-admitted probability is
+\[
+\frac18+\frac15\frac18=\frac3{20}.
+\]
+Dividing by all eventual admissions gives $(3/20)/(3/16)=4/5$. The waitlist fraction $2/5$ omits immediate admits, all of whom are from H in this model. These conditional compositions describe the specified applicant/decision mechanism; H versus L membership was not randomized and no causal comparison of intervening on group membership is supplied.
+\end{parts}
+\end{document}

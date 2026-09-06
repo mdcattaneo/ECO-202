@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+\input{../exam-style.tex}
+\begin{document}
+\solutionheader{Practice Exam 4 --- Version A}{14--18}
+\section*{Multiple-choice key}
+\begin{tabular}{ccl}
+\toprule Question & Answer & Main idea\\\midrule
+1 & C & Power is rejection probability at the specified alternative.\\
+2 & A & A null-based test evaluates variance at the null proportion.\\
+3 & C & Higher confidence requires a larger critical value.\\
+4 & A & Training received is a post-assignment variable.\\\bottomrule
+\end{tabular}
+
+\textbf{1.} C equals $1-(1-1/2)^2=3/4$. A is the probability of zero successes at that alternative; B is the probability of exactly one success; D is the rejection probability under the null, the Type I error probability $1-(9/10)^2$. The rule need not have a conventional 5\% size to have a well-defined power.
+
+\textbf{2.} A uses the null variance. B is estimate-based and appropriate for the specified Wald interval instead. C is a variance, not its square root; D omits division by the sample size inside the square root.
+
+\textbf{3.} C follows from a larger critical value at the fixed standard error. A and B contradict that width change. D confuses the confidence level with the point estimate.
+
+\textbf{4.} A can be affected by the assignment itself and conditioning on it can change the total-effect target. B, C and D are measured before assignment and can be considered as prespecified adjustment variables, subject to a sound analysis plan; their being pre-treatment does not make every possible use automatically valid.
+
+\solution{5}{Changes within the same household}
+\begin{parts}
+\item The target is $\mu_D$, mean after-minus-before monthly spending change in the population sampled. Each household contributes one difference. Before/after measurements from the same household are generally dependent; the paired-difference standard deviation preserves that covariance.
+\item $\widehat{\mathrm{SE}}=5/\sqrt{25}=1$ dollar and $t=(2-0)/1=2$. Using the supplied rounded tail area, the two-sided p-value is approximately $2(0.0285)=0.057$. Fail to reject at 5\%; this does not prove the mean change is zero. Independent Normal differences give the exact $t_{24}$ reference even if the two original spending columns are not separately Normal.
+\item The interval is $2\pm2.064(1)=[-0.064,4.064]$ dollars. Across repeated samples under the stated assumptions, this procedure covers the fixed mean change 95\% of the time. It is not a 95\% interval for individual household changes or a post-data probability that the fixed target lies in the reported endpoints. The before/after comparison alone does not isolate causation: other changes over time can affect spending.
+\item Halving the standard error requires multiplying $n$ by four, so the planning sample size is $4(25)=100$ households. Indeed $\sqrt{25/100}=1/2$. The question explicitly holds the critical value fixed; otherwise finite-sample $t$ critical values would also change.
+\end{parts}
+
+\solution{6}{One employment proportion, two variance choices}
+\begin{parts}
+\item $\widehat p=60/100=3/5$. Under $p_0=1/2$, the standard error is
+\[
+\sqrt{\frac{(1/2)(1/2)}{100}}=\frac1{20}.
+\]
+The statistic is $(3/5-1/2)/(1/20)=(1/10)/(1/20)=2$.
+\item The approximate two-sided p-value is $2(0.0228)=0.0456$; reject at 5\%. It is the null-reference probability of a statistic at least as extreme in either direction as the observed one, assuming the sampling and approximation conditions. It treats $p=1/2$ as the premise, not a random event whose posterior probability is being calculated.
+\item The estimate-based standard error is
+\[
+\sqrt{\frac{(3/5)(2/5)}{100}}=\frac{\sqrt6}{50}.
+\]
+The interval is
+\[
+\left[\frac35-1.96\frac{\sqrt6}{50},\ \frac35+1.96\frac{\sqrt6}{50}\right].
+\]
+The null test uses the variance stipulated by $p_0=1/2$; the Wald interval estimates the variance with $\widehat p=3/5$. Hence exact algebraic interval--test equivalence is not guaranteed for this pair of procedures. Here both reject/exclude $1/2$: since $\sqrt6<5/2$, the margin is smaller than $1.96(5/2)/50=0.098<0.1$.
+\item Observed successes/failures are 60/40; null expected counts are 50/50. These support the respective Normal approximations. A voluntary poll can be selected in ways related to employment; large success/failure counts do not establish representativeness or independent probability sampling.
+\end{parts}
+
+\solution{7}{A complete joint distribution}
+\begin{parts}
+\item The marginal probabilities are $3/20$, $9/20$ and $2/5$ for $X=0,1,2$. Conditional on $X=1$,
+\[
+\mathbb P(Y=0\mid X=1)=\frac{7/20}{9/20}=\frac79,\qquad
+\mathbb P(Y=1\mid X=1)=\frac{1/10}{9/20}=\frac29.
+\]
+These sum to one.
+\item Since $Y$ is binary, its conditional mean is its conditional success probability:
+\[
+f(0)=\frac{1/20}{3/20}=\frac13,\qquad f(1)=\frac29,\qquad
+f(2)=\frac{1/5}{2/5}=\frac12.
+\]
+The successive differences are $-1/9$ and $5/18$, not equal; $f$ is not linear on the support.
+\item Iterated expectations gives
+\[
+\mathbb E[Y]=\frac3{20}\frac13+\frac9{20}\frac29+\frac25\frac12
+=\frac1{20}+\frac1{10}+\frac15=\frac7{20}.
+\]
+The marginal probability of $Y=1$ is also $1/20+1/10+1/5=7/20$, and the mean of a binary variable is its success probability.
+\item Within $X=1$, the errors are $-2/9$ when $Y=0$ and $7/9$ when $Y=1$. Their weighted conditional mean is
+\[
+\frac79\left(-\frac29\right)+\frac29\left(\frac79\right)=0.
+\]
+Mean-zero noise need not be zero for any one observation and does not require constant conditional variance or causality.
+\end{parts}
+
+\solution{8}{Group means and a regression prediction}
+\begin{parts}
+\item The line is $\widehat y=5+3x$: the intercept is the noncollege group mean, 5 thousand dollars; the slope is the college-minus-noncollege difference, 3 thousand dollars of annual expenditure. With a binary indicator, a one-unit change moves from group 0 to group 1.
+\item The standard error is
+\[
+\sqrt{6^2/100+8^2/100}=\sqrt{(36+64)/100}=1
+\]
+thousand dollars. The 95\% interval for the population mean difference is $3\pm1.96=[1.04,4.96]$ thousand dollars.
+\item $H_0:\mu_1-\mu_0=0$ versus $H_a:\mu_1-\mu_0\ne0$. The statistic is $z=3/1=3$, the two-sided p-value is $2(0.00135)=0.0027$, and equality is rejected at 5\% under the independent-sample, large-sample reference.
+\item The criticism is too strong: a stable association can support prediction without identifying an intervention effect. For future prediction, the relevant conditional expenditure distributions must remain sufficiently similar, with comparable measurement and population/support. The line predicts group means, not each individual's expenditure exactly. The data alone do not establish that sending a particular adult to college would increase that adult's expenditure by \$3,000, nor the population average causal effect of doing so; selection and confounding can account for the association.
+\end{parts}
+\end{document}

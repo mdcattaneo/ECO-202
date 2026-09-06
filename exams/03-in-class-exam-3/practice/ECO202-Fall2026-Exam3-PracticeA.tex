@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+\input{exam-style.tex}
+\begin{document}
+\examheader{Practice Exam 3 --- Version A}{Fall 2026}{10--13}
+\mcq{Let $H=\mathbf 1\{X>4\}$. Which identity always holds?}
+{$\mathbb E[H]=\mathbb E[X]$.}
+{$\mathbb E[H]$ must be either zero or one.}
+{$\mathbb E[H]=\mathbb P(X>4)$.}
+{$\mathrm{Var}(H)=\mathbb P(X>4)$.}
+\mcq{An independent sample of 64 observations has sample standard deviation 12. What is the usual estimated standard error of its sample mean?}
+{$12$.}
+{$3/2$.}
+{$12/64$.}
+{$144/64$.}
+\mcq{Independent, identically distributed observations have a skewed distribution with finite positive variance. Which is the appropriate CLT statement?}
+{For every $n>30$, the sample mean is exactly Normal.}
+{The individual observations become approximately Normal as $n$ grows.}
+{The unstandardized sample mean approaches a standard Normal distribution.}
+{The centered sample mean divided by its true standard error approaches a standard Normal distribution.}
+\mcq{Two variables with finite variances have zero covariance. What follows?}
+{They must be independent.}
+{One of them must be constant.}
+{Their joint distribution is determined by their means and variances.}
+{The variance of their sum equals the sum of their variances.}
+
+\written{5}{Marginal distributions and transformations}
+The following table gives joint probabilities.
+\begin{center}\begin{tabular}{c|cc}\toprule
+ & $X=0$ & $X=2$\\\midrule
+$Y=0$ & $1/4$ & $1/4$\\
+$Y=2$ & $1/8$ & $1/8$\\
+$Y=4$ & $1/4$ & $0$\\\bottomrule
+\end{tabular}\end{center}
+\begin{parts}
+\item \pts{6} Find the marginal distribution of $Y$, its expectation, and its variance.
+\workspace{0.9in}
+\item \pts{4} Find the full distribution of $V=(Y-2)^2$. Why can different values of $Y$ contribute to the same value of $V$?
+\workspace{0.8in}
+\item \pts{6} Calculate $\mathbb E[X]$, $\mathbb E[XY]$, and $\mathrm{Cov}(X,Y)$. Explain the sign of the covariance in this table.
+\workspace{1in}
+\item \pts{4} You may use $\mathrm{Var}(X)=15/16$. Find $\mathrm{Var}(Y-X)$ and explain why subtracting $X$ increases variability here relative to adding it.
+\workspace{0.9in}
+\end{parts}
+
+\written{6}{From two draws to many counts}
+A teaching population has two values, 0 and 2, each selected with probability $1/2$. Draw independently with replacement. Write $X_i$ for draw $i$ and $H_i=\mathbf 1\{X_i=2\}$.
+
+Use $\Phi(z)=\mathbb P(Z\leq z)$ for standard Normal $Z$, with $\Phi(9/8)\approx0.8697$ and $\Phi(1)\approx0.8413$.
+\begin{parts}
+\item \pts{6} List all four possible ordered samples of size two and obtain the sampling distribution of $\bar X_2$. Calculate its expectation and variance directly from this distribution.
+\workspace{1.15in}
+\item \pts{6} Now take 64 independent draws. For $K=\sum_{i=1}^{64}H_i$ and $\widehat P=K/64$, calculate the means and standard deviations of $K$ and $\widehat P$. State the exact distribution family of $K$ and its parameters.
+\workspace{1.1in}
+\item \pts{8} Approximate $\mathbb P(28\leq K\leq36)$ using a continuity correction at \emph{both} boundaries. Show the standardized interval and probability. Explain what the correction accomplishes and one reason the result remains approximate.
+\workspace{1.35in}
+\end{parts}
+
+\written{7}{What averaging does and does not do}
+Customer expenditure amounts $X_i$ are independent and identically distributed, with population mean 20 dollars and standard deviation 12 dollars. Their distribution is right-skewed. Let $\bar X_n$ be the mean of $n$ observations.
+
+Use $\Phi(1)\approx0.8413$ and $\Phi(2)\approx0.9772$ for the standard Normal CDF.
+\begin{parts}
+\item \pts{6} Derive $\mathbb E[\bar X_{36}]$, $\mathrm{Var}(\bar X_{36})$, and $\mathrm{SE}(\bar X_{36})$. State which results are exact under the model and the units of the standard error.
+\workspace{1.05in}
+\item \pts{6} Use the CLT to approximate $\mathbb P(\bar X_n>22)$ for $n=36$ and for $n=144$. Interpret the change while keeping the threshold and population fixed.
+\workspace{1.2in}
+\item \pts{4} A student says, ``The LLN makes the original expenditure distribution less skewed when we collect more observations.'' Correct the statement and state what the LLN actually says becomes concentrated.
+\workspace{0.9in}
+\item \pts{4} Suppose observations instead come in groups whose members tend to spend above or below the mean together. Explain which step in the simple standard-error derivation requires re-examination. Does a large row count alone justify using $12/\sqrt n$?
+\workspace{0.9in}
+\end{parts}
+
+\written{8}{Bias, precision, and the target}
+A model treats 100 responses to a renewal-\emph{intention} question as independent Bernoulli draws with common yes probability $p$. The observed data have 64 yes responses. Let $\widehat P$ be the sample proportion and consider $T=(\widehat P+1/2)/2$ as another estimator of $p$.
+
+You may use $\mathrm{MSE}(T;p)=\mathrm{Var}(T)+(\mathbb E[T]-p)^2$ and the estimated standard error $\sqrt{\widehat p(1-\widehat p)/100}$ for the sample proportion.
+\begin{parts}
+\item \pts{5} Identify the estimand, estimator $\widehat P$, and realized estimate. Calculate the estimated standard error of $\widehat P$ from the observed sample.
+\workspace{1in}
+\item \pts{5} Derive the bias and variance of $T$ as functions of $p$. Compare its variance with that of $\widehat P$.
+\workspace{1.1in}
+\item \pts{5} Compare the MSEs of $T$ and $\widehat P$ at $p=1/2$ and at $p=0$. These are hypothetical model values for evaluating the rules; they are not claims about the observed sample. Does either unbiasedness alone or variance alone settle the comparison?
+\workspace{1.1in}
+\item \pts{5} Explain why an unbiased estimator of $p$ does not necessarily estimate the proportion who \emph{actually renew later} without bias. Would increasing the number of intention responses resolve that distinction?
+\workspace{0.9in}
+\end{parts}
+\end{document}

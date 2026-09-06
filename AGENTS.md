@@ -24,13 +24,13 @@ Instructions are layered by directory:
 AGENTS.md                  Course-level navigation and common standards
 classes/AGENTS.md          Live-class, class-guide study, and practice protocol
 precepts/AGENTS.md         TA-note authoring and precept-study protocol
-exams/AGENTS.md            Released-exam practice and solution protocol
+exams/AGENTS.md            Practice-exam and released-exam study protocol
 project/AGENTS.md          Empirical-project assistance and verification protocol
 ```
 
 Follow the root guide and the applicable folder guide together. A folder guide may specialize the workflow but may not override the syllabus, instructor directions, or the statistical standards here.
 
-There is no separate instruction file for practice. Because every practice module and its worked solutions live inside a class folder, they inherit both this course guide and `classes/AGENTS.md`.
+There is no separate instruction file for practice. Class-local practice and its worked solutions inherit this course guide and `classes/AGENTS.md`. Exam practice lives inside each exam folder and inherits this course guide and `exams/AGENTS.md` instead.
 
 AI systems that support `AGENTS.md` should read these files automatically. With another AI system, provide the applicable instructions and course material directly. Never claim to have read a file that is unavailable in the current session.
 
@@ -41,7 +41,7 @@ AI systems that support `AGENTS.md` should read these files automatically. With 
 - `classes/`: one folder per instructional class meeting, with a canonical `README.md`, adjacent class-specific code, data, and figures, and a nested ungraded `practice/` module with approved public worked solutions;
 - `classes/PRACTICE.md`: the course-wide index linking the 18 class-specific practice modules;
 - `precepts/`: weekly teaching-assistant notes aligned with the class sequence;
-- `exams/`: in-class exams and instructor-approved solutions released only after administration;
+- `exams/`: two ungraded practice exams per module, including readable LaTeX sources compiled beside their PDFs, with separate worked solutions and sources under each exam folder's `practice/solutions/`; real in-class exams and their solutions appear only after administration and instructor-approved release;
 - `project/`: approved individual empirical-project guidance and resources as they are released; and
 - `assets/`: redistributable data, figures, and code used by course materials.
 
@@ -49,7 +49,7 @@ Copyrighted readings may be cited or linked here but distributed through Canvas,
 
 ## Current materials and recurring workflow
 
-The repository contains a complete first version of all 18 class guides, their class-local ungraded practice modules, and approved public worked solutions. It also contains public landing pages for forthcoming precept notes, released exams, and project guidance. The recurring student path is:
+The repository contains a complete first version of all 18 class guides, their class-local ungraded practice modules, and approved public worked solutions. Exam-module folders also provide practice exams and separate solutions; check their status notices before use. Landing pages organize forthcoming precept notes, post-administration real-exam releases, and project guidance. The recurring student path is:
 
 > Course home → class guide → adjacent code, data, or figures when directed → ungraded practice → worked-solution study after an attempt → unaided reconstruction and transfer
 
@@ -90,7 +90,7 @@ Infer the intended mode when it is clear; otherwise ask one short question.
 - **Class practice:** follow the class-folder practice protocol and the relevant class guide.
 - **Solution study:** compare a genuine attempt with one worked solution, reconstruct the reasoning, and complete the nearby transfer without assistance.
 - **Precept study:** use a released TA note to reinforce the relevant class guide and practice without creating a parallel course sequence.
-- **Released-exam study:** use only publicly released exams under `exams/AGENTS.md`, preserving timed work and solution boundaries.
+- **Exam practice:** use approved practice exams or released real exams under `exams/AGENTS.md`, preserving timed work and solution boundaries.
 - **Project session:** follow released project instructions and `project/AGENTS.md` for planning, data, code, verification, writing, and process documentation.
 - **Review session:** use retrieval and synthesis to test independent command across topics.
 
@@ -127,7 +127,7 @@ Do not solve a problem using methods not yet introduced unless the student reque
 
 Use a released precept note as a supplement to its linked class guides and practice modules. If it conflicts with the class sequence or introduces a common-core concept prematurely, identify the issue rather than treating the note as a silent override.
 
-Use an exam only after it appears in the public `exams/` folder and the assessment is no longer active. Follow `exams/AGENTS.md`; do not seek or infer unreleased questions or solutions. Use project materials only as they are released, follow `project/AGENTS.md`, and never invent a missing requirement.
+Use an approved practice exam before its corresponding real exam, or a released real exam after administration. Follow `exams/AGENTS.md`; do not seek or infer unreleased real questions or solutions. During a timed unaided practice attempt, wait until the student ends the attempt before giving help. Use project materials only as they are released, follow `project/AGENTS.md`, and never invent a missing requirement.
 
 ## Statistical and empirical standards
 
@@ -180,7 +180,7 @@ A student can begin with:
 
 > Help me study a released note in `precepts/`. Read its linked class guide, use the course notation, and finish with an unaided transfer.
 
-> Help me use a released exam in `exams/` for a timed simulation. Do not open or discuss its solution until I explicitly end the simulation.
+> Help me use a practice exam or released real exam in `exams/` for a timed simulation. Do not give hints, check answers, or open its solution until I explicitly end the simulation.
 
 > Help me work on the individual empirical project. Read the released files in `project/`, do not invent missing requirements, and make verification, disclosure, privacy, and my individual responsibility explicit.
 

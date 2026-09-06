@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\input{exam-style.tex}
+\begin{document}
+\examheader{Practice Exam 4 --- Version B}{Fall 2026}{14--18}
+\mcq{A test rejects a null hypothesis that is actually true. This is:}
+{A Type II error.}{Power.}{Proof that the procedure is invalid.}{A Type I error.}
+\mcq{Before/after measurements on the same independently sampled households are positively correlated. Ignoring that pairing in the standard error of the mean difference ordinarily:}
+{Makes the observed mean difference causal.}
+{Understates its variance because both columns have the same size.}
+{Leaves the standard error unchanged.}
+{Overstates its variance by omitting a positive covariance subtraction.}
+\mcq{There are 20 successes in 100 independent trials. For a null-based Normal test of $p=1/4$, which standard error is appropriate?}
+{$\sqrt{(1/5)(4/5)/100}$.}{$\sqrt{(1/4)(3/4)/100}$.}{$\sqrt{(1/4)(3/4)}$.}{$(1/4)(3/4)/100$.}
+\mcq{Adding pre-treatment experience to a wage regression changes the education slope from 0.5 to 0.4. Which conclusion is justified by that change alone?}
+{The causal effect is 0.4.}{The omitted-variable bias was exactly 0.1.}{The adjusted coefficient is necessarily closer to the causal effect.}{The two fitted models make different conditional comparisons.}
+
+\written{5}{Two populations and a difference in means}
+Independent random samples of 100 households in Region A and 100 in Region B are used to compare mean numbers of cars. Both population standard deviations are known to equal 1 car. The observed means are $\bar x_A=3/2$ and $\bar x_B=6/5$. Let $\Delta=\mu_A-\mu_B$ and use a large-sample Normal approximation.
+
+The standard error for the difference is $\sqrt{\sigma_A^2/n_A+\sigma_B^2/n_B}$. For $Z\sim\mathsf N(0,1)$, $\mathbb P(Z>3/\sqrt2)=0.01695$. Use the two-sided 95\% critical value 1.96 and the upper-sided 5\% critical value 1.645.
+\begin{parts}
+\item \pts{4} Calculate the estimated difference and its standard error. \workspace{0.6in}
+\item \pts{6} Test $H_0:\Delta=0$ against $H_a:\Delta\ne0$ at 5\%, including the statistic, p-value and contextual conclusion. \workspace{0.8in}
+\item \pts{5} Construct the approximate 95\% interval and explain its agreement with the test. \workspace{0.8in}
+\item \pts{5} A separate upper-sided procedure rejects when $\widehat\Delta>1.645\,\mathrm{SE}$. Under a planning model with fixed $\mathrm{SE}$ and $\widehat\Delta\sim\mathsf N(\Delta,\mathrm{SE}^2)$, what are power and Type II error probability when the true $\Delta=1.645\,\mathrm{SE}$? Explain without a probability table. \workspace{0.8in}
+\end{parts}
+
+\written{6}{An observational threshold comparison}
+Two independent random samples of 100 households each are drawn from distinct large populations: those living near a train station and those living farther away. In the near group, 80 households spend below a specified monthly transport-cost threshold; in the far group, 50 do. Location was chosen by households, not randomly assigned. Let $\Delta_p=p_{\rm near}-p_{\rm far}$.
+
+Use the unpooled estimate-based standard error
+\[
+\widehat{\mathrm{SE}}=\sqrt{\frac{\widehat p_{\rm near}(1-\widehat p_{\rm near})}{100}+\frac{\widehat p_{\rm far}(1-\widehat p_{\rm far})}{100}},
+\]
+and the Normal critical value 1.96. A proposed two-sided Wald test uses this \emph{same} standard error; no pooled test is requested.
+\begin{parts}
+\item \pts{4} Calculate the two proportions and their difference. Give the difference in percentage points. \workspace{0.6in}
+\item \pts{6} Calculate the standard error and construct an approximate 95\% confidence interval. \workspace{0.8in}
+\item \pts{5} Determine the matching 5\% test decision for $\Delta_p=0$, justifying the comparison without a calculator. Check observed successes and failures in both groups. \workspace{0.9in}
+\item \pts{5} Does statistical significance establish that moving closer to a station causes a household to cross the threshold, or that the difference is economically important? Explain what else is needed for each conclusion. \workspace{0.8in}
+\end{parts}
+
+\written{7}{Conditional information and overall wealth}
+In a fictional population, $X$ is the number of phones a household owns and $Y$ is net wealth in tens of thousands of dollars. You know:
+\begin{center}
+\begin{tabular}{c|ccc}
+$x$ & 0 & 1 & 2\\\hline
+$\mathbb P(X=x)$ & $1/4$ & $1/2$ & $1/4$\\
+$\mathbb E[Y\mid X=x]$ & 4 & 10 & 12
+\end{tabular}
+\end{center}
+Within the $X=1$ group, $Y=8$ and $Y=12$ each have conditional probability $1/2$.
+\begin{parts}
+\item \pts{4} Calculate $\mathbb P(X=1,Y=12)$ and verify the reported conditional mean for $X=1$. \workspace{0.6in}
+\item \pts{6} Find overall mean wealth using iterated expectations. Explain why an unweighted average of the three displayed means is generally wrong. \workspace{0.9in}
+\item \pts{5} Is the regression function $f(x)=\mathbb E[Y\mid X=x]$ linear? Would a best linear predictor necessarily equal all three displayed conditional means? Explain. \workspace{0.8in}
+\item \pts{5} Define $\varepsilon=Y-f(X)$. Calculate its two possible values within $X=1$ and its conditional mean. Does the wealth pattern establish that buying a phone increases wealth? Explain briefly. \workspace{0.9in}
+\end{parts}
+
+\written{8}{A population line and an estimated line}
+For a teaching population, $X$ is commute distance in kilometers and $Y$ is weekly transit trips. The population moments are $\mathbb E[X]=2$, $\mathbb E[Y]=5$, $\mathrm{Var}(X)=4$, and $\mathrm{Cov}(X,Y)=-2$. For the best linear predictor, use
+\[
+\beta_1=\frac{\mathrm{Cov}(X,Y)}{\mathrm{Var}(X)},\qquad \beta_0=\mathbb E[Y]-\beta_1\mathbb E[X].
+\]
+An independent random sample from this population produces the fitted line $\widehat y=5.8-0.4x$ and a valid robust standard error of 0.1 for its slope. A large-sample Normal approximation applies. Use 1.96 and $\mathbb P(Z>1)=0.1587$ for $Z\sim\mathsf N(0,1)$.
+\begin{parts}
+\item \pts{5} Calculate the population best-linear-prediction coefficients. Explain why the sample coefficients need not equal them. \workspace{0.7in}
+\item \pts{4} Calculate the sample line's prediction at $x=3$ and interpret its slope with units. \workspace{0.6in}
+\item \pts{7} Construct a 95\% confidence interval from the sample slope and standard error. Test the benchmark $H_0:\beta_1=-1/2$ against $H_a:\beta_1\ne-1/2$ at 5\%, including the statistic, p-value and decision. \workspace{1.0in}
+\item \pts{4} A planner says: ``The negative slope proves that relocating any household one kilometer farther away reduces its weekly transit trips by the slope amount.'' Identify the unsupported causal and individual-level conclusions. \workspace{0.7in}
+\end{parts}
+\end{document}

@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+\input{exam-style.tex}
+\begin{document}
+\examheader{Practice Exam 4 --- Version A}{Fall 2026}{14--18}
+\mcq{Two independent Bernoulli outcomes have success probability $p$. A test of $H_0:p=1/10$ against $p>1/10$ rejects when at least one success occurs. What is its power at $p=1/2$?}
+{$1/4$.}{$1/2$.}{$3/4$.}{$1-(9/10)^2$.}
+\mcq{For a large-sample test of a single population proportion $H_0:p=p_0$, which standard error uses the null model?}
+{$\sqrt{p_0(1-p_0)/n}$.}{$\sqrt{\widehat p(1-\widehat p)/n}$.}{$p_0(1-p_0)/n$.}{$\sqrt{p_0(1-p_0)}$.}
+\mcq{Holding the estimate and standard error fixed, changing from 95\% to 99\% confidence ordinarily gives:}
+{The same interval.}{A narrower interval.}{A wider interval.}{A changed point estimate.}
+\mcq{A randomized voucher study aims to estimate the total effect of the offer on employment. Which variable creates a concern if included as a control?}
+{Months of training received after assignment.}{Age measured before assignment.}{Earnings measured before assignment.}{Education measured before assignment.}
+
+\written{5}{Changes within the same household}
+A simple random sample of 25 independent households reports monthly spending before and after a billing change. Let $D_i$ be after-minus-before spending in dollars. For the differences, $\bar d=2$ and $s_D=5$. Assume the population of differences is Normal. The change was not randomly assigned.
+
+Use $\widehat{\mathrm{SE}}(\bar D)=s_D/\sqrt n$. For a Student $t$ variable $T$ with 24 degrees of freedom, $\mathbb P(T>2)\approx0.0285$ and the two-sided 95\% critical value is approximately 2.064.
+\begin{parts}
+\item \pts{4} State the population target and explain why the analysis uses within-household differences rather than independent before/after samples. \workspace{0.7in}
+\item \pts{6} Test $H_0:\mu_D=0$ against $H_a:\mu_D\ne0$ at 5\%. Calculate the standard error, statistic and p-value, and state the decision. \workspace{0.8in}
+\item \pts{6} Construct the 95\% interval and interpret its confidence level correctly. Does it establish that the billing change caused the average change? \workspace{0.9in}
+\item \pts{4} For a future study, suppose the standard error scales as $1/\sqrt n$ and the critical value is held fixed for planning. What sample size would halve the margin of error? Explain. \workspace{0.7in}
+\end{parts}
+
+\written{6}{One employment proportion, two variance choices}
+A random sample of 100 independent workers from a large target population contains 60 employed workers. Let $p$ be the population employment proportion. The prespecified question is $H_0:p=1/2$ versus $H_a:p\ne1/2$.
+
+Use the null standard error $\sqrt{p_0(1-p_0)/n}$ for the test and the estimate-based standard error $\sqrt{\widehat p(1-\widehat p)/n}$ for a Wald interval. Use 1.96 and $\mathbb P(Z>2)=0.0228$ for $Z\sim\mathsf N(0,1)$.
+\begin{parts}
+\item \pts{5} Calculate $\widehat p$, the null standard error and the standardized test statistic. \workspace{0.7in}
+\item \pts{5} Calculate the two-sided p-value and give the 5\% decision. Explain why the p-value is not the probability that $p=1/2$. \workspace{0.7in}
+\item \pts{6} Calculate the estimate-based standard error and construct the approximate 95\% Wald interval. Explain why this interval and the test do not use exactly the same variance estimate. \workspace{0.9in}
+\item \pts{4} Check success/failure counts for the approximation. If the 100 workers had instead volunteered for an online poll, would these counts alone justify generalization to the target population? Explain. \workspace{0.7in}
+\end{parts}
+
+\written{7}{A complete joint distribution}
+The table gives a population joint distribution for $X$ and $Y$.
+\begin{center}
+\begin{tabular}{c|ccc}
+$Y\backslash X$ & 0 & 1 & 2\\\hline
+0 & $1/10$ & $7/20$ & $1/5$\\
+1 & $1/20$ & $1/10$ & $1/5$
+\end{tabular}
+\end{center}
+\begin{parts}
+\item \pts{5} Calculate the marginal distribution of $X$ and the conditional distribution of $Y$ given $X=1$. \workspace{0.8in}
+\item \pts{6} Calculate $f(x)=\mathbb E[Y\mid X=x]$ at all three values of $x$. Explain whether $f$ is linear. \workspace{0.9in}
+\item \pts{5} Use iterated expectations to obtain $\mathbb E[Y]$ and check the result using the marginal distribution of $Y$. \workspace{0.8in}
+\item \pts{4} For $\varepsilon=Y-f(X)$, calculate its two possible values conditional on $X=1$ and verify that its conditional mean is zero. \workspace{0.7in}
+\end{parts}
+
+\written{8}{Group means and a regression prediction}
+An insurer observes independent random samples of 100 adults with college education and 100 without. Annual health expenditure $Y$ is in thousands of dollars. Let $X=1$ indicate college education and $X=0$ otherwise. The college group has $\bar y_1=8$, $s_1=6$; the other group has $\bar y_0=5$, $s_0=8$. Education was not assigned.
+
+For this binary predictor, the least-squares line with an intercept fits each group's sample mean. Its slope standard error is $\sqrt{s_1^2/n_1+s_0^2/n_0}$. Use a large-sample Normal reference, 1.96, and $\mathbb P(Z>3)=0.00135$ for $Z\sim\mathsf N(0,1)$.
+\begin{parts}
+\item \pts{5} Determine the fitted intercept and slope. Interpret each in context. \workspace{0.8in}
+\item \pts{5} Calculate the slope's standard error and construct a 95\% interval for the population mean difference, college minus noncollege. \workspace{0.8in}
+\item \pts{5} Test equality of the two population means at 5\%, reporting hypotheses, statistic, p-value and decision. \workspace{0.8in}
+\item \pts{5} An employee says the line is useless for predicting expenditure because its slope is not known to be causal. Assess the claim. State both an assumption needed to apply the prediction to future adults and a causal conclusion the data alone cannot justify. \workspace{0.8in}
+\end{parts}
+\end{document}

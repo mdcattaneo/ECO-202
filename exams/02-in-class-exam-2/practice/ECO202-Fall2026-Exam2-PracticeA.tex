@@ -1,0 +1,78 @@
+\documentclass[11pt]{article}
+\input{exam-style.tex}
+\begin{document}
+\examheader{Practice Exam 2 --- Version A}{Fall 2026}{6--9}
+\mcq{A city wants the proportion of all its residents who use public transit. Which quantity is the population parameter?}
+{The number of residents who answered a survey.}
+{The proportion of survey respondents who report using transit.}
+{The survey's response rate.}
+{The proportion of all city residents who use transit.}
+\mcq{Which procedure is a randomized matched-pair design?}
+{Let each person choose treatment, then match people using their outcomes.}
+{Form pairs using baseline information, then randomly treat one person in each pair.}
+{Randomly sample one person from each district and observe their chosen treatment.}
+{Treat the higher-income person in every baseline pair.}
+\mcq{Under any valid probability model, which statement holds for the empty event $\varnothing$?}
+{It has probability zero.}
+{It has probability one because it contains no contradictions.}
+{Its probability depends on the number of observed cases.}
+{It cannot be assigned a probability.}
+\mcq{Events $A$ and $B$ are disjoint and each has positive probability. Which statement is correct?}
+{They are not independent because their intersection probability is zero but the product of their probabilities is positive.}
+{Their union has probability zero.}
+{They are independent because they have no outcomes in common.}
+{Their conditional probabilities must both be undefined.}
+\input{ECO202-Fall2026-Exam2-FormulaSupport.tex}
+
+\written{5}{A workforce survey}
+A firm wants the mean weekly overtime hours among the 100 people who worked for it at any time last year. Its current roster contains 80 of those people; the other 20 have left. It randomly selects 40 people from the current roster, receives 20 responses, and records 120 total weekly overtime hours from respondents. Assume reports are accurate. A separate complete record establishes that current employees averaged 5 hours and former employees averaged 15 hours. Among selected current employees, those with longer overtime are more likely to respond.
+\begin{parts}
+\item \pts{4} Identify the observational unit, target population, sampling frame, selected sample, and responding sample.
+\workspace{1.7cm}
+\item \pts{6} Calculate the target population mean using the complete record and the sample mean reported by the survey. Label which is a parameter and which is a statistic.
+\workspace{1.8cm}
+\item \pts{6} Identify the coverage problem and the response problem. Explain the direction each mechanism tends to move the mean at its own stage, using the stated facts. Does the actual respondent mean exceed the target mean here?
+\workspace{2.2cm}
+\item \pts{4} A manager proposes interviewing every current employee and says this will remove every source of error about the target. Evaluate the claim, even if all 80 current employees answer accurately.
+\workspace{1.8cm}
+\end{parts}
+
+\written{6}{Blocking a training experiment}
+Eight volunteers are enrolled in a training experiment: four have low prior earnings and four have high prior earnings. Within each earnings group, an SRS of two receives a training offer. The selections in the two groups are independent. Everyone's earnings outcome is observed. There are six unordered pairs among four people and 70 unordered groups of four among eight.
+\begin{parts}
+\item \pts{5} Describe the design and identify its blocks, treatment, and control. Explain how blocking here differs from stratified sampling of people into a study.
+\workspace{1.8cm}
+\item \pts{5} How many offer assignments are possible under this design, and what is the probability of each? Give an assignment that complete randomization of four offers could produce but this design cannot.
+\workspace{1.8cm}
+\item \pts{5} The low-earnings block has offered and control outcome means of 8 and 5; the high-earnings block has means of 12 and 11. Outcomes are in thousands of dollars, and all four cells contain two people. Calculate the overall offered-minus-control mean difference. Explain why the result need not be the exact average effect for these eight volunteers and does not automatically apply to all workers.
+\workspace{2.2cm}
+\item \pts{5} In a second run of this experiment, participants with poor outcomes are more likely to disappear from follow-up in the offered group than in control. Explain why the original randomization does not by itself justify a causal interpretation of the difference among respondents. Name the threat and one useful design response.
+\workspace{2cm}
+\end{parts}
+
+\written{7}{A small sample space}
+Draw an SRS of two people without replacement from A, B, C, and D. Let $U$ be the event that A or B, or both, are selected. Let $V$ be the event that C is not selected.
+\begin{parts}
+\item \pts{5} List all possible unordered samples and give the probability of each. List the outcomes belonging to $U$ and to $V$.
+\workspace{2cm}
+\item \pts{6} Calculate $\mathbb P(U)$, $\mathbb P(V)$, and $\mathbb P(U\cap V)$. Are $U$ and $V$ independent? Explain using the definition.
+\workspace{2.1cm}
+\item \pts{5} You learn that A was selected. What is the probability that B was also selected? Show the restricted sample space. Explain why the answer is not B's unconditional inclusion probability.
+\workspace{2cm}
+\item \pts{4} A simulation repeats the original SRS procedure 100 times and finds that C is absent 53 times. An analyst claims that this disproves the exact probability found above. Assess the claim and distinguish a model probability from a simulated relative frequency.
+\workspace{1.7cm}
+\end{parts}
+
+\written{8}{A card with a hidden side}
+There are six physical cards: one is blue on both sides (BB), two are red on both sides (RR), and three are blue on one side and red on the other (BR). Select a card uniformly, then select one of its two physical sides uniformly to reveal. Let $R$ mean the revealed side is red, and let $M$ mean the selected card is mixed (BR).
+\begin{parts}
+\item \pts{5} Describe an equally likely elementary-outcome space that distinguishes the physical cards and sides. How many outcomes are there? How many reveal red, and how many both reveal red and use a mixed card?
+\workspace{2cm}
+\item \pts{5} Calculate $\mathbb P(R)$, $\mathbb P(M)$, and $\mathbb P(R\cap M)$. Are $R$ and $M$ independent? Justify.
+\workspace{2cm}
+\item \pts{5} The revealed side is red. Find the probability that the hidden side is also red. Give a count-based or Bayes calculation that makes the conditioning denominator explicit.
+\workspace{2cm}
+\item \pts{5} A student reasons: ``Five cards have at least one red side. Two are RR, so the answer is $2/5$.'' Identify the mistake and explain which cards have become more likely after observing red. Verify that the conditional probabilities of a red and a blue hidden side sum to one.
+\workspace{2cm}
+\end{parts}
+\end{document}

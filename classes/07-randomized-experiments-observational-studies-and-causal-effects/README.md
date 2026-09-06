@@ -2,7 +2,7 @@
 
 **Date:** Wednesday, September 30, 2026  
 **Status:** Complete first version  
-**Last updated:** August 30, 2026
+**Last updated:** September 6, 2026
 
 [← Class 6](../06-populations-samples-surveys-and-selection-bias/) · [Practice 7](practice/) · [Course syllabus](../../ECO202-Fall2026-Syllabus.pdf) · [Class 8 →](../08-probability-rules-and-probability-models/)
 
@@ -68,6 +68,8 @@ By the end of class, you should be able to:
 ## 1. From a causal question to an experiment
 
 An experiment begins with a causal contrast, not with a software command. The **experimental units** are the objects assigned to conditions. A **factor** is a variable deliberately varied by the investigator, its possible values are **levels**, and the complete condition applied to a unit is a **treatment**. The **outcome** is measured after assignment. A useful control condition represents the comparison state in the causal question.
+
+When several factors are varied, each specified combination of their levels defines a complete treatment condition. Identifying those combinations and describing a randomized assignment among them uses the same basic design ideas.
 
 For a binary treatment, retain the Class 5 notation. Let $D_i=1$ indicate assignment to treatment and $D_i=0$ assignment to control. Let $Y_i(1)$ and $Y_i(0)$ be unit $i$'s potential outcomes under the two assignments. The observed outcome is
 
@@ -294,7 +296,9 @@ An analyst lets applicants choose whether to receive a training program and comp
 
 **Common core:** Experimental units; factors, levels, treatments, and outcomes; potential outcomes and observed outcomes; finite-sample ATE; the difference-in-means estimator; comparison, randomization, and replication; complete randomization, blocks, and matched pairs; chance imbalance; random sampling versus random assignment; intention-to-treat interpretation; internal and external validity; and the main threats that remain after random assignment.
 
-**Explore further:** Exact randomization inference; treatment-effect heterogeneity; noncompliance and instrumental variables; attrition bounds; cluster randomization; interference and spillovers; factorial designs; covariate-adjusted estimators; and transportability.
+**Explore further:** Exact randomization inference; treatment-effect heterogeneity; noncompliance and instrumental variables; attrition bounds; cluster randomization; interference and spillovers; advanced analysis of factorial effects and interactions; covariate-adjusted estimators; and transportability.
+
+**Scope clarification (September 6, 2026):** Identifying factors, levels, and treatment combinations and describing basic random assignment are common core. Advanced analysis of factorial effects and interactions remains optional.
 
 The durable lesson is that a randomized assignment supplies a principled counterfactual comparison. It does not turn assignment into receipt, an average into every individual's effect, the study group into every population, or the rest of the research process into an assumption-free exercise.
 

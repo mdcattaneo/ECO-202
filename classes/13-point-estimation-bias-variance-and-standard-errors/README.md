@@ -2,7 +2,7 @@
 
 **Date:** Wednesday, November 4, 2026  
 **Status:** Complete first version  
-**Last updated:** August 30, 2026
+**Last updated:** September 6, 2026
 
 [← Class 12](../12-laws-of-large-numbers-and-central-limit-theorem/) · [Practice 13](practice/) · [Course syllabus](../../ECO202-Fall2026-Syllabus.pdf) · **Next meeting:** In-Class Exam 3
 
@@ -291,9 +291,11 @@ Repair: “The sample standard deviation is small, so the estimator is unbiased 
 
 ## 8. Common core, optional paths, and recap
 
-**Common core:** Estimand, estimator, estimate, realized error, sampling distribution, true and estimated standard errors, bias, variance, MSE, unbiasedness, the bias–variance comparison, estimator bias versus data bias, and the role of the repeated-sampling mechanism.
+**Common core:** Estimand, estimator, estimate, realized error, sampling distribution, true and estimated standard errors, bias, variance, MSE, unbiasedness, the bias–variance comparison, estimator bias versus data bias, and the role of the repeated-sampling mechanism. Applications include exact distributions in small examples by enumerating samples or using elementary probability rules, and bias–variance–MSE comparisons of benchmark-weighted estimators using supplied or directly calculated moments.
 
-**Explore further:** Consistency; asymptotic bias; bootstrap and design-based standard errors; alternative loss functions; shrinkage and regularization; exact order-statistic distributions; finite-population corrections; and optimality comparisons among unbiased estimators.
+**Explore further:** Consistency; asymptotic bias; bootstrap and design-based standard errors; alternative loss functions; general shrinkage and regularization theory; general order-statistic distribution formulas; finite-population corrections; and optimality comparisons among unbiased estimators. These extensions go beyond the small numerical sampling examples and benchmark comparisons developed here and in the class practice.
+
+**Scope clarification (September 6, 2026):** The optional labels refer to general theory, not to the elementary examples and estimator comparisons already developed in this guide and its practice.
 
 The durable lesson is that an estimate is one number, while its credibility comes from a complete argument about the target, rule, data-generating mechanism, repeated-sampling behavior, and limitations.
 

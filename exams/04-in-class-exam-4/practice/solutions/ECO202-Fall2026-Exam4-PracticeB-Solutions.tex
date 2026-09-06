@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+\input{../exam-style.tex}
+\begin{document}
+\solutionheader{Practice Exam 4 --- Version B}{14--18}
+\section*{Multiple-choice key}
+\begin{tabular}{ccl}
+\toprule Question & Answer & Main idea\\\midrule
+1 & D & Rejecting a true null is a Type I error.\\
+2 & D & Positive within-pair covariance reduces difference variance.\\
+3 & B & Null-based variance uses $p_0=1/4$.\\
+4 & D & A specification change alters the fitted comparison.\\\bottomrule
+\end{tabular}
+
+\textbf{1.} D is the definition. A is failure to reject a false null; B is rejection probability at a specified alternative; C is false because a valid procedure can make errors at its stated rate.
+
+\textbf{2.} D follows from $\mathrm{Var}(A-B)=\mathrm{Var}(A)+\mathrm{Var}(B)-2\mathrm{Cov}(A,B)$ and positive covariance. A confuses a precision calculation with a causal design; B gives the wrong direction; C incorrectly ignores dependence.
+
+\textbf{3.} B uses $p_0(1-p_0)/n$ inside the square root. A uses the estimate-based interval variance; C is the individual Bernoulli SD rather than the sample-proportion SE; D is the variance rather than its square root.
+
+\textbf{4.} D is the justified model comparison. A invents a causal interpretation; B assumes the adjusted coefficient is the causal truth; C asserts an improvement that cannot be inferred from a coefficient change alone.
+
+\solution{5}{Two populations and a difference in means}
+\begin{parts}
+\item $\widehat\Delta=3/2-6/5=3/10$ car per household and
+\[
+\mathrm{SE}=\sqrt{1/100+1/100}=\frac{\sqrt2}{10}.
+\]
+\item The standardized statistic is $(3/10)/(\sqrt2/10)=3/\sqrt2$. The approximate two-sided p-value is $2(0.01695)=0.0339$. Reject equality at 5\%; there is evidence of a difference in population mean car ownership, with the estimated mean higher in Region A. The reference relies on independent samples and the large-sample approximation.
+\item The interval is
+\[
+\left[\frac3{10}-1.96\frac{\sqrt2}{10},\ \frac3{10}+1.96\frac{\sqrt2}{10}\right]
+\]
+cars per household. Zero is excluded: $1.96\sqrt2<3$, as follows by squaring positive quantities, $2(1.96)^2<2(2)^2=8<9$. The test and interval use the same standard error and compatible two-sided levels.
+\item At the specified alternative, the rejection threshold equals the true mean of the Normal estimator. By symmetry,
+\[
+\mathrm{Power}=\mathbb P_{\Delta}(\widehat\Delta>\Delta)=\frac12.
+\]
+The Type II error probability is also $1/2$. The threshold being the upper 5\% boundary under the \emph{null} does not mean power is 0.05 under this shifted alternative.
+\end{parts}
+
+\solution{6}{An observational threshold comparison}
+\begin{parts}
+\item $\widehat p_{\rm near}=4/5$, $\widehat p_{\rm far}=1/2$ and $\widehat\Delta_p=3/10$, a 30-percentage-point difference.
+\item
+\[
+\widehat{\mathrm{SE}}=\sqrt{\frac{(4/5)(1/5)+(1/2)(1/2)}{100}}
+=\sqrt{\frac{41}{10000}}=\frac{\sqrt{41}}{100}.
+\]
+The approximate interval is
+\[
+\left[\frac3{10}-1.96\frac{\sqrt{41}}{100},\ \frac3{10}+1.96\frac{\sqrt{41}}{100}\right].
+\]
+\item Since $\sqrt{41}<7$, the margin is below $1.96(7)/100=0.1372<0.3$. The interval excludes zero; the matching two-sided 5\% Wald test rejects equality. Equivalently, the statistic is $30/\sqrt{41}>30/7>1.96$. Counts are 80 successes and 20 failures near, 50 successes and 50 failures far. The test explicitly uses the same unpooled standard error as the interval, so their compatibility here is valid; no null-pooled equivalence is being assumed.
+\item Statistical significance concerns incompatibility with a zero population difference under the reference model. It does not show that location causes the difference; income, car ownership, commuting preferences or other selection mechanisms can affect both location and costs. A credible identification design is needed for relocation causality. Practical importance requires the threshold's meaning, the size and uncertainty of the effect, and relevant costs/benefits; a small p-value alone cannot settle it. The binary threshold outcome also does not identify a change in average dollar expenditure.
+\end{parts}
+
+\solution{7}{Conditional information and overall wealth}
+\begin{parts}
+\item $\mathbb P(X=1,Y=12)=(1/2)(1/2)=1/4$. Within $X=1$, the mean is $(1/2)8+(1/2)12=10$, as reported.
+\item
+\[
+\mathbb E[Y]=\mathbb E\{\mathbb E[Y\mid X]\}
+=\frac14(4)+\frac12(10)+\frac14(12)=9.
+\]
+Overall mean wealth is 9 tens of thousands of dollars, or \$90,000. Equal weighting of the three means instead gives $26/3$, but the groups are not equally common: the one-phone group contains half the population.
+\item The increments between the consecutive conditional means are $10-4=6$ and $12-10=2$. They differ, so the function is not linear on $0,1,2$. A best linear predictor may still be defined, but no single line can reproduce all three conditional means.
+\item Within $X=1$, errors are $8-10=-2$ and $12-10=2$, each with conditional probability $1/2$; their conditional mean is zero. Phone ownership was not randomized. Wealth can influence ownership or share causes with it, so these conditional means do not establish that buying a phone increases wealth.
+\end{parts}
+
+\solution{8}{A population line and an estimated line}
+\begin{parts}
+\item $\beta_1=-2/4=-1/2$, $\beta_0=5-(-1/2)(2)=6$. The population best linear predictor is $6-x/2$. Sample coefficients vary because they depend on the random sample, so $5.8,-0.4$ need not equal $6,-0.5$. Population best linear prediction need not be the full conditional-mean function if that function is nonlinear.
+\item At $x=3$, the sample line predicts $5.8-0.4(3)=4.6$ weekly transit trips. Its slope is 0.4 fewer fitted weekly trips per additional kilometer of commute distance.
+\item The sample-based interval is
+\[
+-0.4\pm1.96(0.1)=[-0.596,-0.204]
+\]
+weekly trips per kilometer. For the nonzero null benchmark,
+\[
+z=\frac{-0.4-(-0.5)}{0.1}=1,\qquad
+\text{p-value}=2(0.1587)=0.3174.
+\]
+Fail to reject at 5\%; $-0.5$ also lies inside the interval. Nonrejection does not prove the benchmark. This teaching exercise supplies the population moments so one can compare a sample-based procedure with its known population target.
+\item An observational predictive slope does not identify what would happen under an intervention on location; residence choices, jobs or other common causes may explain the association. Even a valid average causal effect would not establish the same response for each household. The population/sample line and uncertainty estimates summarize relationships, not guaranteed individual intervention effects.
+\end{parts}
+\end{document}

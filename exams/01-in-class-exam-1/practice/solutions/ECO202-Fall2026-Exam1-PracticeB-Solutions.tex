@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\input{../exam-style.tex}
+\begin{document}
+\solutionheader{Practice Exam 1 --- Version B}{1--5}
+\solution{1--4}{Multiple-choice answers and reasoning}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+\item \textbf{D.} Area codes label categories. Their numerical representation does not make subtraction or averaging substantively meaningful. A confuses storage with meaning, B mistakes a label for an amount, and C incorrectly calls a finite code continuous.
+\item \textbf{B.} Interval probability is the area under a continuous density over that interval. Endpoint or midpoint heights alone do not give it. Length alone is insufficient because the density need not be constant or equal to one.
+\item \textbf{A.} A slope has response units per predictor unit, here thousands of dollars per hundred square feet. B reverses the ratio, C confuses slope with correlation, and D is a squared-unit variance-like quantity.
+\item \textbf{A.} The counterfactual refers to the same unit under the alternative treatment state. B's group mean and C's other person's observed outcome are not that individual outcome by definition. D does not change the treatment state at all.
+\end{enumerate}
+
+\solution{5}{A boxplot and a change of scale}
+\begin{parts}
+\item The median is $(3+5)/2=4$, lower-half median $Q_1=3$, upper-half median $Q_3=7$, and IQR 4. Fences are $3-6=-3$ and $7+6=13$. The labeled boxplot has box endpoints 3 and 7, median line 4, and whiskers at 1 and 8; there are no flagged points.
+\item The sum is 27, giving $\bar x=27/6=9/2$. The sample variance is
+\[s^2=\frac{157-6(9/2)^2}{5}=\frac{71}{10}.\]
+Variance is measured in squared original units.
+\item The transformed median is $20-2(4)=12$. Reflection exchanges the lower and upper quartiles: $Q_{1,w}=20-2(7)=6$ and $Q_{3,w}=20-2(3)=14$. Thus $\mathrm{IQR}_w=14-6=8=|-2|(4)$. The negative multiplier reverses order; spread scales by its absolute value and cannot become negative.
+\item The upper fence is 13, so 20 is flagged. Check units, transcription or recording errors, and the source/context to determine whether it is a valid extreme value or an error. Flagging is a diagnostic; it is not evidence that deletion is appropriate.
+\end{parts}
+
+\solution{6}{Transformations and model-based comparisons}
+\begin{parts}
+\item The graph is a rectangle of height $1/4$ over $[-2,2]$, with total area $4(1/4)=1$ and median 0. The transformed inequality is $X+2<3$, or $X<1$. Its area is $(1-(-2))(1/4)=3/4$. The open or closed endpoint at 1 makes no difference for this continuous model.
+\item The standard deviation is 5 minutes; the second Normal argument is variance $5^2=25$ minutes squared. Standardizing the cutoff gives $(20-30)/5=-2$, so the required fraction is $\Phi(-2)=0.0228$.
+\item A's observed delivery is shorter in minutes: $35<45$. Relative to its own distribution it is more extreme on the long-time side, because $z_A=(35-30)/5=1$ and $z_B=(45-40)/10=1/2$. The percentiles are approximately 84.13\% and 69.15\%, respectively. Ranking raw values and ranking standardized/percentile positions answer different questions.
+\item The roughly 95\% statement is a Normal-model property, not a universal property of every dataset. Strong skewness, multiple separated modes, or marked departures in a Normal quantile plot would question that approximation. One clear feature and an explanation of the model dependence suffice.
+\end{parts}
+
+\solution{7}{A small scatterplot and its residuals}
+\begin{parts}
+\item $\bar x=1$, $\bar y=2$, and the centered pairs are $(-1,-1),(0,1),(1,0)$. Thus $S_{xx}=2$, $S_{yy}=2$, and $S_{xy}=1$. The line is $\widehat y=3/2+x/2$.
+\item A correct sketch shows the three points and the line through $(0,3/2)$, $(1,2)$, and $(2,5/2)$. At $x=1$, the vertical segment from fitted 2 to observed 3 has residual $+1$ output unit.
+\item $r=1/\sqrt{2(2)}=1/2$ and $r^2=1/4$. The residuals, in $x$ order, are $-1/2,1,-1/2$, summing to zero. The fitted values account for one quarter of the sample response variation about its mean. For a direct check, the residual squared sum is $1/4+1+1/4=3/2$, leaving $(2-3/2)/2=1/4$ explained.
+\item The new $x=50$ lies far from the original predictor values, so it has high leverage. Compare the fitted lines with and without that observation to assess influence. Its response value matters: a point on the existing line need not change the slope, while a point far above or below the line can do so. The $x$ coordinate alone does not determine the slope change.
+\end{parts}
+
+\solution{8}{Group composition and a causal claim}
+\begin{parts}
+\item The participant mean is $[1(12)+3(6)]/4=30/4=15/2$. The nonparticipant mean is $[3(10)+1(4)]/4=34/4=17/2$. The difference is $-1$ thousand dollars. The counts recover the earnings totals; averaging the two subgroup means with equal weights would misrepresent these records.
+\item The within-high-skill difference is $12-10=2$ and the within-low-skill difference is $6-4=2$, both in thousands of dollars. Both are positive, whereas the aggregate difference is negative.
+\item Participants are disproportionately in the lower-earning prior-skill group, while nonparticipants are disproportionately in the higher-earning group. The unequal mix can reverse the overall association. Neither raw nor within-skill comparisons automatically identify a treatment effect: participation may also differ by other pre-treatment factors, and no random assignment or sufficient comparability assumption is supplied. Controlling for one observed characteristic does not prove that all confounding has been removed.
+\item The missing outcome is the participant's subsequent earnings under no training, $Y_i(0)$, for the specified comparison and timing. Another worker with the same recorded prior skill can still differ in opportunities, resources, or other outcome determinants. Similar observed characteristics do not reveal an individual's exact missing potential outcome.
+\end{parts}
+\end{document}

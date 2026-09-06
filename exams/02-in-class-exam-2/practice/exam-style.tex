@@ -1,0 +1,62 @@
+% Shared typesetting for ECO 202 papers; contains formatting, not answers.
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,enumitem,fancyhdr,lastpage,needspace}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ECO 202 \textbar\ Fall 2026}
+\rhead{\paperlabel}
+\cfoot{\thepage\ of \pageref{LastPage}}
+\newcommand{\paperlabel}{Statistics and Data Analysis for Economics}
+% Arguments: complete paper title, date/term, covered class numbers.
+\newcommand{\examheader}[3]{%
+  \renewcommand{\paperlabel}{#1}%
+  \begin{center}
+  {\Large\bfseries ECO 202 --- #1}\\[4pt]
+  Statistics and Data Analysis for Economics \textbar\ Princeton University\\[3pt]
+  #2 \textbar\ Classes #3 \textbar\ 100 points
+  \end{center}
+  Name: \rule{2.6in}{0.4pt}\hfill Student ID: \rule{1.3in}{0.4pt}\par
+  \begin{small}
+  \textbf{Timing.} Target workload: 70 minutes (10 minutes multiple choice; 60 minutes written work). Follow announced start/end times within the 80-minute meeting. For practice, set a 70-minute timer.
+
+  \textbf{Conditions.} No books, notes, calculators, AI, or other electronics; University-authorized accommodations apply. Fractions, radicals, and equivalent exact expressions are acceptable. Show reasoning in written answers. Data are teaching examples unless identified otherwise.
+
+  \textbf{Points.} Questions 1--4: one answer A--D, 5 points each, no negative marking. Questions 5--8: 20 points each; subpart points are shown. Label any continuation clearly.
+  \end{small}
+  \section*{Multiple choice \normalfont\small(20 points; about 10 minutes)}
+}
+\newcounter{mcquestion}
+\newcommand{\mcq}[5]{%
+  \par\addvspace{6pt}\begin{minipage}{\linewidth}
+  \refstepcounter{mcquestion}\textbf{\themcquestion.} #1
+  \begin{enumerate}[label=\textbf{\Alph*.},leftmargin=1.9em,itemsep=1pt,topsep=3pt]
+  \item #2
+  \item #3
+  \item #4
+  \item #5
+  \end{enumerate}
+  \end{minipage}\par
+}
+\newcommand{\written}[2]{\clearpage\section*{#1. #2 \normalfont\large(20 points; about 15 minutes)}}
+\newlist{parts}{enumerate}{1}
+\setlist[parts]{label=\textbf{(\alph*)},leftmargin=2em,itemsep=7pt,topsep=5pt}
+\newcommand{\pts}[1]{\textbf{(#1 points)}\ }
+\newcommand{\workspace}[1]{\par\vspace{#1}}
+% Arguments: complete paper title, covered class numbers.
+\newcommand{\solutionheader}[2]{%
+  \renewcommand{\paperlabel}{#1 solutions}%
+  \begin{center}
+  {\Large\bfseries ECO 202 --- #1}\\[4pt]
+  {\large Worked solutions}\\[3pt]
+  Fall 2026 \textbar\ Classes #2
+  \end{center}
+  Equivalent exact expressions and valid alternative reasoning are acceptable. For practice study, attempt the paper first, then compare reasoning, close these solutions, and reconstruct any missed method independently.
+}
+\newcommand{\solution}[2]{\Needspace{5\baselineskip}\section*{#1. #2}}

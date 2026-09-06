@@ -227,7 +227,7 @@ ECO-202/
         README.md                   Practice problems and compact checks
         solutions/README.md         Public worked solutions after an attempt
   precepts/                         Weekly notes from the teaching assistants
-  exams/                            Exams and solutions after administration
+  exams/                            Practice exams; real exams after release
   project/                          Approved final-project information
   assets/                           Canonical files reused across classes
 ```

@@ -1,7 +1,7 @@
 # ECO 202 Practice 13: Point Estimation, Bias, Variance, and Standard Errors
 
 **Status:** Complete ungraded practice  
-**Last updated:** August 30, 2026  
+**Last updated:** September 6, 2026<br>
 **Class guide:** [Class 13: Point Estimation, Bias, Variance, and Standard Errors](../)  
 **Worked solutions:** [Complete solutions for study after your attempt](solutions/)  
 **Suggested completion:** After Class 13 and before In-Class Exam 3
@@ -293,6 +293,6 @@ This record is for self-assessment, not submission or grading.
 
 ## Common core and optional extensions
 
-**Common core:** Every object, calculation, interpretation, assumption, and limitation required in Problems 1–6.
+**Common core:** Every object, calculation, interpretation, assumption, and limitation required in Problems 1–6. This includes exact distributions in small examples by enumerating samples or applying elementary probability rules, and bias–variance–MSE comparisons using supplied or directly calculated moments.
 
-**Optional extensions:** Bootstrap and design-based standard errors; alternative loss functions; consistency; shrinkage estimators; exact order-statistic theory; and software-based exploration beyond the reproducibility check.
+**Optional extensions:** Bootstrap and design-based standard errors; alternative loss functions; consistency; general shrinkage and regularization theory; general order-statistic distribution formulas and optimality theory; and software-based exploration beyond the reproducibility check. The elementary estimator comparisons and sample enumerations in the problems above remain common core.

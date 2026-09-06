@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+\input{exam-style.tex}
+\begin{document}
+\examheader{Practice Exam 1 --- Version A}{Fall 2026}{1--5}
+\mcq{Every wage in dollars is converted to cents. How do the numerical sample standard deviation and variance change?}
+{Both are multiplied by 100.}
+{Neither changes.}
+{Standard deviation is multiplied by 100; variance by $100^2$.}
+{Standard deviation is multiplied by $100^2$; variance by 100.}
+\mcq{A continuous density has height $f(2)=1/4$. What is $\mathbb P(X=2)$ under this model?}
+{$1/2$}{$1/4$}{0}{It must equal the sample frequency at 2.}
+\mcq{In a dataset, mean height is 67 inches, mean number of siblings is $6/5$, and the two variables have zero correlation. Both standard deviations are positive. What does the fitted least-squares line with an intercept predict for somebody with two siblings?}
+{Zero inches}{$67(2)/(6/5)$ inches}{It cannot give a prediction.}{67 inches}
+\mcq{A firm's new software was installed before its productivity rose. Which statement is correct?}
+{The time ordering proves the software caused the increase.}
+{Time ordering is consistent with causation, but other changes could explain the increase.}
+{An observational study cannot describe a productivity change.}
+{A positive association proves there were no pre-existing differences.}
+
+\written{5}{Summaries, units, and scope}
+Five recorded transaction amounts, in dollars, are $7,5,3,3,2$. For quartiles use the median of each half of the sorted data, excluding the overall median.
+\begin{parts}
+\item \pts{6} Calculate the mean, median, $Q_1$, $Q_3$, and IQR. Show the sorted data.
+\workspace{0.9in}
+\item \pts{6} Calculate the sample variance and standard deviation, including units. Use the $1.5\mathrm{IQR}$ rule to determine whether any value is flagged.
+\workspace{1.2in}
+\item \pts{4} Each amount is transformed to $y=1+2x$. Without listing all transformed observations, find the new mean, median, and standard deviation. Explain the rules you use.
+\workspace{0.85in}
+\item \pts{4} The records come from five transactions at one shop on one morning. An analyst describes the sample mean as ``the amount currently spent by a typical customer in the city.'' Explain two limitations of that statement, including the distinction between a transaction and a customer.
+\workspace{0.9in}
+\end{parts}
+
+\written{6}{Areas, tails, and unit changes}
+\begin{parts}
+\item \pts{6} A density is $1/4$ from 0 to 2, $1/8$ from 2 to 6, and zero elsewhere. Sketch it, verify that its total area is one, find its median, and calculate the fraction between 1 and 4. Endpoint values do not affect areas.
+\workspace{1.15in}
+\item \pts{5} In a separate teaching model, weekly spending $X$ in dollars follows $\mathsf N(50,10^2)$. Find $\mathbb P(X>60)$ using $\Phi(1)=0.8413$. Show the standardized cutoff and identify the tail.
+\workspace{0.8in}
+\item \pts{5} Find the 25th percentile of spending using $\Phi(-0.6745)=0.25$. Explain what your cutoff means.
+\workspace{0.8in}
+\item \pts{4} Convert spending to cents. Find the model mean and standard deviation in cents and the standardized position of 6,000 cents. Explain why the tail fraction from part (b) stays the same.
+\workspace{0.85in}
+\end{parts}
+
+\written{7}{Reading and reversing a fitted line}
+For a dataset of shops, $x$ is a service charge in dollars and $y$ is purchases per customer in dollars. The observed $x$ range is 1 to 7, and
+\[\bar x=4,\qquad s_x=2,\qquad\bar y=10,\qquad s_y=4,\qquad r=-1/2.\]
+You may use $b_1=r s_y/s_x$ and $b_0=\bar y-b_1\bar x$ for the least-squares regression of $y$ on $x$ with an intercept.
+\begin{parts}
+\item \pts{6} Find the line and interpret its slope with units. Explain whether the intercept has a supported practical interpretation here.
+\workspace{0.9in}
+\item \pts{4} For a shop with $x=5$ and $y=11$, calculate the fitted value and residual. State what the residual's sign means.
+\workspace{0.7in}
+\item \pts{4} Find $r^2$ and interpret it. Does it measure the proportion of purchases caused by the service charge?
+\workspace{0.7in}
+\item \pts{6} Now fit $x$ on $y$. Find its slope and intercept by exchanging the roles in the formulas. Compare this fitted line with the line obtained by algebraically solving your first fitted equation for $x$. Explain the difference.
+\workspace{1.1in}
+\end{parts}
+
+\written{8}{Two causal stories consistent with the same data}
+For four workers, treatment means taking a specified training course and the outcome is earnings in thousands of dollars. Only the following outcomes are observed:
+\begin{center}\begin{tabular}{ccc}\toprule Worker & $D_i$ & Observed $Y_i$\\\midrule A&1&16\\B&1&12\\C&0&8\\D&0&12\\\bottomrule\end{tabular}\end{center}
+\begin{parts}
+\item \pts{4} Find the observed treated-minus-untreated difference in mean earnings. Give a descriptive interpretation.
+\workspace{0.6in}
+\item \pts{4} Define $Y_i(1)$ and $Y_i(0)$. Identify which one is missing for each worker.
+\workspace{0.65in}
+\item \pts{8} Construct two complete tables of potential outcomes compatible with all four observed outcomes: one in which every individual's treatment effect is zero, and another in which every individual's treatment effect is 4. Calculate the average treatment effect in each table.
+\workspace{1.45in}
+\item \pts{4} What do the two tables establish about learning causality from the observed group difference alone? Give one plausible pre-treatment common cause of training participation and earnings.
+\workspace{0.8in}
+\end{parts}
+\end{document}

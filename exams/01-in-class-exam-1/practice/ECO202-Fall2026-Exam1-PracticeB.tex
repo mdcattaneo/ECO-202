@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\input{exam-style.tex}
+\begin{document}
+\examheader{Practice Exam 1 --- Version B}{Fall 2026}{1--5}
+\mcq{A dataset records the three-digit telephone area code of each customer. Which description fits area code?}
+{Quantitative, because it is written using digits.}
+{A measure of the amount of telephone service.}
+{A continuous outcome.}
+{Categorical, because the numbers label groups.}
+\mcq{Under a continuous density model, the fraction of values between $a$ and $b$ is represented by:}
+{the sum of the density heights at $a$ and $b$.}
+{the area under the density between $a$ and $b$.}
+{the density height at the midpoint.}
+{the interval length, regardless of the density.}
+\mcq{A regression predicts weekly sales in thousands of dollars from store area in hundreds of square feet. Which describes the slope's units?}
+{Thousands of dollars per hundred square feet.}
+{Hundreds of square feet per thousand dollars.}
+{No units; every regression coefficient is standardized.}
+{Thousands of dollars squared.}
+\mcq{For a treated worker with an observed outcome $Y_i(1)$, the missing counterfactual is:}
+{the same worker's outcome under no treatment, $Y_i(0)$.}
+{the observed mean of the treated workers.}
+{the outcome of any untreated worker.}
+{the worker's outcome measured after treatment.}
+
+\written{5}{A boxplot and a change of scale}
+Six values are $1,3,3,5,7,8$. Use the median-of-halves quartile convention. For variance you may use $\sum x_i^2=157$ and $s^2=[\sum x_i^2-n\bar x^2]/(n-1)$.
+\begin{parts}
+\item \pts{6} Calculate the median, quartiles, and IQR. Sketch a labeled boxplot with whiskers extending to the extreme observations within the $1.5\mathrm{IQR}$ fences.
+\workspace{1.1in}
+\item \pts{6} Calculate the mean and sample variance. State how the units of variance differ from the units of the observations.
+\workspace{0.85in}
+\item \pts{4} Transform each value by $w=20-2x$. Find the transformed median and IQR without listing every new value. Explain how the negative multiplier changes the ordering and why the IQR remains nonnegative.
+\workspace{0.8in}
+\item \pts{4} Another dataset has $Q_1=3$, $Q_3=7$, and an observation of 20. Apply the outlier rule and explain what you would need to check before deleting that observation.
+\workspace{0.8in}
+\end{parts}
+
+\written{6}{Transformations and model-based comparisons}
+\begin{parts}
+\item \pts{6} A density has constant height $1/4$ on $[-2,2]$ and is zero elsewhere. Sketch it and find its median. What fraction of its values satisfies $(X+2)/4<3/4$? Show the transformed cutoff and area.
+\workspace{1.1in}
+\item \pts{5} In a separate teaching model, delivery time $T$ follows $\mathsf N(30,5^2)$ in minutes. Find the fraction below 20 minutes using $\Phi(-2)=0.0228$. Explain why a model standard deviation of 25 would be incorrect here.
+\workspace{0.8in}
+\item \pts{5} Company A's delivery times are Normal with mean 30 and standard deviation 5; Company B's are Normal with mean 40 and standard deviation 10. Compare a 35-minute delivery at A with a 45-minute delivery at B, first in minutes and then in percentile position. Use $\Phi(1)=0.8413$ and $\Phi(0.5)=0.6915$.
+\workspace{0.9in}
+\item \pts{4} An analyst claims that 95\% of every dataset must lie within roughly two standard deviations of its mean. Explain the problem and identify one graphical feature that would lead you to question a Normal model.
+\workspace{0.85in}
+\end{parts}
+
+\written{7}{A small scatterplot and its residuals}
+Three observed pairs are $(x,y)=(0,1),(1,3),(2,2)$, with $x$ measured in hours and $y$ in units of output. You may use
+\[S_{xx}=\sum(x_i-\bar x)^2,\quad S_{yy}=\sum(y_i-\bar y)^2,\quad S_{xy}=\sum(x_i-\bar x)(y_i-\bar y),\]
+\[b_1=S_{xy}/S_{xx},\qquad b_0=\bar y-b_1\bar x,\qquad r=S_{xy}/\sqrt{S_{xx}S_{yy}}.\]
+\begin{parts}
+\item \pts{6} Find the two means, the three centered sums, and the least-squares line with an intercept.
+\workspace{1.0in}
+\item \pts{4} Sketch the three observations and fitted line on labeled axes. Mark the vertical residual for the point $(1,3)$ and calculate it.
+\workspace{1.15in}
+\item \pts{6} Calculate $r$, $r^2$, and all three residuals. Check that residuals sum to zero. Explain what $r^2$ measures.
+\workspace{0.85in}
+\item \pts{4} A fourth observation with $x=50$ is added. Explain why it has high leverage and how you would assess whether it is influential. Can its effect on the fitted slope be determined from its $x$ value alone?
+\workspace{0.8in}
+\end{parts}
+
+\written{8}{Group composition and a causal claim}
+The following fictional observational records describe training participants and nonparticipants. Prior skill was measured before training, and all outcomes are subsequent earnings in thousands of dollars.
+\begin{center}\begin{tabular}{lrrrr}\toprule
+&\multicolumn{2}{c}{Training}&\multicolumn{2}{c}{No training}\\
+Prior skill & Count & Mean earnings & Count & Mean earnings\\\midrule
+High &1&12&3&10\\Low&3&6&1&4\\\bottomrule\end{tabular}\end{center}
+\begin{parts}
+\item \pts{6} Calculate mean earnings among all participants and among all nonparticipants, and their difference. Show how the counts enter the calculation.
+\workspace{0.95in}
+\item \pts{4} Calculate the participant-minus-nonparticipant mean difference separately within each prior-skill group. Compare the signs with part (a).
+\workspace{0.7in}
+\item \pts{6} Explain how the group composition produces the contrast between (a) and (b). Does either comparison by itself establish a causal training effect? Explain what remains uncertain even after separating workers by prior skill.
+\workspace{1.1in}
+\item \pts{4} For a worker who participated, define the missing counterfactual relevant to this question. Explain why another worker in the same prior-skill group need not supply that counterfactual exactly.
+\workspace{0.85in}
+\end{parts}
+\end{document}

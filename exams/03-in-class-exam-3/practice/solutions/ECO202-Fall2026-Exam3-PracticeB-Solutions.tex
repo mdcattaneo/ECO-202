@@ -1,0 +1,81 @@
+\documentclass[11pt]{article}
+\input{../exam-style.tex}
+\begin{document}
+\solutionheader{Practice Exam 3 --- Version B}{10--13}
+\section*{Questions 1--4: multiple choice}
+\begin{tabular}{cp{0.08\linewidth}p{0.75\linewidth}}\toprule
+Question & Answer & Reason and distractor check\\\midrule
+1 & C & The jump is $3/4-1/4=1/2$. A is mass strictly below 2; B is cumulative mass through 2; D adds incompatible cumulative quantities.\\[5pt]
+2 & C & Linearity and independent-sum variance give the stated exact moments. A needs extra distributional assumptions; B confuses variance with SD; D confuses unbiasedness with zero realized error.\\[5pt]
+3 & A & The LLN gives concentration; the CLT supplies the limiting shape after centering and scaling. B makes an incorrect path guarantee, C changes the wrong distribution, and D confuses a limit with an exact finite result.\\[5pt]
+4 & D & $\mathrm{Cov}(X,Y)=(1/2)(2)(3)=3$, so the difference variance is $4+9-6=7$. A omits covariance, B treats correlation as covariance, and C uses the sum's sign.\\\bottomrule
+\end{tabular}
+
+\solution{5}{A nonlinear transformation can preserve dependence}
+\begin{parts}
+\item The CDF includes the mass at its argument:
+\[
+F_X(t)=\begin{cases}
+0,&t<-1,\\
+1/4,&-1\leq t<0,\\
+1/2,&0\leq t<1,\\
+1,&t\geq1.
+\end{cases}
+\]
+The moments are $\mathbb E[X]=-1/4+1/2=1/4$, $\mathbb E[X^2]=1/4+1/2=3/4$, and $\mathrm{Var}(X)=3/4-(1/4)^2=11/16$.
+\item $H=0$ has probability $1/4$ and $H=1$ has probability $3/4$. It is $H=\mathbf 1\{X\neq0\}$. Thus $\mathbb E[H]=3/4$ and $\mathrm{Var}(H)=(3/4)(1/4)=3/16$.
+\item Here $XH=X^3=X$ on the support. Thus
+\[
+\mathbb E[XH]=\frac14,\qquad
+\mathrm{Cov}(X,H)=\frac14-\frac14\frac34=\frac1{16}.
+\]
+It follows that $\mathrm{Var}(X+H)=11/16+3/16+2/16=1$. A direct check is that $X+H$ equals 0 with probability $1/2$ and 2 with probability $1/2$.
+\item For example, $\mathbb P(X=0,H=0)=1/4$, whereas $\mathbb P(X=0)\mathbb P(H=0)=(1/4)^2=1/16$. This violates independence. Also $\mathbb E[XH]=1/4$ differs from $\mathbb E[X]\mathbb E[H]=3/16$; factoring the product expectation would incorrectly assume a property absent here.
+\end{parts}
+
+\solution{6}{Estimating a population maximum}
+\begin{parts}
+\item Independence gives $\mathbb P(M_2=0)=(1/2)^2=1/4$. Both draws must be at most 2 for the maximum to be at most 2, so $\mathbb P(M_2\leq2)=(3/4)^2=9/16$. Subtracting the probability of maximum 0 and taking the remaining complement gives
+\begin{center}\begin{tabular}{c|ccc}\toprule
+Possible $M_2$ & 0 & 2 & 4\\\midrule
+Probability & $1/4$ & $5/16$ & $7/16$\\\bottomrule
+\end{tabular}\end{center}
+The probabilities sum to one.
+\item $\mathbb E[M_2]=2(5/16)+4(7/16)=19/8$. Its bias for 4 is $19/8-4=-13/8$. The maximum never exceeds 4 and is strictly below 4 with positive probability, so its expectation is below the target.
+\item Directly from the errors,
+\[
+\mathrm{MSE}(M_2;4)=(-4)^2\frac14+(-2)^2\frac5{16}+0^2\frac7{16}=\frac{21}4.
+\]
+Bias averages signed errors; MSE averages squared errors, capturing variability as well as systematic offset. As a check, $\mathrm{Var}(M_2)=167/64$ and squared bias is $169/64$, which sum to $21/4$; these separate calculations are not required.
+\item A draw misses 4 with probability $3/4$, and independent draws all miss it with probability $(3/4)^n$. Hence $\mathbb P(M_n=4)=1-(3/4)^n$. The statistic's distribution depends on the number of draws; a two-draw distribution cannot describe all sample sizes.
+\end{parts}
+
+\solution{7}{A discrete count and its continuous approximation}
+\begin{parts}
+\item $K\sim\mathsf{Binomial}(48,1/4)$ exactly. Each indicator has mean $1/4$ and variance $3/16$. Linearity and independence yield
+\[
+\mathbb E[K]=12,\quad \mathrm{Var}(K)=48(3/16)=9,\quad \mathrm{SE}(K)=3.
+\]
+Dividing by 48 yields $\mathbb E[\widehat P]=1/4$ and $\mathrm{SE}(\widehat P)=3/48=1/16$. Expected successes are 12 and expected failures are 36; neither is very small, supporting an ordinary Normal approximation here.
+\item The continuous upper boundary for $K\leq17$ is $17.5$. Therefore
+\[
+z=\frac{17.5-12}{3}=\frac{11}{6},\qquad
+\mathbb P(K\leq17)\approx\Phi(11/6)=0.9666.
+\]
+The equivalent exact event for the sample proportion is $\widehat P\leq17/48$. The half-unit adjustment belongs to the count scale; on the proportion scale the corrected continuous boundary would be $17.5/48$.
+\item The LLN states that $\widehat P_n$ concentrates around $p=1/4$, in the sense that fixed positive deviations have probability tending to zero. The CLT states that $(\widehat P_n-p)/\sqrt{p(1-p)/n}$ approaches a standard Normal distribution. The unscaled error shrinks; the centered and scaled error retains a nondegenerate limiting distribution.
+\item Twelve is the mean of the sampling distribution over repeated groups of 48 independent draws, not a required count in any one group. A realized count is one integer from 0 through 48, while the expected count is fixed by $n$ and $p$ and need not in general be an integer.
+\end{parts}
+
+\solution{8}{Combining estimators and reporting uncertainty}
+\begin{parts}
+\item Linearity gives $\mathbb E[T_1-3T_2]=\theta_1-3\theta_2$, so the combination is unbiased for its stated target. Independence is not required for this expectation result.
+\item The covariance contributes with the sign of the two coefficients:
+\[
+\mathrm{Var}(T_1-3T_2)=4+9(9)+2(1)(-3)(1)=79.
+\]
+MSE is also 79 because the bias is zero. Adding only $4+9(9)=85$ drops the nonzero covariance term; the two estimators share uncertainty under this model.
+\item $\mathbb E[T_1^2]=\theta_1^2+4$, so $\mathbb E[T_1^2+T_2]=\theta_1^2+\theta_2+4$. The bias is 4. Subtracting it gives the unbiased estimator $T_1^2+T_2-4$. No independence assumption is needed for this expectation calculation.
+\item The estimated standard error is $s/\sqrt n=10/5=2$ dollars. This estimates the sample mean's repeated-sampling SD; it does not reveal the realized error $80-\mu$. The population mean $\mu$ is unknown, so neither the signed error nor its absolute magnitude is established. The sample SD, estimated SE, and realized error are three different quantities.
+\end{parts}
+\end{document}

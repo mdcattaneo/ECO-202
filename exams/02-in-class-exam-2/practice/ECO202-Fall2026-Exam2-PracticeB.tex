@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\input{exam-style.tex}
+\begin{document}
+\examheader{Practice Exam 2 --- Version B}{Fall 2026}{6--9}
+\mcq{An online poll attracts one million voluntary responses. Which claim is justified solely by that large response count?}
+{The poll has no selection bias.}
+{The respondents constitute an SRS of internet users.}
+{None of these claims about representativeness follows from the count alone.}
+{The poll accurately describes every adult in the country.}
+\mcq{Some people randomly offered a job-search course do not attend. Which analysis preserves the original randomized comparison?}
+{Choose the comparison producing the largest difference.}
+{Compare course attendees with everyone who did not attend.}
+{Remove all nonattendees from the offered group.}
+{Compare outcomes by assigned offer, keeping nonattendees in their assigned group.}
+\mcq{Which event means that neither $A$ nor $B$ occurs?}
+{$A^c\cup B^c$.}
+{$A\cap B$.}
+{$A\cup B$.}
+{$(A\cup B)^c=A^c\cap B^c$.}
+\mcq{Suppose $\mathbb P(B)=1/3$, $\mathbb P(A\mid B)=1/2$, and $\mathbb P(A\mid B^c)=1/4$. What is $\mathbb P(A)$?}
+{$3/4$.}
+{$1/3$.}
+{$1/6$.}
+{$3/8$.}
+\input{ECO202-Fall2026-Exam2-FormulaSupport.tex}
+
+\written{5}{Unequal representation in a probability sample}
+A finite population contains two small firms $S_1,S_2$ and four large firms $L_1,L_2,L_3,L_4$. A design uniformly selects one small firm and, independently, one large firm. There are 15 unordered pairs among all six firms.
+\begin{parts}
+\item \pts{5} How many samples can this design select, and what is each sample's probability? Compare these with an SRS of two from all six firms.
+\workspace{1.8cm}
+\item \pts{5} Find each small firm's inclusion probability and each large firm's inclusion probability. Explain why this is a probability sample despite those probabilities being unequal, and why it is not an SRS.
+\workspace{2cm}
+\item \pts{6} Each small firm has 2 employees and each large firm has 10. Calculate the mean number of employees across all six firms and the unweighted mean in any sample produced by the stratified design. Explain the difference using the small-firm shares in the population and sample; no weighting formula is required.
+\workspace{2.3cm}
+\item \pts{4} Suppose a city survey uses only currently operating firms in its frame to describe every firm that operated last year, including firms that have closed. Name the resulting coverage problem. Does the problem alone determine whether mean employment is overstated or understated? Explain.
+\workspace{1.8cm}
+\end{parts}
+
+\written{6}{Designing an encouragement experiment}
+A researcher recruits 80 volunteer households to study electricity conservation. The researcher can vary two features: whether a household receives a usage-comparison report (yes or no), and whether it receives a weekly reminder (yes or no). The outcome is each household's electricity use over the following month. All households' outcomes can be collected from meters, and assume no household's treatment affects another household's outcome.
+\begin{parts}
+\item \pts{5} Identify the experimental unit, the two factors and their levels, and all four treatment conditions. Which condition provides the natural comparison without either encouragement?
+\workspace{1.8cm}
+\item \pts{5} Describe a completely randomized procedure assigning exactly 20 households to each condition. Explain what provides comparison, randomization, and replication in your design. No count of all possible assignments is needed.
+\workspace{2.2cm}
+\item \pts{5} In the realized experiment, the report-only group uses a mean of 90 units and the neither-encouragement group a mean of 100 units. Calculate and interpret their mean difference as an estimate of the effect of assigning the report when no reminder is assigned. Does this show that every household reduced its use by that amount?
+\workspace{2cm}
+\item \pts{5} A colleague says, ``Random assignment makes these volunteers a random sample of all households, and the groups must have identical pre-experiment electricity use.'' Explain both errors. Suggest a design change that directly limits imbalance in pre-experiment usage while keeping assignment random.
+\workspace{2.1cm}
+\end{parts}
+
+\written{7}{Conditional probabilities remain probabilities}
+Let $C$ and $D$ be disjoint events, and let $F$ have positive probability.
+\begin{parts}
+\item \pts{6} Use the definition of conditional probability, set intersections, and disjoint additivity to show
+\[
+\mathbb P(C\cup D\mid F)=\mathbb P(C\mid F)+\mathbb P(D\mid F).
+\]
+Explain where disjointness is used.
+\workspace{2.4cm}
+\item \pts{5} Suppose $\mathbb P(F)=1/2$, $\mathbb P(C\cap F)=1/8$, and $\mathbb P(D\cap F)=1/4$. Calculate $\mathbb P(C\mid F)$, $\mathbb P(D\mid F)$, and $\mathbb P(C\cup D\mid F)$.
+\workspace{1.9cm}
+\item \pts{4} Calculate the probability that neither $C$ nor $D$ occurs given $F$. Explain why the unconditional complement $1-\mathbb P(C\cup D)$ is not the requested calculation.
+\workspace{1.8cm}
+\item \pts{5} In addition, suppose $\mathbb P(C)=1/4$. Find $\mathbb P(F\mid C)$ and decide whether $C$ and $F$ are independent. Explain why the forward and reverse conditional probabilities can differ even when the events are independent.
+\workspace{2cm}
+\end{parts}
+
+\written{8}{Applications, waitlists, and admission}
+A college's applicants belong to two groups, H and L. A randomly selected applicant has probability $1/4$ of belonging to H and $3/4$ of belonging to L. Initially, half of H applicants are admitted and half are waitlisted; among L applicants, $1/4$ are waitlisted and $3/4$ are rejected. Nobody initially admitted is later removed. Every waitlisted applicant has probability $1/5$ of eventual admission, regardless of group. Applicants initially rejected are never admitted.
+\begin{parts}
+\item \pts{5} Draw a probability tree through the initial decisions, or construct its equivalent joint-probability table. Include all nonzero branches and their probabilities.
+\workspace{2.3cm}
+\item \pts{5} Among the waitlisted applicants, what proportion belong to H? Show the total waitlist probability used as your denominator.
+\workspace{1.9cm}
+\item \pts{5} Calculate the probability an applicant is eventually admitted, including both immediate and waitlist admissions.
+\workspace{1.9cm}
+\item \pts{5} Among all eventually admitted applicants, what proportion belong to H? Explain why the waitlist composition from part (b) is not the answer and why this calculation does not establish a causal effect of belonging to H.
+\workspace{2.1cm}
+\end{parts}
+\end{document}

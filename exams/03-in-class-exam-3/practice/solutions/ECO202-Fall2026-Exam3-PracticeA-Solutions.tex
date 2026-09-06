@@ -1,0 +1,96 @@
+\documentclass[11pt]{article}
+\input{../exam-style.tex}
+\begin{document}
+\solutionheader{Practice Exam 3 --- Version A}{10--13}
+\section*{Questions 1--4: multiple choice}
+\begin{tabular}{cp{0.08\linewidth}p{0.75\linewidth}}\toprule
+Question & Answer & Reason and distractor check\\\midrule
+1 & C & An indicator's expectation is its event probability. A substitutes a different variable. B restricts the expectation to the possible realizations. D omits the factor $1-p$ from variance.\\[5pt]
+2 & B & $12/\sqrt{64}=3/2$. A gives observation spread; C divides by $n$ rather than $\sqrt n$; D gives the estimated variance of the mean.\\[5pt]
+3 & D & The CLT concerns centered and scaled sampling error. A asserts unjustified finite-sample exactness; B concerns the wrong object; C omits centering and scaling.\\[5pt]
+4 & D & The covariance term in the sum variance is zero. A wrongly reverses the implication from independence. B is unnecessary, and C claims moments identify the full joint distribution.\\\bottomrule
+\end{tabular}
+
+\solution{5}{Marginal distributions and transformations}
+\begin{parts}
+\item The row sums are $\mathbb P(Y=0)=1/2$, $\mathbb P(Y=2)=1/4$, and $\mathbb P(Y=4)=1/4$. Then
+\[
+\mathbb E[Y]=\frac24+\frac44=\frac32,\quad
+\mathbb E[Y^2]=\frac44+\frac{16}4=5,\quad
+\mathrm{Var}(Y)=5-\frac94=\frac{11}4.
+\]
+\item $V=0$ when $Y=2$ and $V=4$ when $Y=0$ or 4. Thus $\mathbb P(V=0)=1/4$ and $\mathbb P(V=4)=3/4$. Squaring the distance from 2 maps the two equally distant endpoints to the same outcome, so their masses must be added.
+\item $\mathbb P(X=2)=1/4+1/8=3/8$, giving $\mathbb E[X]=3/4$. The only cell with nonzero product is $(X,Y)=(2,2)$, with probability $1/8$, so
+\[
+\mathbb E[XY]=4(1/8)=\frac12,\qquad
+\mathrm{Cov}(X,Y)=\frac12-\frac34\frac32=-\frac58.
+\]
+The largest $Y$ value occurs only with $X=0$, producing opposite co-movement in deviations on average; the exact covariance verifies this sign.
+\item The sign on the covariance term changes for a difference:
+\[
+\mathrm{Var}(Y-X)=\frac{11}4+\frac{15}{16}-2\left(-\frac58\right)=\frac{79}{16}.
+\]
+For comparison, $\mathrm{Var}(Y+X)=39/16$. Negative covariance makes the sum's deviations offset, while subtraction makes those opposite deviations reinforce each other.
+\end{parts}
+
+\solution{6}{From two draws to many counts}
+\begin{parts}
+\item The ordered samples $(0,0),(0,2),(2,0),(2,2)$ each have probability $1/4$. Their means are $0,1,1,2$, so
+\begin{center}\begin{tabular}{c|ccc}\toprule
+Possible $\bar X_2$ & 0 & 1 & 2\\\midrule
+Probability & $1/4$ & $1/2$ & $1/4$\\\bottomrule
+\end{tabular}\end{center}
+Directly, $\mathbb E[\bar X_2]=1$, $\mathbb E[\bar X_2^2]=3/2$, and $\mathrm{Var}(\bar X_2)=1/2$. One draw has variance 1, so this also verifies $\sigma^2/2$.
+\item $H_i$ is Bernoulli with $p=1/2$; the independent sum is $K\sim\mathsf{Binomial}(64,1/2)$. Thus
+\[
+\mathbb E[K]=32,\quad \mathrm{Var}(K)=16,\quad \mathrm{SD}(K)=4,
+\]
+\[
+\mathbb E[\widehat P]=\frac12,\quad \mathrm{SD}(\widehat P)=\frac4{64}=\frac1{16}.
+\]
+The SD of the sample proportion is also its standard error. Count and proportion have different scales even though they convey the same information.
+\item The corrected continuous interval is $[27.5,36.5]$, extending half a unit beyond the two included integer endpoints. Standardizing gives
+\[
+\left[\frac{27.5-32}{4},\frac{36.5-32}{4}\right]
+=\left[-\frac98,\frac98\right].
+\]
+Consequently
+\[
+\mathbb P(28\leq K\leq36)\approx\Phi(9/8)-\Phi(-9/8)
+=2(0.8697)-1=0.7394.
+\]
+The correction accounts for the discrete boundary by approximating whole integer bins with continuous area. It does not replace the finite binomial distribution by an exactly equal Normal distribution; the probability remains an approximation. Both expected successes and failures are 32.
+\end{parts}
+
+\solution{7}{What averaging does and does not do}
+\begin{parts}
+\item Linearity and independence give
+\[
+\mathbb E[\bar X_{36}]=20,\qquad
+\mathrm{Var}(\bar X_{36})=\frac{36(12^2)}{36^2}=4,\qquad
+\mathrm{SE}(\bar X_{36})=2\text{ dollars}.
+\]
+The center and variance statements are exact despite skewness. The variance has squared-dollar units; the mean and SE have dollar units.
+\item At $n=36$, the standardized boundary is $(22-20)/2=1$, giving an approximate upper tail of $1-\Phi(1)=0.1587$. At $n=144$, the SE is $12/12=1$, the standardized boundary is 2, and the approximate tail is $1-\Phi(2)=0.0228$. Across hypothetical independent samples, the larger sample mean is less likely to exceed a fixed threshold above the same population mean. Accuracy of the finite-sample Normal approximation still depends on the population's shape.
+\item The original expenditure distribution remains fixed and skewed. The LLN says that sample means become concentrated near 20: for fixed $\varepsilon>0$, $\mathbb P(|\bar X_n-20|>\varepsilon)\to0$. It is a claim about the mean's repeated-sampling behavior, not a change in individual expenditure values.
+\item Within-group dependence can make cross-covariances nonzero. The step replacing the variance of a sum by the sum of variances therefore needs re-examination. Many correlated rows need not supply the same information as the same number of independent draws; row count alone does not validate $12/\sqrt n$.
+\end{parts}
+
+\solution{8}{Bias, precision, and the target}
+\begin{parts}
+\item The estimand is $p$, the probability of a yes response to the specified intention question under the model. The estimator is the random proportion $\widehat P=100^{-1}\sum_i H_i$, and its observed estimate is $\widehat p=64/100=16/25$. The estimated SE is
+\[
+\sqrt{\frac{(16/25)(9/25)}{100}}=\sqrt{\frac{144}{62500}}=\frac6{125}.
+\]
+This is estimated sampling variability, not an observed estimation error.
+\item For $T=\widehat P/2+1/4$,
+\[
+\mathbb E[T]=\frac p2+\frac14,\quad
+\mathrm{Bias}(T;p)=\frac14-\frac p2,\quad
+\mathrm{Var}(T)=\frac{p(1-p)}{400}.
+\]
+The variance is one-quarter of $\mathrm{Var}(\widehat P)=p(1-p)/100$. That reduction comes with bias unless $p=1/2$.
+\item At $p=1/2$, $\widehat P$ has MSE $1/400$, while $T$ has zero bias and MSE $1/1600$. At $p=0$, every modeled response is no: $\widehat P=0$ always and has MSE 0, but $T=1/4$ always and has MSE $1/16$. These evaluate the rules under hypothetical populations; the observed 64 yes responses are not being assigned to the $p=0$ population. Neither unbiasedness nor variance alone is a universal ranking criterion; MSE accounts for both.
+\item A yes response measures stated intention. Actual renewal is a different outcome and may have a different probability. Unbiasedness for one target does not establish unbiasedness for another. More responses can improve precision for intention under the model, but cannot by themselves establish the connection between intentions and behavior.
+\end{parts}
+\end{document}
