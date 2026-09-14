@@ -8,6 +8,10 @@
 
 **Class-folder workflow:** Use this guide for preparation, class, and review; run adjacent files when directed; then complete [ungraded practice](practice/) before studying the [worked solutions](practice/solutions/).
 
+**Class notes:** [Handwritten notes from September 14](class-03-notes.pdf).
+
+**Correction to the handwritten notes (September 14):** On PDF page 5, the purple variance calculation should begin with $b^2s_y^2$, not $(1/b^2)s_y^2$. Here $y_i=x_i-\bar x$ and $b=1/s_x$, so $s_z^2=b^2s_y^2=(1/s_x^2)s_x^2=1$, as the remaining calculation shows.
+
 <!-- Source lineage: Econ202-UlrichMueller/LectureNotes.tex, Density Curves, Normal Distribution and Standardization; Spring 2026 PS1--PS2; Spring 2025 Midterm Exam 1; Moore, McCabe, and Craig, Chapter 1. The empirical example uses the documented bwght CSV distributed with the course. -->
 
 ## Central question
