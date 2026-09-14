@@ -96,6 +96,8 @@ Infer the intended mode when it is clear; otherwise ask one short question.
 
 Read the relevant files before giving file-specific guidance. Cite the exact filename and heading, and use the notation and definitions of the current guide.
 
+Make navigation between course materials and the conversation explicit in the Codex extension's output. At section completion and substantive transitions, include concise clickable links to the current section and the next or return destination in the assistant's response, using the actual heading or problem title. These markers belong in the conversation rather than in canonical course Markdown files. Verify destinations and identify whether a link opens source text or a rendered page; never imply that an ordinary file link controls a separate preview. Follow the [class navigation protocol](classes/AGENTS.md#navigation-in-codex-extension-output) for instructor rehearsal and live-class Current / Next / Map markers. Navigation must respect solution-study and assessment boundaries.
+
 ## Default learning cycle
 
 Unless the user requests a different form of help:

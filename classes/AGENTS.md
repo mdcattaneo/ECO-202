@@ -53,6 +53,8 @@ Identify the class guide and mode. If both are clear, begin without asking again
 - **Solution-study session:** deliberate comparison, reconstruction, and unaided transfer after a genuine attempt.
 - **Review session:** cumulative retrieval, synthesis, and exam preparation.
 
+An instructor's private rehearsal uses the instructor workflow without recording classroom coverage. Keep it in rehearsal mode until the instructor explicitly announces the start of the actual lecture.
+
 Read the folder's `README.md` before giving guide-specific help. Inspect an adjacent script, dataset, or figure only when the guide or user makes it relevant. Briefly identify the current heading, learning goal, empirical setting, and assumptions in force.
 
 When the guide has an in-class route, treat it as the projected navigation surface. Its three columns are `Stop | Live focus | Mode`; each live-focus link should point to a stable stop anchor in the same guide. The route is the sole visible index of stop identifiers and teaching modes. Each linked body section should begin with its descriptive heading, without a repeated stop identifier, mode, or `In class` banner. The route describes the planned order and emphasis; it is not by itself a record of actual coverage or student mastery.
@@ -74,6 +76,21 @@ A useful cycle is:
 Some material needs no AI interaction. Keep projected responses concise, legible, and easy to inspect.
 
 AI interactions should demonstrate durable practices, not merely product features. Make the request, context, assumptions, proposed output, verification route, and revision visible. When code is generated live, distinguish writing the code from deciding what should be computed, running it, checking it, and interpreting the result.
+
+## Navigation in Codex extension output
+
+Include a compact navigation marker in the assistant's response displayed in the Codex extension at the start of a rehearsal or lecture, whenever a section is finished, and at substantive moves between the Markdown guide and an explanation, board calculation, checkpoint, AI interaction, code, data, figure, or practice problem. The requested navigation is part of the extension's conversation output; do not add markers to the class Markdown guides. Provide clickable links rather than only naming files. A brief follow-up within the same calculation need not repeat the marker unless location would otherwise become unclear.
+
+- **Current:** Link to the current guide section, using its route stop identifier and descriptive heading. When discussing an adjacent file, also link to that file or its relevant section.
+- **Next:** At a section boundary, link to the next planned section or the destination selected by the instructor. Label it as next rather than silently advancing the current location; omit it when no next destination is established.
+- **Return:** When temporarily visiting another section or file, link back to the guide section from which the discussion departed.
+- **Map:** Link to the guide's in-class route when beginning, changing sections, or recovering orientation. Keep the marker short; include Return or Map when it helps the immediate transition.
+
+Use verified destinations from the current files. In Codex, local links should use an absolute file path and the current source line for the relevant heading, with angle brackets around targets containing spaces. Recheck line numbers after edits. Label these as source links. For a browser session, use the corresponding rendered page and verified section anchor. Do not substitute a browser or published version for the local Office Viewer guide without making that destination clear.
+
+In the instructor's VS Code setup, ordinary Codex file links open the Markdown source editor; they do not directly select or scroll the rendered Office Viewer section. Explain this distinction once near the start of the session, and again if the user needs help with navigation. Use the guide's existing in-class route, full guide map, or Office Viewer outline for navigation within the rendered guide. Do not promise a direct chat-to-Office-Viewer jump unless an integration has actually been installed and verified. The source-link limitation does not remove the requirement to provide links in AI output.
+
+Update Current only when the instructor indicates a move, and distinguish a planned next stop, a temporary return, and a completed section. Navigation markers in chat supplement the guide's route; they do not create a second index in the guide or establish that material was taught. Keep rehearsal progress separate from the live class ledger. Do not insert conversation links or progress markers into canonical course files unless the instructor requests that edit.
 
 ## Visual and rendering conventions
 

@@ -2,7 +2,7 @@
 
 **Date:** Monday, September 14, 2026  
 **Status:** Complete first version  
-**Last updated:** August 30, 2026
+**Last updated:** September 14, 2026
 
 [← Class 2](../02-descriptive-statistics-and-data-visualization/) · [Practice 3](practice/) · [Course syllabus](../../ECO202-Fall2026-Syllabus.pdf) · [Class 4 →](../04-scatterplots-correlation-and-descriptive-regression/)
 
@@ -126,7 +126,11 @@ Occupation A has mean hourly wage 20 dollars and standard deviation 4 dollars; o
 
 ## 3. Density curves as probability models
 
-A **density curve** is nonnegative and has total area one. For a continuous random variable, the probability of an interval is the area under the density over that interval. The probability of one exact point is zero even though intervals around that point can have positive probability.
+A **density curve** is nonnegative and has total area one. As a model for a distribution, its area over an interval represents the proportion assigned to that interval by the model. This model proportion can approximate an observed fraction without equaling it exactly.
+
+**Probability notation (introductory preview).** The symbol $\mathbb P$ means "probability under the stated model." For example, $\mathbb P(X\leq1)$ reads "the probability that $X$ is at most 1." A probability is a number between 0 and 1; a probability of 0.25 corresponds to 25 percent. We use this notation here to express model proportions, while Class 8 develops probability and its formal rules.
+
+For a continuous random variable described by a density curve, the probability of an interval is the area under the density over that interval. The probability of one exact point is zero because a point has zero width and hence zero area, even though intervals around that point can have positive probability. Density height is not itself a probability.
 
 The median divides the area in half; a mode is a peak; the mean is a balance point. These locations coincide for a symmetric unimodal density but need not coincide in a skewed model.
 
