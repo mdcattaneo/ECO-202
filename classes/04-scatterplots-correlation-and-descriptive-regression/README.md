@@ -2,11 +2,13 @@
 
 **Date:** Wednesday, September 16, 2026  
 **Status:** Complete first version  
-**Last updated:** August 30, 2026
+**Last updated:** September 16, 2026
 
 [← Class 3](../03-density-curves-normal-distributions-and-standardization/) · [Practice 4](practice/) · [Course syllabus](../../ECO202-Fall2026-Syllabus.pdf) · [Class 5 →](../05-association-causation-and-confounding/)
 
 **Class-folder workflow:** Use this guide for preparation, class, and review; run adjacent files when directed; then complete [ungraded practice](practice/) before studying the [worked solutions](practice/solutions/).
+
+**Class notes:** [Handwritten notes from September 16](class-04-notes.pdf).
 
 <!-- Source lineage: Econ202-UlrichMueller/LectureNotes.tex, Correlation and Regression; Spring 2026 PS1--PS2; Spring 2025 Midterm Exam 1; Moore, McCabe, and Craig, Chapter 2. The empirical example uses the documented wage1 CSV distributed with the course. -->
 
