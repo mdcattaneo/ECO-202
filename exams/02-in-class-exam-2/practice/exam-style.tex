@@ -14,6 +14,9 @@
 \rhead{\paperlabel}
 \cfoot{\thepage\ of \pageref{LastPage}}
 \newcommand{\paperlabel}{Statistics and Data Analysis for Economics}
+% Generic pacing defaults; an individual paper may override these in its source.
+\newcommand{\examtiming}{Target workload: 70 minutes (10 minutes multiple choice; 60 minutes written work). Follow announced start/end times within the 80-minute meeting. For practice, set a 70-minute timer.}
+\newcommand{\writtenminutes}{15}
 % Arguments: complete paper title, date/term, covered class numbers.
 \newcommand{\examheader}[3]{%
   \renewcommand{\paperlabel}{#1}%
@@ -24,7 +27,7 @@
   \end{center}
   Name: \rule{2.6in}{0.4pt}\hfill Student ID: \rule{1.3in}{0.4pt}\par
   \begin{small}
-  \textbf{Timing.} Target workload: 70 minutes (10 minutes multiple choice; 60 minutes written work). Follow announced start/end times within the 80-minute meeting. For practice, set a 70-minute timer.
+  \textbf{Timing.} \examtiming
 
   \textbf{Conditions.} No books, notes, calculators, AI, or other electronics; University-authorized accommodations apply. Fractions, radicals, and equivalent exact expressions are acceptable. Show reasoning in written answers. Data are teaching examples unless identified otherwise.
 
@@ -36,7 +39,7 @@
 \newcommand{\mcq}[5]{%
   \par\addvspace{6pt}\begin{minipage}{\linewidth}
   \refstepcounter{mcquestion}\textbf{\themcquestion.} #1
-  \begin{enumerate}[label=\textbf{\Alph*.},leftmargin=1.9em,itemsep=1pt,topsep=3pt]
+  \begin{enumerate}[label=\textbf{\Alph*.},leftmargin=3.8em,labelsep=0.65em,itemsep=1pt,topsep=3pt]
   \item #2
   \item #3
   \item #4
@@ -44,7 +47,7 @@
   \end{enumerate}
   \end{minipage}\par
 }
-\newcommand{\written}[2]{\clearpage\section*{#1. #2 \normalfont\large(20 points; about 15 minutes)}}
+\newcommand{\written}[2]{\clearpage\section*{#1. #2 \normalfont\large(20 points; about \writtenminutes\ minutes)}}
 \newlist{parts}{enumerate}{1}
 \setlist[parts]{label=\textbf{(\alph*)},leftmargin=2em,itemsep=7pt,topsep=5pt}
 \newcommand{\pts}[1]{\textbf{(#1 points)}\ }
