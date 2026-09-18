@@ -1,4 +1,4 @@
-# ECO 202: Statistics and Data Analysis for Economics
+# ECO 202: Statistics and Data Analysis for Economics - hi!
 
 This repository contains the student-facing materials for ECO 202 at Princeton University in Fall 2026. The course is instructor-led and AI-integrated: each class guide provides the stable statistical and empirical spine, while AI is used selectively for explanation, critique, examples, code, and guided practice. Independent mastery is assessed through four closed-book, fully unaided in-class exams.
 
