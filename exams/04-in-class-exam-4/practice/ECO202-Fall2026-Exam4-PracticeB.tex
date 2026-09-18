@@ -19,10 +19,10 @@ Independent random samples of 100 households in Region A and 100 in Region B are
 
 The standard error for the difference is $\sqrt{\sigma_A^2/n_A+\sigma_B^2/n_B}$. For $Z\sim\mathsf N(0,1)$, $\mathbb P(Z>3/\sqrt2)=0.01695$. Use the two-sided 95\% critical value 1.96 and the upper-sided 5\% critical value 1.645.
 \begin{parts}
-\item \pts{4} Calculate the estimated difference and its standard error. \workspace{0.6in}
-\item \pts{6} Test $H_0:\Delta=0$ against $H_a:\Delta\ne0$ at 5\%, including the statistic, p-value and contextual conclusion. \workspace{0.8in}
-\item \pts{5} Construct the approximate 95\% interval and explain its agreement with the test. \workspace{0.8in}
-\item \pts{5} A separate upper-sided procedure rejects when $\widehat\Delta>1.645\,\mathrm{SE}$. Under a planning model with fixed $\mathrm{SE}$ and $\widehat\Delta\sim\mathsf N(\Delta,\mathrm{SE}^2)$, what are power and Type II error probability when the true $\Delta=1.645\,\mathrm{SE}$? Explain without a probability table. \workspace{0.8in}
+\answerpart{0.6in}{\pts{4} Calculate the estimated difference and its standard error.}
+\answerpart{0.8in}{\pts{6} Test $H_0:\Delta=0$ against $H_a:\Delta\ne0$ at 5\%, including the statistic, p-value and contextual conclusion.}
+\answerpart{0.8in}{\pts{5} Construct the approximate 95\% interval and explain its agreement with the test.}
+\answerpart{0.8in}{\pts{5} A separate upper-sided procedure rejects when $\widehat\Delta>1.645\,\mathrm{SE}$. Under a planning model with fixed $\mathrm{SE}$ and $\widehat\Delta\sim\mathsf N(\Delta,\mathrm{SE}^2)$, what are power and Type II error probability when the true $\Delta=1.645\,\mathrm{SE}$? Explain without a probability table.}
 \end{parts}
 
 \written{6}{An observational threshold comparison}
@@ -34,10 +34,10 @@ Use the unpooled estimate-based standard error
 \]
 and the Normal critical value 1.96. A proposed two-sided Wald test uses this \emph{same} standard error; no pooled test is requested.
 \begin{parts}
-\item \pts{4} Calculate the two proportions and their difference. Give the difference in percentage points. \workspace{0.6in}
-\item \pts{6} Calculate the standard error and construct an approximate 95\% confidence interval. \workspace{0.8in}
-\item \pts{5} Determine the matching 5\% test decision for $\Delta_p=0$, justifying the comparison without a calculator. Check observed successes and failures in both groups. \workspace{0.9in}
-\item \pts{5} Does statistical significance establish that moving closer to a station causes a household to cross the threshold, or that the difference is economically important? Explain what else is needed for each conclusion. \workspace{0.8in}
+\answerpart{0.6in}{\pts{4} Calculate the two proportions and their difference. Give the difference in percentage points.}
+\answerpart{0.8in}{\pts{6} Calculate the standard error and construct an approximate 95\% confidence interval.}
+\answerpart{0.9in}{\pts{5} Determine the matching 5\% test decision for $\Delta_p=0$, justifying the comparison without a calculator. Check observed successes and failures in both groups.}
+\answerpart{0.8in}{\pts{5} Does statistical significance establish that moving closer to a station causes a household to cross the threshold, or that the difference is economically important? Explain what else is needed for each conclusion.}
 \end{parts}
 
 \written{7}{Conditional information and overall wealth}
@@ -51,10 +51,10 @@ $\mathbb E[Y\mid X=x]$ & 4 & 10 & 12
 \end{center}
 Within the $X=1$ group, $Y=8$ and $Y=12$ each have conditional probability $1/2$.
 \begin{parts}
-\item \pts{4} Calculate $\mathbb P(X=1,Y=12)$ and verify the reported conditional mean for $X=1$. \workspace{0.6in}
-\item \pts{6} Find overall mean wealth using iterated expectations. Explain why an unweighted average of the three displayed means is generally wrong. \workspace{0.9in}
-\item \pts{5} Is the regression function $f(x)=\mathbb E[Y\mid X=x]$ linear? Would a best linear predictor necessarily equal all three displayed conditional means? Explain. \workspace{0.8in}
-\item \pts{5} Define $\varepsilon=Y-f(X)$. Calculate its two possible values within $X=1$ and its conditional mean. Does the wealth pattern establish that buying a phone increases wealth? Explain briefly. \workspace{0.9in}
+\answerpart{0.6in}{\pts{4} Calculate $\mathbb P(X=1,Y=12)$ and verify the reported conditional mean for $X=1$.}
+\answerpart{0.9in}{\pts{6} Find overall mean wealth using iterated expectations. Explain why an unweighted average of the three displayed means is generally wrong.}
+\answerpart{0.8in}{\pts{5} Is the regression function $f(x)=\mathbb E[Y\mid X=x]$ linear? Would a best linear predictor necessarily equal all three displayed conditional means? Explain.}
+\answerpart{0.9in}{\pts{5} Define $\varepsilon=Y-f(X)$. Calculate its two possible values within $X=1$ and its conditional mean. Does the wealth pattern establish that buying a phone increases wealth? Explain briefly.}
 \end{parts}
 
 \written{8}{A population line and an estimated line}
@@ -64,9 +64,9 @@ For a teaching population, $X$ is commute distance in kilometers and $Y$ is week
 \]
 An independent random sample from this population produces the fitted line $\widehat y=5.8-0.4x$ and a valid robust standard error of 0.1 for its slope. A large-sample Normal approximation applies. Use 1.96 and $\mathbb P(Z>1)=0.1587$ for $Z\sim\mathsf N(0,1)$.
 \begin{parts}
-\item \pts{5} Calculate the population best-linear-prediction coefficients. Explain why the sample coefficients need not equal them. \workspace{0.7in}
-\item \pts{4} Calculate the sample line's prediction at $x=3$ and interpret its slope with units. \workspace{0.6in}
-\item \pts{7} Construct a 95\% confidence interval from the sample slope and standard error. Test the benchmark $H_0:\beta_1=-1/2$ against $H_a:\beta_1\ne-1/2$ at 5\%, including the statistic, p-value and decision. \workspace{1.0in}
-\item \pts{4} A planner says: ``The negative slope proves that relocating any household one kilometer farther away reduces its weekly transit trips by the slope amount.'' Identify the unsupported causal and individual-level conclusions. \workspace{0.7in}
+\answerpart{0.7in}{\pts{5} Calculate the population best-linear-prediction coefficients. Explain why the sample coefficients need not equal them.}
+\answerpart{0.6in}{\pts{4} Calculate the sample line's prediction at $x=3$ and interpret its slope with units.}
+\answerpart{1.0in}{\pts{7} Construct a 95\% confidence interval from the sample slope and standard error. Test the benchmark $H_0:\beta_1=-1/2$ against $H_a:\beta_1\ne-1/2$ at 5\%, including the statistic, p-value and decision.}
+\answerpart{0.7in}{\pts{4} A planner says: ``The negative slope proves that relocating any household one kilometer farther away reduces its weekly transit trips by the slope amount.'' Identify the unsupported causal and individual-level conclusions.}
 \end{parts}
 \end{document}

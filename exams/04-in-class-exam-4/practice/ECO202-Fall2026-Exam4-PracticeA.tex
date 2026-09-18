@@ -16,10 +16,10 @@ A simple random sample of 25 independent households reports monthly spending bef
 
 Use $\widehat{\mathrm{SE}}(\bar D)=s_D/\sqrt n$. For a Student $t$ variable $T$ with 24 degrees of freedom, $\mathbb P(T>2)\approx0.0285$ and the two-sided 95\% critical value is approximately 2.064.
 \begin{parts}
-\item \pts{4} State the population target and explain why the analysis uses within-household differences rather than independent before/after samples. \workspace{0.7in}
-\item \pts{6} Test $H_0:\mu_D=0$ against $H_a:\mu_D\ne0$ at 5\%. Calculate the standard error, statistic and p-value, and state the decision. \workspace{0.8in}
-\item \pts{6} Construct the 95\% interval and interpret its confidence level correctly. Does it establish that the billing change caused the average change? \workspace{0.9in}
-\item \pts{4} For a future study, suppose the standard error scales as $1/\sqrt n$ and the critical value is held fixed for planning. What sample size would halve the margin of error? Explain. \workspace{0.7in}
+\answerpart{0.7in}{\pts{4} State the population target and explain why the analysis uses within-household differences rather than independent before/after samples.}
+\answerpart{0.8in}{\pts{6} Test $H_0:\mu_D=0$ against $H_a:\mu_D\ne0$ at 5\%. Calculate the standard error, statistic and p-value, and state the decision.}
+\answerpart{0.9in}{\pts{6} Construct the 95\% interval and interpret its confidence level correctly. Does it establish that the billing change caused the average change?}
+\answerpart{0.7in}{\pts{4} For a future study, suppose the standard error scales as $1/\sqrt n$ and the critical value is held fixed for planning. What sample size would halve the margin of error? Explain.}
 \end{parts}
 
 \written{6}{One employment proportion, two variance choices}
@@ -27,10 +27,10 @@ A random sample of 100 independent workers from a large target population contai
 
 Use the null standard error $\sqrt{p_0(1-p_0)/n}$ for the test and the estimate-based standard error $\sqrt{\widehat p(1-\widehat p)/n}$ for a Wald interval. Use 1.96 and $\mathbb P(Z>2)=0.0228$ for $Z\sim\mathsf N(0,1)$.
 \begin{parts}
-\item \pts{5} Calculate $\widehat p$, the null standard error and the standardized test statistic. \workspace{0.7in}
-\item \pts{5} Calculate the two-sided p-value and give the 5\% decision. Explain why the p-value is not the probability that $p=1/2$. \workspace{0.7in}
-\item \pts{6} Calculate the estimate-based standard error and construct the approximate 95\% Wald interval. Explain why this interval and the test do not use exactly the same variance estimate. \workspace{0.9in}
-\item \pts{4} Check success/failure counts for the approximation. If the 100 workers had instead volunteered for an online poll, would these counts alone justify generalization to the target population? Explain. \workspace{0.7in}
+\answerpart{0.7in}{\pts{5} Calculate $\widehat p$, the null standard error and the standardized test statistic.}
+\answerpart{0.7in}{\pts{5} Calculate the two-sided p-value and give the 5\% decision. Explain why the p-value is not the probability that $p=1/2$.}
+\answerpart{0.9in}{\pts{6} Calculate the estimate-based standard error and construct the approximate 95\% Wald interval. Explain why this interval and the test do not use exactly the same variance estimate.}
+\answerpart{0.7in}{\pts{4} Check success/failure counts for the approximation. If the 100 workers had instead volunteered for an online poll, would these counts alone justify generalization to the target population? Explain.}
 \end{parts}
 
 \written{7}{A complete joint distribution}
@@ -43,10 +43,10 @@ $Y\backslash X$ & 0 & 1 & 2\\\hline
 \end{tabular}
 \end{center}
 \begin{parts}
-\item \pts{5} Calculate the marginal distribution of $X$ and the conditional distribution of $Y$ given $X=1$. \workspace{0.8in}
-\item \pts{6} Calculate $f(x)=\mathbb E[Y\mid X=x]$ at all three values of $x$. Explain whether $f$ is linear. \workspace{0.9in}
-\item \pts{5} Use iterated expectations to obtain $\mathbb E[Y]$ and check the result using the marginal distribution of $Y$. \workspace{0.8in}
-\item \pts{4} For $\varepsilon=Y-f(X)$, calculate its two possible values conditional on $X=1$ and verify that its conditional mean is zero. \workspace{0.7in}
+\answerpart{0.8in}{\pts{5} Calculate the marginal distribution of $X$ and the conditional distribution of $Y$ given $X=1$.}
+\answerpart{0.9in}{\pts{6} Calculate $f(x)=\mathbb E[Y\mid X=x]$ at all three values of $x$. Explain whether $f$ is linear.}
+\answerpart{0.8in}{\pts{5} Use iterated expectations to obtain $\mathbb E[Y]$ and check the result using the marginal distribution of $Y$.}
+\answerpart{0.7in}{\pts{4} For $\varepsilon=Y-f(X)$, calculate its two possible values conditional on $X=1$ and verify that its conditional mean is zero.}
 \end{parts}
 
 \written{8}{Group means and a regression prediction}
@@ -54,9 +54,9 @@ An insurer observes independent random samples of 100 adults with college educat
 
 For this binary predictor, the least-squares line with an intercept fits each group's sample mean. Its slope standard error is $\sqrt{s_1^2/n_1+s_0^2/n_0}$. Use a large-sample Normal reference, 1.96, and $\mathbb P(Z>3)=0.00135$ for $Z\sim\mathsf N(0,1)$.
 \begin{parts}
-\item \pts{5} Determine the fitted intercept and slope. Interpret each in context. \workspace{0.8in}
-\item \pts{5} Calculate the slope's standard error and construct a 95\% interval for the population mean difference, college minus noncollege. \workspace{0.8in}
-\item \pts{5} Test equality of the two population means at 5\%, reporting hypotheses, statistic, p-value and decision. \workspace{0.8in}
-\item \pts{5} An employee says the line is useless for predicting expenditure because its slope is not known to be causal. Assess the claim. State both an assumption needed to apply the prediction to future adults and a causal conclusion the data alone cannot justify. \workspace{0.8in}
+\answerpart{0.8in}{\pts{5} Determine the fitted intercept and slope. Interpret each in context.}
+\answerpart{0.8in}{\pts{5} Calculate the slope's standard error and construct a 95\% interval for the population mean difference, college minus noncollege.}
+\answerpart{0.8in}{\pts{5} Test equality of the two population means at 5\%, reporting hypotheses, statistic, p-value and decision.}
+\answerpart{0.8in}{\pts{5} An employee says the line is useless for predicting expenditure because its slope is not known to be causal. Assess the claim. State both an assumption needed to apply the prediction to future adults and a causal conclusion the data alone cannot justify.}
 \end{parts}
 \end{document}

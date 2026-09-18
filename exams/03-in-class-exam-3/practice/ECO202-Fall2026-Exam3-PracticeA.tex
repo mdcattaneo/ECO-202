@@ -32,14 +32,10 @@ $Y=2$ & $1/8$ & $1/8$\\
 $Y=4$ & $1/4$ & $0$\\\bottomrule
 \end{tabular}\end{center}
 \begin{parts}
-\item \pts{6} Find the marginal distribution of $Y$, its expectation, and its variance.
-\workspace{0.9in}
-\item \pts{4} Find the full distribution of $V=(Y-2)^2$. Why can different values of $Y$ contribute to the same value of $V$?
-\workspace{0.8in}
-\item \pts{6} Calculate $\mathbb E[X]$, $\mathbb E[XY]$, and $\mathrm{Cov}(X,Y)$. Explain the sign of the covariance in this table.
-\workspace{1in}
-\item \pts{4} You may use $\mathrm{Var}(X)=15/16$. Find $\mathrm{Var}(Y-X)$ and explain why subtracting $X$ increases variability here relative to adding it.
-\workspace{0.9in}
+\answerpart{0.9in}{\pts{6} Find the marginal distribution of $Y$, its expectation, and its variance.}
+\answerpart{0.8in}{\pts{4} Find the full distribution of $V=(Y-2)^2$. Why can different values of $Y$ contribute to the same value of $V$?}
+\answerpart{1in}{\pts{6} Calculate $\mathbb E[X]$, $\mathbb E[XY]$, and $\mathrm{Cov}(X,Y)$. Explain the sign of the covariance in this table.}
+\answerpart{0.9in}{\pts{4} You may use $\mathrm{Var}(X)=15/16$. Find $\mathrm{Var}(Y-X)$ and explain why subtracting $X$ increases variability here relative to adding it.}
 \end{parts}
 
 \written{6}{From two draws to many counts}
@@ -47,12 +43,9 @@ A teaching population has two values, 0 and 2, each selected with probability $1
 
 Use $\Phi(z)=\mathbb P(Z\leq z)$ for standard Normal $Z$, with $\Phi(9/8)\approx0.8697$ and $\Phi(1)\approx0.8413$.
 \begin{parts}
-\item \pts{6} List all four possible ordered samples of size two and obtain the sampling distribution of $\bar X_2$. Calculate its expectation and variance directly from this distribution.
-\workspace{1.15in}
-\item \pts{6} Now take 64 independent draws. For $K=\sum_{i=1}^{64}H_i$ and $\widehat P=K/64$, calculate the means and standard deviations of $K$ and $\widehat P$. State the exact distribution family of $K$ and its parameters.
-\workspace{1.1in}
-\item \pts{8} Approximate $\mathbb P(28\leq K\leq36)$ using a continuity correction at \emph{both} boundaries. Show the standardized interval and probability. Explain what the correction accomplishes and one reason the result remains approximate.
-\workspace{1.35in}
+\answerpart{1.15in}{\pts{6} List all four possible ordered samples of size two and obtain the sampling distribution of $\bar X_2$. Calculate its expectation and variance directly from this distribution.}
+\answerpart{1.1in}{\pts{6} Now take 64 independent draws. For $K=\sum_{i=1}^{64}H_i$ and $\widehat P=K/64$, calculate the means and standard deviations of $K$ and $\widehat P$. State the exact distribution family of $K$ and its parameters.}
+\answerpart{1.35in}{\pts{8} Approximate $\mathbb P(28\leq K\leq36)$ using a continuity correction at \emph{both} boundaries. Show the standardized interval and probability. Explain what the correction accomplishes and one reason the result remains approximate.}
 \end{parts}
 
 \written{7}{What averaging does and does not do}
@@ -60,14 +53,10 @@ Customer expenditure amounts $X_i$ are independent and identically distributed, 
 
 Use $\Phi(1)\approx0.8413$ and $\Phi(2)\approx0.9772$ for the standard Normal CDF.
 \begin{parts}
-\item \pts{6} Derive $\mathbb E[\bar X_{36}]$, $\mathrm{Var}(\bar X_{36})$, and $\mathrm{SE}(\bar X_{36})$. State which results are exact under the model and the units of the standard error.
-\workspace{1.05in}
-\item \pts{6} Use the CLT to approximate $\mathbb P(\bar X_n>22)$ for $n=36$ and for $n=144$. Interpret the change while keeping the threshold and population fixed.
-\workspace{1.2in}
-\item \pts{4} A student says, ``The LLN makes the original expenditure distribution less skewed when we collect more observations.'' Correct the statement and state what the LLN actually says becomes concentrated.
-\workspace{0.9in}
-\item \pts{4} Suppose observations instead come in groups whose members tend to spend above or below the mean together. Explain which step in the simple standard-error derivation requires re-examination. Does a large row count alone justify using $12/\sqrt n$?
-\workspace{0.9in}
+\answerpart{1.05in}{\pts{6} Derive $\mathbb E[\bar X_{36}]$, $\mathrm{Var}(\bar X_{36})$, and $\mathrm{SE}(\bar X_{36})$. State which results are exact under the model and the units of the standard error.}
+\answerpart{1.2in}{\pts{6} Use the CLT to approximate $\mathbb P(\bar X_n>22)$ for $n=36$ and for $n=144$. Interpret the change while keeping the threshold and population fixed.}
+\answerpart{0.9in}{\pts{4} A student says, ``The LLN makes the original expenditure distribution less skewed when we collect more observations.'' Correct the statement and state what the LLN actually says becomes concentrated.}
+\answerpart{0.9in}{\pts{4} Suppose observations instead come in groups whose members tend to spend above or below the mean together. Explain which step in the simple standard-error derivation requires re-examination. Does a large row count alone justify using $12/\sqrt n$?}
 \end{parts}
 
 \written{8}{Bias, precision, and the target}
@@ -75,13 +64,9 @@ A model treats 100 responses to a renewal-\emph{intention} question as independe
 
 You may use $\mathrm{MSE}(T;p)=\mathrm{Var}(T)+(\mathbb E[T]-p)^2$ and the estimated standard error $\sqrt{\widehat p(1-\widehat p)/100}$ for the sample proportion.
 \begin{parts}
-\item \pts{5} Identify the estimand, estimator $\widehat P$, and realized estimate. Calculate the estimated standard error of $\widehat P$ from the observed sample.
-\workspace{1in}
-\item \pts{5} Derive the bias and variance of $T$ as functions of $p$. Compare its variance with that of $\widehat P$.
-\workspace{1.1in}
-\item \pts{5} Compare the MSEs of $T$ and $\widehat P$ at $p=1/2$ and at $p=0$. These are hypothetical model values for evaluating the rules; they are not claims about the observed sample. Does either unbiasedness alone or variance alone settle the comparison?
-\workspace{1.1in}
-\item \pts{5} Explain why an unbiased estimator of $p$ does not necessarily estimate the proportion who \emph{actually renew later} without bias. Would increasing the number of intention responses resolve that distinction?
-\workspace{0.9in}
+\answerpart{1in}{\pts{5} Identify the estimand, estimator $\widehat P$, and realized estimate. Calculate the estimated standard error of $\widehat P$ from the observed sample.}
+\answerpart{1.1in}{\pts{5} Derive the bias and variance of $T$ as functions of $p$. Compare its variance with that of $\widehat P$.}
+\answerpart{1.1in}{\pts{5} Compare the MSEs of $T$ and $\widehat P$ at $p=1/2$ and at $p=0$. These are hypothetical model values for evaluating the rules; they are not claims about the observed sample. Does either unbiasedness alone or variance alone settle the comparison?}
+\answerpart{0.9in}{\pts{5} Explain why an unbiased estimator of $p$ does not necessarily estimate the proportion who \emph{actually renew later} without bias. Would increasing the number of intention responses resolve that distinction?}
 \end{parts}
 \end{document}
