@@ -1,8 +1,8 @@
 # ECO 202 practice exams and released in-class exams
 
-**Status:** Practice exams and worked solutions released September 6, 2026; no real exams released
+**Status:** In-Class Exam 1 and its worked solutions released September 23, 2026; practice resources released September 6, 2026
 
-**Last updated:** September 6, 2026
+**Last updated:** September 23, 2026
 
 [Course home](../) · [Syllabus](../ECO202-Fall2026-Syllabus.pdf) · [Exam-study AI protocol](AGENTS.md) · [Class practice](../classes/PRACTICE.md)
 
@@ -12,7 +12,7 @@ Each exam covers its own module. Earlier concepts remain prerequisites, but ther
 
 | Assessment | Date in 2026 | Module | Practice exams | Real exam |
 |---|---|---|---|---|
-| [In-Class Exam 1](01-in-class-exam-1/) | September 23 | Classes 1–5 | [A and B](01-in-class-exam-1/practice/) | Not released |
+| [In-Class Exam 1](01-in-class-exam-1/) | September 23 | Classes 1–5 | [A and B](01-in-class-exam-1/practice/) | [Exam](01-in-class-exam-1/ECO202-Fall2026-Exam1.pdf) · [Solutions](01-in-class-exam-1/ECO202-Fall2026-Exam1-Solutions.pdf) |
 | [In-Class Exam 2](02-in-class-exam-2/) | October 12 | Classes 6–9 | [A and B](02-in-class-exam-2/practice/) | Not released |
 | [In-Class Exam 3](03-in-class-exam-3/) | November 9 | Classes 10–13 | [A and B](03-in-class-exam-3/practice/) | Not released |
 | [In-Class Exam 4](04-in-class-exam-4/) | December 7 | Classes 14–18 | [A and B](04-in-class-exam-4/practice/) | Not released |
