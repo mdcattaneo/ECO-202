@@ -2,7 +2,7 @@
 
 **Date:** Wednesday, November 4, 2026  
 **Status:** Complete first version  
-**Last updated:** September 6, 2026
+**Last updated:** September 24, 2026  
 
 [← Class 12](../12-laws-of-large-numbers-and-central-limit-theorem/) · [Practice 13](practice/) · [Course syllabus](../../ECO202-Fall2026-Syllabus.pdf) · **Next meeting:** In-Class Exam 3
 
@@ -227,9 +227,9 @@ A defensible estimator report should state:
 
 Before using AI, write that seven-part audit for the one-sample wage example. Then inspect whether the generated response keeps the objects distinct and verifies its numbers rather than treating fluent notation as proof.
 
-### Project estimand transfer
+### Estimand transfer
 
-Write a one-sentence candidate question for the individual empirical project. Then define the observational unit, target population or model, estimand, proposed estimator, and the source of repeated-sampling uncertainty. If the available data identify only a descriptive quantity, say so rather than turning it into a causal estimand. This is a project-development transfer, not a separate closed-book exam topic.
+Using the historical `wage1` class data, write a one-sentence descriptive question about mean hourly wages. Then define the observational unit, target population or model, estimand, proposed estimator, and the source of repeated-sampling uncertainty. If the available data identify only a descriptive quantity, say so rather than turning it into a causal estimand. This exercise applies the class’s estimand–estimator distinction to familiar data.
 
 > [!TIP]
 > **AI interaction 1 — Audit an estimator report**

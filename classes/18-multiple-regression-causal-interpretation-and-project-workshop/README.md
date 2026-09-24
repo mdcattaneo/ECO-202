@@ -1,18 +1,18 @@
-# Class 18: Multiple Regression, Causal Interpretation, and Project Workshop
+# Class 18: Multiple Regression and Causal Interpretation
 
 **Date:** Wednesday, December 2, 2026  
 **Status:** Complete first version  
-**Last updated:** August 30, 2026
+**Last updated:** September 24, 2026
 
 [← Class 17](../17-conditional-distributions-expectations-and-simple-regression/) · [Practice 18](practice/) · [Course syllabus](../../ECO202-Fall2026-Syllabus.pdf) · **Next meeting:** In-Class Exam 4
 
 **Class-folder workflow:** Use this guide for preparation, class, and review; run adjacent files when directed; then complete [ungraded practice](practice/) before studying the [worked solutions](practice/solutions/).
 
-<!-- Source lineage: Econ202-UlrichMueller/LectureNotes.tex, multiple-regression population coefficients, holding variables fixed, least squares, coefficient inference, regression interpretations, confounding, potential outcomes, and randomized experiments; Spring 2026 PS10; selected private historical assessments used only for scope calibration; Moore, McCabe, and Craig, Chapters 10--11. The empirical demonstrations use the documented wage1 and jtrain2 CSVs distributed with the course. The paired specifications, project workshop, audits, checks, prompts, and prose are newly authored. Multiple regression is deliberately a conceptual preview; simple regression receives the course's substantive treatment in Class 17. -->
+<!-- Source lineage: Econ202-UlrichMueller/LectureNotes.tex, multiple-regression population coefficients, holding variables fixed, least squares, coefficient inference, regression interpretations, confounding, potential outcomes, and randomized experiments; Spring 2026 PS10; selected private historical assessments used only for scope calibration; Moore, McCabe, and Craig, Chapters 10--11. The empirical demonstrations use the documented wage1 and jtrain2 CSVs distributed with the course. The paired specifications, regression audits, checks, prompts, and prose are newly authored. Multiple regression is deliberately a conceptual preview; simple regression receives the course's substantive treatment in Class 17. -->
 
 ## Central question
 
-What changes when a regression compares units while holding included variables fixed—and how can that comparison support a transparent empirical project without becoming an automatic causal claim?
+What changes when a regression compares units while holding included variables fixed, and what additional evidence is needed for a causal interpretation?
 
 ## Learning goals
 
@@ -22,9 +22,8 @@ By the end of class, you should be able to:
 2. interpret one multiple-regression coefficient while naming the variables held fixed;
 3. compare a simple and an adjusted coefficient without declaring one automatically better or causal;
 4. distinguish pre-treatment controls, possible confounders, post-treatment variables, and unsupported mechanical controls;
-5. align a project question with an observational unit, population, target, design, method, and claim type;
-6. create a reproducible evidence chain from source data to each reported result; and
-7. audit AI-assisted work while retaining responsibility for every decision, calculation, and claim.
+5. connect randomized assignment to a causal intention-to-treat comparison; and
+6. audit a regression claim using the data, design, coefficient meaning, and limitations.
 
 <a id="lecture-map"></a>
 
@@ -35,22 +34,17 @@ By the end of class, you should be able to:
 | **C18.1** | [From one predictor to several](#c18-stop-1) | Class 17 retrieval + Checkpoint 1 |
 | **C18.2** | [What “holding fixed” does—and does not—mean](#c18-stop-2) | Coefficient interpretation + control audit |
 | **C18.3** | [Two empirical specification comparisons](#c18-stop-3) | Data demonstration + Checkpoint 2 |
-| **C18.4** | [Project question, population, and target](#c18-stop-4) | Project workshop 1 |
-| **C18.5** | [Design, method, evidence, and limitation](#c18-stop-5) | Project workshop 2 |
-| **C18.6** | [Reproducibility and responsible AI use](#c18-stop-6) | Project workshop 3 + AI/peer audit |
-| **C18.7** | [Readiness check and course synthesis](#c18-stop-7) | Project workshop 4 + retrieval |
-
-The first three stops are planned for approximately 40 minutes. The remaining four stops reserve approximately 40 minutes for the individual empirical project.
+| **C18.4** | [Audit the regression claim](#c18-stop-4) | Independent audit + AI interaction 1 + course synthesis |
 
 ## How to use this guide
 
-**Prepare:** Review the Class 17 distinction among prediction, conditional comparison, and causality. Bring a provisional project description containing the question, observational unit, outcome, main explanatory variable or grouping, population of interest, claim type, and data source. A rough description is enough; the purpose of the workshop is to find what must be repaired.
+**Prepare:** Review the Class 17 distinction among prediction, conditional comparison, and causality, and the Class 7 distinction between assignment and treatment receipt.
 
-**In class:** Treat the regression examples as comparisons of specifications, not as a contest to find the largest coefficient or smallest p-value. During the workshop, make the substantive choices first, use AI or a non-AI peer audit second, and revise only after checking the criticism.
+**In class:** Treat the regression examples as comparisons of specifications. State the statistical comparison and the design evidence before evaluating an AI critique.
 
-**Review:** Explain both empirical coefficient comparisons in words, including units, variables held fixed, design, and limitations. Then produce a one-page project analysis map linking each intended claim to its target, evidence, assumption, verification step, and limitation.
+**Review:** Explain both empirical coefficient comparisons in words, including units, variables held fixed, design, and limitations. Reconstruct the claim audit using the class examples.
 
-**Practice:** Complete the short questions in Section 8, then use [Practice 18](practice/) for a 35–50 minute ungraded core, a separate 30–40 minute cumulative Exam 4 checkpoint, and an optional project-readiness transfer. Multiple-regression interpretation is a conceptual bridge to the next econometrics class; matrix algebra and manual multiple-regression computation are not common-core ECO 202 exam targets.
+**Practice:** Complete the short questions in Section 5, then use [Practice 18](practice/) for a 35–50 minute ungraded core and a separate 30–40 minute cumulative Exam 4 checkpoint. Multiple-regression interpretation is a conceptual bridge to the next econometrics class; matrix algebra and manual multiple-regression computation are not common-core ECO 202 exam targets.
 
 **Prerequisites:** Classes 5, 7, and 13–17.
 
@@ -59,12 +53,9 @@ The first three stops are planned for approximately 40 minutes. The remaining fo
 1. [From one predictor to several](#c18-stop-1)
 2. [What “holding fixed” does—and does not—mean](#c18-stop-2)
 3. [Two empirical specification comparisons](#c18-stop-3)
-4. [Project question, population, and target](#c18-stop-4)
-5. [Design, method, evidence, and limitation](#c18-stop-5)
-6. [Reproducibility and responsible AI use](#c18-stop-6)
-7. [Readiness check and course synthesis](#c18-stop-7)
-8. [Practice and answer checks](#8-practice-and-answer-checks)
-9. [Common core, optional paths, and recap](#9-common-core-optional-paths-and-recap)
+4. [Audit the regression claim](#c18-stop-4)
+5. [Practice and answer checks](#5-practice-and-answer-checks)
+6. [Common core, optional paths, and recap](#6-common-core-optional-paths-and-recap)
 
 <a id="c18-stop-1"></a>
 
@@ -190,148 +181,42 @@ For each comparison, write one statistically accurate sentence and one causal se
 
 <a id="c18-stop-4"></a>
 
-## 4. Project question, population, and target
+## 4. Audit the regression claim
 
-Turn a broad topic into one empirical question whose observational unit, population, outcome, comparison, and claim type can all be stated before choosing a method.
+Use the two class examples to distinguish a verified coefficient from a justified causal conclusion. First assess this claim without assistance:
 
-Start with a sentence that can survive contact with the data:
+> Adding experience and tenure makes the education coefficient causal. Adding 1974 and 1975 pre-assignment earnings makes the training coefficient causal for the same reason.
 
-> Among **[population]**, how does **[outcome]** differ or vary with **[explanatory variable, group, or intervention]** over **[time and setting]**?
+For each example, name the outcome and coefficient units, identify the variables held fixed, state how the observations and treatment assignment arose, and identify the first unsupported step. Use the coefficient table and the data documentation to check your answer.
 
-Then complete the target card.
-
-| Element | Project decision |
-|---|---|
-| Observational unit | What does one row represent? |
-| Population or scope | Which units, place, and period can the analysis describe? |
-| Outcome | What is measured, in what units, and when? |
-| Main comparison | Which groups, values, or conditions are being compared? |
-| Estimand | Which population mean, proportion, difference, association, or regression target answers the question? |
-| Claim type | Is the intended claim descriptive, predictive, or causal? |
-| Counterfactual or benchmark | Compared with what? |
-
-### Independent-first workshop move
-
-Without AI, write the seven entries for your project and underline any word whose meaning depends on a data-codebook definition. Exchange the card with a partner. The partner should identify the first element that is missing, inconsistent, or broader than the available data support.
-
-If the target cannot be stated clearly, do not add a more complicated method. Repair the question or narrow the claim.
-
-[← Previous](#c18-stop-3) · [↑ In-class route](#lecture-map) · [Next →](#c18-stop-5)
-
-<a id="c18-stop-5"></a>
-
-## 5. Design, method, evidence, and limitation
-
-Build one visible chain from the data-generating or selection process to the claim, and stop where an unsupported assumption would be required.
-
-For the main analysis, complete this map:
-
-| Link | Question to answer |
-|---|---|
-| Data provenance | Who created the data, from what process, and under what license or access rule? |
-| Selection or assignment | How did rows enter the dataset, and how was any treatment or exposure determined? |
-| Measurement | How were the outcome, explanatory variable, and important controls recorded? |
-| Method | Why does the chosen summary, interval, test, or regression target the stated estimand? |
-| Uncertainty | What hypothetical repetition or assignment mechanism does the standard error describe? |
-| Evidence | Which table, figure, estimate, interval, or test supports each claim? |
-| Limitation | What selection, measurement, design, support, or external-validity issue remains? |
-
-A strong project can be modest. One well-defined question, one verified main analysis, and one honest limitation are more informative than many unrelated specifications. A descriptive project does not become weaker merely because the data do not justify causal language.
-
-### Claim-to-evidence ledger
-
-Create one row for every substantive sentence you expect to report.
-
-| Intended claim | Evidence | Assumption | Independent check | Limitation |
-|---|---|---|---|---|
-| Example: recorded mean wage differs across education groups in these data | Table of group means | Variable definitions and included rows are correct | Recompute counts and weighted overall mean | Observational historical sample; no causal interpretation |
-
-If a claim has no evidence row, remove or revise it. If the same fragile assumption supports every result, make that dependence prominent rather than hiding it behind additional output.
-
-[← Previous](#c18-stop-4) · [↑ In-class route](#lecture-map) · [Next →](#c18-stop-6)
-
-<a id="c18-stop-6"></a>
-
-## 6. Reproducibility and responsible AI use
-
-Make the complete route from source data to reported evidence reproducible, then ask AI or a partner to challenge the route without delegating the substantive decisions.
-
-A reproducible project should:
-
-1. identify the original data source, access date or version, variables, provenance, and permission to use or share them;
-2. preserve raw data separately from derived files when permitted;
-3. document missing-data decisions, exclusions, recodes, transformations, and units;
-4. run from documented inputs to every final table, figure, and reported number;
-5. record software and package requirements without requiring a particular AI vendor;
-6. verify key counts, denominators, estimates, uncertainty calculations, and graph encodings independently; and
-7. connect each written claim to a reproducible output and an explicit limitation.
-
-Do not enter private, confidential, personally identifying, licensed, or restricted information into an external AI system. AI output is neither a scholarly source nor statistical authority. Generated code must be executed and inspected; generated citations, quotations, definitions, and numerical claims must be checked against the actual source or calculation.
+The wage data remain observational after controls are added. In the training study, random assignment supports the intention-to-treat interpretation; adding pretreatment covariates may change precision but does not create the randomized design. Neither adjustment nor a small p-value makes the sample representative of a different population.
 
 > [!TIP]
-> **AI interaction 1 — Audit the same project claim.** First, without AI, give a partner the project card and claim-to-evidence ledger from the preceding project sections. Ask the partner to identify the first unsupported link and record that criticism. Then use the prompt below to audit the same claim, or have the partner follow the prompt as a complete non-AI route.
+> **AI interaction 1 — Audit the same regression comparison.** Complete the independent audit above first, then evaluate the assistant’s critique against the class examples.
 
 ```text
-PROJECT CARD: [paste a nonconfidential project card here]
+In historical observational wage data, the education coefficient is
+0.5414 dollars per hour per year of education in a simple regression
+and 0.5990 after experience and tenure are included.
 
-CLAIM-TO-EVIDENCE LEDGER: [paste the matching nonconfidential ledger here]
+In a randomized job-training study, compare a regression on assignment
+alone with one that also includes pretreatment 1974 and 1975 earnings.
 
-PROPOSED CLAIM: [paste the exact claim to audit here]
+Audit this claim: “Adding controls makes the education coefficient causal.
+It makes the training coefficient causal for the same reason.”
 
-Audit this proposed empirical analysis; do not rewrite it or invent missing
-facts. Check alignment among the question, observational unit, population,
-variables, estimand, design, method, uncertainty, evidence, claim type, and
-limitations. Identify the first unsupported causal or generalization step.
-Flag missing provenance, privacy, licensing, missing-data, denominator,
-support, and reproducibility checks. For every criticism, state what evidence
-would verify it and which decision must remain mine.
-
-Do not include names, student records, confidential information, licensed or
-restricted data, or other material that may not be shared with the system.
+Name the statistical targets and variables held fixed. Explain what
+supports a causal interpretation in each setting and what remains
+unresolved. Do not invent assignment, sampling, or measurement facts.
 ```
 
-Compare the partner and AI audits of the same project claim. For every suggested revision, label it **accept**, **reject**, or **investigate**, and give a reason. A fluent suggestion does not earn acceptance.
+A complete non-AI route is to check the same claim against the Class 7 design principles and the two empirical comparisons above. Accept a criticism only after verifying its premise; fluent wording does not supply identification evidence.
 
-> [!NOTE]
-> The syllabus permits and encourages AI assistance on the individual empirical project, subject to documentation, verification, attribution, privacy, reproducibility, interpretation, and individual responsibility. The amount of manually typed code and the prestige of a tool are not evaluation criteria.
+The recurring statistical chain is question → data and design → target → estimator → uncertainty → interpretation and limitations. Explain how each class example fits that chain, and which link prevents an automatic causal or population-wide claim.
 
-[← Previous](#c18-stop-5) · [↑ In-class route](#lecture-map) · [Next →](#c18-stop-7)
+[← Previous](#c18-stop-3) · [↑ In-class route](#lecture-map)
 
-<a id="c18-stop-7"></a>
-
-## 7. Readiness check and course synthesis
-
-Conduct a final readiness audit, then reconstruct the empirical reasoning chain that connects the project to the independent course foundation.
-
-Mark each item **ready**, **repair**, or **unresolved**:
-
-- the question and population match the available data;
-- the observational unit, variables, units, and missingness are documented;
-- the estimand and claim type are explicit;
-- the design justifies the proposed interpretation;
-- the method answers the stated question;
-- uncertainty refers to a coherent repetition or assignment mechanism;
-- every important claim has reproducible evidence and an independent check;
-- limitations include the strongest plausible threat rather than a generic disclaimer;
-- data permissions and privacy rules are satisfied; and
-- material AI assistance can be documented honestly under the final project rules.
-
-The durable course chain is
-
-$$
-\text{question}\longrightarrow\text{data and design}\longrightarrow\text{target}\longrightarrow\text{estimator}\longrightarrow\text{uncertainty}\longrightarrow\text{interpretation and limitations}.
-$$
-
-The closed-book exams test whether you can reason through this chain independently. The project tests whether you can use those foundations, data, computation, and permitted AI assistance to produce an analysis you understand and can defend.
-
-> [!CAUTION]
-> **Project-policy boundary.** The syllabus sets the project purpose, 20% weight, permitted AI principles, and deadline of 7:00 pm on December 20, 2026. Detailed guidance is still to specify the question and data requirements, milestones, deliverables, AI-use record and disclosure, reproducibility standard, attribution and privacy rules, grading criteria, and submission procedure. This workshop does not create those requirements.
-
-The approved project brief, rubric, process-record template, and submission instructions will be linked through official course channels when released. Until then, the syllabus and instructor announcements are authoritative.
-
-[← Previous](#c18-stop-6) · [↑ In-class route](#lecture-map)
-
-## 8. Practice and answer checks
+## 5. Practice and answer checks
 
 For a complete self-study route, continue to [Practice 18](practice/) and open its [worked solutions](practice/solutions/) only after a genuine attempt.
 
@@ -357,9 +242,9 @@ The coefficient changed and the two models make different conditional comparison
 
 </details>
 
-### Practice C — Project claim audit
+### Practice C — Regression claim audit
 
-Choose one proposed project sentence. Identify its claim type, estimand, exact evidence, strongest required assumption, independent check, and most important limitation. Which element would force you to revise the sentence first?
+Choose one interpretation of the wage or training coefficients above. Identify its claim type, estimand, exact evidence, strongest required assumption, independent check, and most important limitation. Which element would force you to revise the sentence first?
 
 <details>
 <summary>Check after attempting Practice C</summary>
@@ -368,7 +253,7 @@ There is no universal numerical answer. A defensible response must connect the s
 
 </details>
 
-## 9. Common core, optional paths, and recap
+## 6. Common core, optional paths, and recap
 
 ### Common core
 
@@ -378,7 +263,7 @@ You should be able to do the following without AI or software:
 - explain why an adjusted coefficient is not automatically causal or preferable to a simple coefficient;
 - distinguish plausible pre-treatment adjustment from post-treatment or mechanically selected controls;
 - connect randomized assignment—not regression adjustment—to a causal intention-to-treat argument;
-- align a project question, observational unit, population, estimand, design, method, evidence, interpretation, and limitation; and
+- align an empirical question, observational unit, population, estimand, design, method, evidence, interpretation, and limitation; and
 - state how important computations and claims can be independently verified.
 
 Matrix formulas, manual multiple-regression computation, and multiple-regression inference algebra are previews for the next econometrics course rather than ECO 202 common-core exam targets.
@@ -389,14 +274,14 @@ Matrix formulas, manual multiple-regression computation, and multiple-regression
 - **Inference:** Study heteroskedasticity-robust, cluster-robust, and design-based uncertainty for adjusted estimates.
 - **Causal design:** Use causal diagrams to compare confounders, mediators, and colliders.
 - **Prediction:** Compare out-of-sample prediction rather than selecting a model by in-sample fit.
-- **Reproducibility:** Rebuild the complete project in a clean environment from documented inputs.
+- **Reproducibility:** Rerun the class analysis from the documented inputs and check the reported coefficients.
 
 ### Durable recap
 
 1. Multiple regression changes the conditional comparison by holding included predictors fixed.
 2. A control needs a substantive or design justification; more controls do not automatically mean less bias.
 3. Random assignment, not the adjusted coefficient itself, supports the job-training causal argument.
-4. A project should expose the complete chain from question and data to evidence, uncertainty, interpretation, and limitation.
+4. An empirical analysis should expose the complete chain from question and data to evidence, uncertainty, interpretation, and limitation.
 5. AI can expand criticism and computational support, but responsibility and verification remain with the student.
 
 ## Notation
@@ -415,6 +300,6 @@ Matrix formulas, manual multiple-regression computation, and multiple-regression
 - Official textbook: Moore, McCabe, and Craig, 10th ed., Chapters 10–11.
 - Complementary references: *Introduction to Modern Statistics*, regression chapters; Angrist and Pischke, *Mastering 'Metrics*; Huntington-Klein, *The Effect*; Wickham, Çetinkaya-Rundel, and Grolemund, *R for Data Science*.
 - Data sources: Jeffrey M. Wooldridge's `wage1` and `jtrain2` data, distributed with the GPL-3 `wooldridge` R package; see the [class-local provenance note](data/README.md).
-- Continuity with prior ECO 202: multiple conditional means, holding variables fixed, least-squares targets, coefficient interpretation, controls, confounding, and causal qualifications are retained. Multiple-regression algebra is deliberately deferred while the class preserves the conceptual foundation needed for the next econometrics course and reserves half the meeting for the empirical project.
+- Continuity with prior ECO 202: multiple conditional means, holding variables fixed, least-squares targets, coefficient interpretation, controls, confounding, and causal qualifications are retained. Multiple-regression algebra is deliberately deferred; the class preserves the conceptual foundation needed for the next econometrics course, with statistical reasoning grounded in the two class examples.
 
 [← Class 17](../17-conditional-distributions-expectations-and-simple-regression/) · [Practice 18](practice/) · [↑ In-class route](#lecture-map) · **Next meeting:** In-Class Exam 4

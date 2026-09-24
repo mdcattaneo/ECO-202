@@ -2,7 +2,7 @@
 
 **Date:** Monday, November 30, 2026  
 **Status:** Complete first version  
-**Last updated:** August 30, 2026
+**Last updated:** September 24, 2026  
 
 [← Class 16](../16-inference-for-means-and-proportions/) · [Course syllabus](../../ECO202-Fall2026-Syllabus.pdf) · [Practice 17](practice/) · [Class 18 →](../18-multiple-regression-causal-interpretation-and-project-workshop/)
 
@@ -354,7 +354,7 @@ identification assumptions for each. Preserve the 1976 units and historical
 scope. Do not invent random assignment or omitted controls.
 ```
 
-**Project transfer:** Write the project's proposed outcome, predictor, population, and regression target. Label the intended interpretation as descriptive, predictive, or causal, and state the evidence required for that label. If the design supports only description, retain that honest target.
+**Class-data transfer:** Use the historical `wage1` example to state the outcome, predictor, population or sample scope, and regression target. Label the intended interpretation as descriptive, predictive, or causal, and state the evidence required for that label. If the design supports only description, retain that honest target.
 
 [← Previous](#c17-stop-6) · [↑ In-class route](#lecture-map)
 

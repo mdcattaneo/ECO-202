@@ -1,8 +1,8 @@
-# ECO 202 Practice 18: Multiple Regression, Causal Interpretation, and Project Workshop — Worked Solutions
+# ECO 202 Practice 18: Multiple Regression and Causal Interpretation — Worked Solutions
 
 **Status:** Complete worked solutions  
-**Last updated:** August 30, 2026  
-**Practice module:** [Practice 18: Multiple Regression, Causal Interpretation, and Project Workshop](../)  
+**Last updated:** September 24, 2026  
+**Practice module:** [Practice 18: Multiple Regression and Causal Interpretation](../)  
 **Class guide:** [Class 18](../../)
 
 [← Return to Practice 18](../) · [Practice index](../../../PRACTICE.md)
@@ -23,7 +23,6 @@
 | [3. Two specification comparisons](#solution-3) | Observational adjustment versus randomized assignment |
 | [4. Audit the same claim twice](#solution-4) | Independent claim audit and verified external criticism |
 | [5. Cumulative checkpoint for In-Class Exam 4](#solution-5) | Tests, intervals, proportions, conditional means, and regression |
-| [6. Build a one-page analysis map](#solution-6) | Question-to-evidence alignment and project readiness |
 
 <a id="solution-1"></a>
 
@@ -173,7 +172,7 @@ $1.7000-1.7943=-0.0943$ thousand dollars. The adjusted model makes a conditional
 ## Solution 4. Audit the same claim twice
 
 **Practice problem:** [Return to Problem 4](../#problem-4)  
-**Class-guide connection:** [Reproducibility and responsible AI use](../../#c18-stop-6)
+**Class-guide connection:** [Audit the regression claim](../../#c18-stop-4)
 
 ### Question and strategy
 
@@ -343,47 +342,6 @@ Before opening the check, an approximately Normal estimator is 42 with estimated
 <summary>Reveal the transfer check</summary>
 
 $z=(42-39)/3=1$, so the two-sided p-value is $2(1-0.84134)=0.31732$. The interval is $42\pm1.96(3)=[36.12,47.88]$. Fail to reject at 5%, and note that the interval contains 39; neither statement proves $\theta=39$.
-
-</details>
-
-[Return to the solution map](#solution-map)
-
-<a id="solution-6"></a>
-
-## Solution 6. Build a one-page analysis map
-
-**Practice problem:** [Return to Problem 6](../#problem-6)  
-**Class-guide connections:** [Project question, population, and target](../../#c18-stop-4), [design, method, evidence, and limitation](../../#c18-stop-5), and [reproducibility and responsible AI use](../../#c18-stop-6)
-
-### Question and strategy
-
-There is no universal project answer. The complete fictional example below demonstrates alignment without creating a project requirement: every claim has a target, evidence item, assumption, check, and limitation.
-
-### Complete solution: fictional delivery-record analysis
-
-1. **Question and claim type — ready:** Among completed shipments recorded by a fictional regional delivery platform during October 2026, how does the recorded late-delivery proportion differ between ground and air service? This is descriptive, not causal.
-2. **Unit, scope, outcome, comparison, and estimand — ready:** One row is one completed shipment. Scope is shipments recorded by this platform in the stated region and month. The binary outcome is whether delivery occurred after the platform's promised timestamp. The comparison is ground minus air. The estimand is the difference in recorded late-delivery proportions for the defined finite set of shipments.
-3. **Selection and measurement — repair:** Rows enter after a shipment is marked completed. Service type comes from the booking record; lateness is computed from promised and recorded delivery timestamps. Canceled, unresolved, or missing-timestamp shipments require a documented inclusion decision.
-4. **Method and uncertainty — unresolved:** Report group counts, proportions, their difference, and a two-proportion interval if a coherent repeated-sampling model is justified. If the analysis treats all October platform shipments as the finite target, the descriptive difference can be reported without pretending that a sampling interval expands the target.
-5. **Claim and evidence — ready as a template:** “In the analyzed October platform records, the ground late-delivery proportion was [estimated difference] percentage points higher or lower than the air proportion.” Evidence is a table containing group denominators, late counts, proportions, the difference, and any justified interval.
-6. **Strongest limitation — ready:** Service selection is observational and can differ by distance, urgency, package type, weather, and customer. The difference cannot be interpreted as the effect of switching service. Excluding unresolved shipments could also alter the descriptive target.
-7. **Independent verification — ready as a plan:** Recompute each denominator from raw service labels; hand-check a sample of timestamp classifications; reproduce the difference from the displayed counts; recalculate any standard error from the printed inputs; and confirm graph heights, labels, units, and denominators against the table.
-8. **Provenance, permission, privacy, and reproducibility — unresolved:** Record the data owner, extract date and query, data dictionary, permission to analyze or share, treatment of shipment identifiers and addresses, raw-file preservation rule, cleaning steps, software versions, and one command or documented sequence that rebuilds every output.
-9. **AI boundary — unresolved until the project rules are final:** AI may propose code or critique the claim using only nonrestricted descriptions or approved data. The student decides the target, exclusions, method, and claim; runs and audits all code; checks every number and source; protects private records; and documents material assistance under the final project rules.
-10. **First repair:** Confirm permission and the exact data-generating, completion, and missingness process before expanding the analysis. Remove or repair any causal-sounding service comparison.
-
-### Verification and limitation
-
-Read the ten numbered entries as a chain. The descriptive claim reaches only the defined records, the evidence has explicit denominators, the uncertainty statement depends on a coherent repetition, and the strongest causal and selection limitations appear before stylistic polishing. Actual project rules come from the approved project brief, not this fictional example.
-
-### Nearby transfer
-
-Before opening the check, change the question to “What is the causal effect of switching a shipment from ground to air service on late delivery?” What new evidence is missing?
-
-<details>
-<summary>Reveal the transfer check</summary>
-
-The observational service groups do not reveal the same shipment's outcome under both services. A causal answer needs a credible assignment or identification design, such as a well-implemented randomized service offer for eligible shipments, plus implementation, outcome-measurement, interference, support, and external-validity checks. Adding controls or rewriting the descriptive sentence cannot supply that missing design.
 
 </details>
 

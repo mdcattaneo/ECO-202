@@ -12,11 +12,11 @@
 - Practice Exam 2 — Version A: [printable PDF](ECO202-Fall2026-Exam2-PracticeA.pdf) · [LaTeX source](ECO202-Fall2026-Exam2-PracticeA.tex)
 - Practice Exam 2 — Version B: [printable PDF](ECO202-Fall2026-Exam2-PracticeB.pdf) · [LaTeX source](ECO202-Fall2026-Exam2-PracticeB.tex)
 
-Each has four multiple-choice questions and four written problems. Attempt one practice exam before opening its solutions; save the other for a fresh attempt after reviewing your gaps. No special software, code, or data download is needed.
+Each has four multiple-choice questions and four written problems. The cover lists question pages, points, and suggested times; questions begin on page 2. The Honor Code section is optional rehearsal for an unaided attempt, with no submission requirement. Attempt one practice exam before opening its solutions; save the other for a fresh attempt after reviewing your gaps. No special software, code, or data download is needed.
 
 ## Optional source study
 
-The `.tex` files beside the PDFs are the editable originals. This complete practice folder includes [the local formatting file](exam-style.tex) and [reference formulas](ECO202-Fall2026-Exam2-FormulaSupport.tex), so it can be downloaded and compiled independently. See [LaTeX build instructions](../../README.md#latex-sources-and-compilation). Reading or compiling sources is optional; it is not an exam skill. Do not open solution sources during a timed attempt.
+The `.tex` files beside the PDFs are the editable originals. This complete practice folder includes [the local formatting file](exam-style.tex), [the cover layout](exam-cover.tex), and [reference formulas](ECO202-Fall2026-Exam2-FormulaSupport.tex), so it can be downloaded and compiled independently. See [LaTeX build instructions](../../README.md#latex-sources-and-compilation). Reading or compiling sources is optional; it is not an exam skill. Do not open solution sources during a timed attempt.
 
 ## Your attempt
 

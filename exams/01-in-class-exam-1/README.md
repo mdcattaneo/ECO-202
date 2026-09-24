@@ -3,7 +3,7 @@
 **Module:** Classes 1–5<br>
 **Scheduled date:** September 23, 2026<br>
 **Status:** Actual exam and worked solutions released September 23, 2026; practice resources released September 6, 2026<br>
-**Last updated:** September 23, 2026
+**Last updated:** September 24, 2026
 
 [All exams](../) · [Practice exams](practice/) · [Class index](../../classes/)
 
@@ -22,6 +22,8 @@ Start with the module’s guides and class-local practice, then use the [two ful
 ## Actual exam and worked solutions
 
 Administered September 23, 2026. The instructor approved release of the question paper and its verified worked solutions after administration. Both PDFs are kept together in this folder.
+
+**Formatting update — September 24, 2026:** A cover with student details, instructions, question contents, suggested pacing, and Honor Code writing space was added after administration. The exam questions, point allocations, and answer-space allocations are unchanged. The new cover preserves the original question pacing and reserves time for checking.
 
 - [In-Class Exam 1 — question paper (PDF)](ECO202-Fall2026-Exam1.pdf)
 - [In-Class Exam 1 — worked solutions (PDF)](ECO202-Fall2026-Exam1-Solutions.pdf)

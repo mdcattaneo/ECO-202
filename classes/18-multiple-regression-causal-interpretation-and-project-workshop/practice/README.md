@@ -1,8 +1,8 @@
-# ECO 202 Practice 18: Multiple Regression, Causal Interpretation, and Project Workshop
+# ECO 202 Practice 18: Multiple Regression and Causal Interpretation
 
 **Status:** Complete ungraded practice  
-**Last updated:** August 30, 2026  
-**Class guide:** [Class 18: Multiple Regression, Causal Interpretation, and Project Workshop](../)  
+**Last updated:** September 24, 2026  
+**Class guide:** [Class 18: Multiple Regression and Causal Interpretation](../)  
 **Worked solutions:** [Complete solutions for study after your attempt](solutions/)  
 **Suggested completion:** After Class 18 and before In-Class Exam 4
 
@@ -11,7 +11,7 @@
 **Practice workflow:** Attempt the recommended route first; use staged hints or AI only when feedback would help; inspect compact checks after an attempt; study the worked solution deliberately; then close it and complete the nearby transfer unaided.
 
 > [!NOTE]
-> **Ungraded practice—not submitted.** Problems 1–4 form the Class 18 core. Problem 5 is a separate cumulative checkpoint across Classes 14–18. Problem 6 is an optional project-readiness transfer, not a project requirement or deliverable. Use the compact checks and complete solutions to diagnose and repair your reasoning after a genuine attempt.
+> **Ungraded practice—not submitted.** Problems 1–4 form the Class 18 core. Problem 5 is a separate cumulative checkpoint across Classes 14–18. Use the compact checks and complete solutions to diagnose and repair your reasoning after a genuine attempt.
 
 <!-- Source lineage: Scope is calibrated against Econ202-UlrichMueller/LectureNotes.tex, regression interpretations, multiple regression, controls, confounding, causal qualifications, and coefficient inference; Spring 2026 PS10; selected private historical assessment material; the current Classes 14--18 guides; and the Fall 2026 syllabus project principles. All wording, numerical settings, audits, and transfers are newly authored. No protected exercise or reserved exam question is reproduced. -->
 
@@ -19,7 +19,7 @@
 
 Problems 1–4 form a 35–50 minute Class 18 core route. It moves from partial-coefficient interpretation to control selection, specification comparison, and an independent-first claim audit.
 
-Problem 5 is an additional 30–40 minute cumulative Exam 4 checkpoint. Problem 6 is a separate 20–30 minute project-readiness transfer. Neither is included in the Class 18 core estimate. Optional code execution, an AI or partner comparison after the individual audit, answer-check study, and worked-solution study take additional time.
+Problem 5 is an additional 30–40 minute cumulative Exam 4 checkpoint and is not included in the Class 18 core estimate. Optional code execution, an AI or partner comparison after the individual audit, answer-check study, and worked-solution study take additional time.
 
 | Class 18 core stage | Suggested time | Work |
 |---|---:|---|
@@ -37,7 +37,6 @@ After completing the core route, you should be able to:
 - distinguish a plausible pre-treatment control from a post-treatment variable or a mechanically selected regressor;
 - compare simple and adjusted coefficients without labeling their difference as omitted-variable bias automatically;
 - connect randomized assignment, rather than regression adjustment, to an internal causal argument;
-- align a project question with a population, target, design, method, evidence, and limitation; and
 - audit an AI suggestion while retaining responsibility for the statistical decision.
 
 ## Problem map
@@ -49,7 +48,6 @@ After completing the core route, you should be able to:
 | [3. Two specification comparisons](#problem-3) | Class 18 core | Compare observational and randomized examples. | Calculation + interpretation |
 | [4. Audit the same claim twice](#problem-4) | Class 18 core | Complete an individual audit, then optionally compare an external audit. | Individual audit; optional comparison |
 | [5. Cumulative checkpoint for In-Class Exam 4](#problem-5) | Additional review | Reconstruct essential inference and regression reasoning. | 30–40 minute unaided checkpoint |
-| [6. Project-readiness transfer](#problem-6) | Optional transfer | Build and audit a one-page analysis map. | 20–30 minute workshop |
 
 ## Class 18 core route
 
@@ -154,7 +152,7 @@ The wage coefficient changes by $0.5990-0.5414=0.0576$ dollars per hour per educ
 
 ### Problem 4. Audit the same claim twice
 
-**Class-guide connection:** [Reproducibility and responsible AI use](../#c18-stop-6)
+**Class-guide connection:** [Audit the regression claim](../#c18-stop-4)
 
 An analyst reports:
 
@@ -265,43 +263,6 @@ In Part A, $z=2.00$, the two-sided p-value is approximately $0.0455$, and the 95
 
 [Back to the problem map](#problem-map)
 
-<a id="problem-6"></a>
-
-## Optional project-readiness transfer
-
-### Problem 6. Build a one-page analysis map
-
-**Class-guide connections:** [Project question, population, and target](../#c18-stop-4), [design, method, evidence, and limitation](../#c18-stop-5), and [reproducibility and responsible AI use](../#c18-stop-6)
-
-This exercise is ungraded, not submitted, and does not add requirements to the individual empirical project. Use a possible project idea or a fictional analysis if your topic is not yet settled.
-
-1. Write one empirical question and label it descriptive, predictive, or causal.
-2. State the observational unit, population or scope, outcome, main comparison, and estimand.
-3. Describe how rows enter the data and how the key variables are measured.
-4. Name one course method that targets the estimand and one uncertainty statement it could support.
-5. Write one intended claim and connect it to a table, figure, estimate, interval, or test.
-6. Name the strongest design, measurement, support, or external-validity limitation.
-7. Give an independent verification step for the denominator, key estimate, uncertainty calculation, and graph.
-8. List the data provenance, permission, privacy, and reproducibility checks that must be resolved.
-9. If AI may assist, identify what it may do, what you must decide, what you must verify, and what must be documented under the final project rules.
-10. Mark each element **ready**, **repair**, or **unresolved**. Identify the first repair rather than expanding the analysis.
-
-> [!CAUTION]
-> The syllabus states that detailed project guidance will specify question and data requirements, milestones, deliverables, the AI-use record and disclosure, reproducibility standard, attribution and privacy rules, grading criteria, and submission procedure. This transfer is a planning aid only; consult the approved project brief once released.
-
-<!-- Source lineage: Newly authored project-readiness transfer aligned only with already stated syllabus principles. -->
-
-<details>
-<summary>Check after completing the project map</summary>
-
-A complete map keeps one question aligned with one observational unit, population or scope, estimand, method, evidence item, uncertainty statement, and claim type. It names a substantive limitation and concrete checks for denominators, estimates, uncertainty, graphs, provenance, permission, privacy, and reproducibility. Any AI role is bounded by decisions, verification, and documentation that remain the student's responsibility. The first **repair** or **unresolved** link should be addressed before the analysis expands.
-
-</details>
-
-[Study the complete solution after your attempt](solutions/#solution-6)
-
-[Back to the problem map](#problem-map)
-
 ## Verification and personal learning record
 
 After using the compact checks and worked solutions, close them and reconstruct the key reasoning without assistance. Record each item in exactly one category:
@@ -312,7 +273,7 @@ After using the compact checks and worked solutions, close them and reconstruct 
 - **Remaining:** I still cannot explain the target, calculation, design boundary, or interpretation.
 - **Transfer:** I completed the nearby transfer in the worked solution without reopening its check.
 
-Your record should distinguish the Class 18 core, the separate Exam 4 checkpoint, and the optional project transfer. A correct answer after disclosure is progress, but it is not yet independent mastery.
+Your record should distinguish the Class 18 core and the separate Exam 4 checkpoint. A correct answer after disclosure is progress, but it is not yet independent mastery.
 
 ## Common mistakes to repair
 
@@ -322,6 +283,6 @@ Your record should distinguish the Class 18 core, the separate Exam 4 checkpoint
 - treating significance, fit, or many controls as substitutes for design;
 - describing a p-value as the probability that the null hypothesis is true;
 - generalizing a sample calculation without evidence about selection or population scope; and
-- allowing a polished project narrative to hide a missing estimand, permission, verification step, or limitation.
+- allowing a polished empirical narrative to hide a missing estimand, permission, verification step, or limitation.
 
 [Open the worked solutions](solutions/) · [Return to Class 18](../)

@@ -30,7 +30,7 @@ The instructor's reference setup uses VS Code, Markdown, Codex, and R, but stude
 
 - [`precepts/`](precepts/) will contain weekly notes prepared by the teaching assistants. These notes support the class sequence and its ungraded practice; they do not replace the class guides as the common learning spine.
 - [`exams/`](exams/) provides two ungraded practice exams per module, with separate worked solutions inside each exam folder's `practice/solutions/` folder. PDFs include adjacent LaTeX sources and [local build instructions](exams/README.md#latex-sources-and-compilation) for optional source study. Use the papers for a timed unaided attempt before solution study. Real exams and their solutions are released only after administration and explicit instructor approval; practice exams do not disclose future real papers.
-- [`project/`](project/) will contain the final project's approved brief, rubric, templates, reproducibility guidance, resources, and submission instructions as they are released. Student work is not submitted through the public repository unless the instructor explicitly says otherwise.
+- [`project/`](project/) contains the [final empirical project instructions](project/final-project.md), including the approved experiment menu, analysis guidance, rubric, and submission requirements. Submit project work through Gradescope, accessed through Canvas.
 
 ## Fall 2026 sequence
 
@@ -53,7 +53,7 @@ The instructor's reference setup uses VS Code, Markdown, Codex, and R, but stude
 | 15 | Nov 16 | Confidence Intervals and Their Connection to Hypothesis Tests | [Open](classes/15-confidence-intervals-and-hypothesis-tests/) | [Practice](classes/15-confidence-intervals-and-hypothesis-tests/practice/) | [Study](classes/15-confidence-intervals-and-hypothesis-tests/practice/solutions/) |
 | 16 | Nov 18 | Inference for and Comparison of Means and Proportions | [Open](classes/16-inference-for-means-and-proportions/) | [Practice](classes/16-inference-for-means-and-proportions/practice/) | [Study](classes/16-inference-for-means-and-proportions/practice/solutions/) |
 | 17 | Nov 30 | Conditional Distributions, Expectations, and Simple Regression | [Open](classes/17-conditional-distributions-expectations-and-simple-regression/) | [Practice](classes/17-conditional-distributions-expectations-and-simple-regression/practice/) | [Study](classes/17-conditional-distributions-expectations-and-simple-regression/practice/solutions/) |
-| 18 | Dec 2 | Multiple Regression, Causal Interpretation, and Project Workshop | [Open](classes/18-multiple-regression-causal-interpretation-and-project-workshop/) | [Practice](classes/18-multiple-regression-causal-interpretation-and-project-workshop/practice/) | [Study](classes/18-multiple-regression-causal-interpretation-and-project-workshop/practice/solutions/) |
+| 18 | Dec 2 | Multiple Regression and Causal Interpretation | [Open](classes/18-multiple-regression-causal-interpretation-and-project-workshop/) | [Practice](classes/18-multiple-regression-causal-interpretation-and-project-workshop/practice/) | [Study](classes/18-multiple-regression-causal-interpretation-and-project-workshop/practice/solutions/) |
 
 The full calendar, holidays, four in-class exam dates, project deadline, grading rules, and assessment policies are in the [syllabus](ECO202-Fall2026-Syllabus.pdf).
 

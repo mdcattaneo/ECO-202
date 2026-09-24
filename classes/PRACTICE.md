@@ -41,7 +41,7 @@ The detailed tutoring, verification, and solution-study protocol is in [`classes
 | 15 | [Confidence Intervals and Their Connection to Hypothesis Tests](15-confidence-intervals-and-hypothesis-tests/) | [Attempt](15-confidence-intervals-and-hypothesis-tests/practice/) | [Study](15-confidence-intervals-and-hypothesis-tests/practice/solutions/) | 55 minutes |
 | 16 | [Inference for and Comparison of Means and Proportions](16-inference-for-means-and-proportions/) | [Attempt](16-inference-for-means-and-proportions/practice/) | [Study](16-inference-for-means-and-proportions/practice/solutions/) | 40–55 minutes |
 | 17 | [Conditional Distributions, Expectations, and Simple Regression](17-conditional-distributions-expectations-and-simple-regression/) | [Attempt](17-conditional-distributions-expectations-and-simple-regression/practice/) | [Study](17-conditional-distributions-expectations-and-simple-regression/practice/solutions/) | 40–55 minutes |
-| 18 | [Multiple Regression, Causal Interpretation, and Project Workshop](18-multiple-regression-causal-interpretation-and-project-workshop/) | [Attempt](18-multiple-regression-causal-interpretation-and-project-workshop/practice/) | [Study](18-multiple-regression-causal-interpretation-and-project-workshop/practice/solutions/) | 35–50 minutes + 30–40 minute checkpoint |
+| 18 | [Multiple Regression and Causal Interpretation](18-multiple-regression-causal-interpretation-and-project-workshop/) | [Attempt](18-multiple-regression-causal-interpretation-and-project-workshop/practice/) | [Study](18-multiple-regression-causal-interpretation-and-project-workshop/practice/solutions/) | 35–50 minutes + 30–40 minute checkpoint |
 
 ## Assessment boundary
 

@@ -1,20 +1,21 @@
 # ECO 202 individual empirical project
 
-**Status:** Detailed guidance forthcoming  
-**Last updated:** August 30, 2026
+**Last updated:** September 24, 2026
 
 [Course home](../) · [Course syllabus](../ECO202-Fall2026-Syllabus.pdf) · [Project AI protocol](AGENTS.md)
 
-## Purpose
+Read the **[final empirical project instructions](final-project.md)** for the requirements, approved experiment menu, analysis guidance, grading rubric, and submission checklist.
 
-This folder will be the public home for the individual empirical project's approved brief, milestones, rubric, reproducibility guidance, process-record or AI-disclosure template, supporting resources, and submission instructions as they are released.
+The project is individual, replaces the final examination, and counts for 20% of the course grade. Choose one of three randomized experiments and use course methods to estimate an effect, quantify uncertainty, verify the analysis, and explain its limitations.
 
-## Confirmed course-level information
+## Working period and submission
 
-The project is individual, replaces a final exam, counts for 20% of the course grade, and is due at 7:00 p.m. on Sunday, December 20, 2026. AI assistance is permitted and encouraged subject to the project's detailed requirements for reproducibility, verification, attribution, privacy, interpretation, process documentation, and individual responsibility.
+Project work begins **Wednesday, December 16, 2026, at 12:00 a.m. Eastern Time**. Advance access to the instructions does not open the working period; see [General information](final-project.md#1-general-information) for permitted preparation.
 
-The [syllabus](../ECO202-Fall2026-Syllabus.pdf), future project brief, rubric, and official instructor announcements are authoritative. This placeholder does not create additional requirements or authorize assumptions about the question, data, milestones, deliverables, or submission process.
+All required files are due **Sunday, December 20, 2026, at 7:00 p.m. Eastern Time**, through **Gradescope, accessed through Canvas**:
 
-## Submission and privacy
+- `report.pdf`: your report, at most five pages plus references.
+- `ai-log.pdf`: the complete AI-interaction record, if you use AI.
+- `reproducibility.zip`: your analysis code and README.
 
-Student projects will not be submitted through this public repository unless the instructor explicitly announces a different procedure. Do not post student work, private data, credentials, licensed or restricted material, or personal information here. Submission directions will be provided through official course channels.
+AI use is entirely optional. If you use no AI, include the signed no-use declaration in your report. See [What to submit](final-project.md#what-to-submit) and [AI assistance, authorship, and collaboration](final-project.md#ai-assistance-authorship-and-collaboration) for the full requirements. Submit all required files together; keep student work out of this public repository.

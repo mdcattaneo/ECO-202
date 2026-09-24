@@ -2,7 +2,7 @@
 
 **Status:** In-Class Exam 1 and its worked solutions released September 23, 2026; practice resources released September 6, 2026
 
-**Last updated:** September 23, 2026
+**Last updated:** September 24, 2026
 
 [Course home](../) · [Syllabus](../ECO202-Fall2026-Syllabus.pdf) · [Exam-study AI protocol](AGENTS.md) · [Class practice](../classes/PRACTICE.md)
 
@@ -19,7 +19,9 @@ Each exam covers its own module. Earlier concepts remain prerequisites, but ther
 
 ## Common format and conditions
 
-Each paper targets 70 minutes of work within the 80-minute class meeting. Follow announced start and end times for a real exam. There are four multiple-choice questions worth 5 points each and four written problems worth 20 points each: 100 points in total. Multiple choice has one correct answer per question and no negative marking. Plan approximately 10 minutes for multiple choice and 15 minutes per written problem.
+The practice papers use a cover with name and student-ID fields, instructions, a contents table listing each question’s page, points, and suggested time, and the Princeton Honor Code pledge with writing and signature space. Questions begin on page 2. The pledge is optional rehearsal for an unaided attempt; practice remains ungraded and is not submitted. All four actual exams use the same cover format. Exam 1’s cover was added after administration, as recorded on its [release page](01-in-class-exam-1/README.md#actual-exam-and-worked-solutions); its question content is unchanged.
+
+Each paper targets 70 minutes of work within the 80-minute class meeting. Follow announced start and end times for a real exam. There are four multiple-choice questions worth 5 points each and four written problems worth 20 points each: 100 points in total. Multiple choice has one correct answer per question and no negative marking. The practice papers allocate approximately 10 minutes for multiple choice and 15 minutes per written problem. Follow each actual paper’s cover for its suggested pacing.
 
 No books, notes, calculators, AI, or other electronics are permitted during an exam or timed unaided simulation, subject to University-authorized accommodations. Fractions, radicals, and equivalent exact expressions are acceptable; show your reasoning. Needed reference probability values and less central formulas are supplied. Fundamental definitions and constructions, including how to form a confidence interval, remain part of independent mastery. Software syntax and optional technical extensions are not exam targets.
 
@@ -45,7 +47,7 @@ pdflatex -no-shell-escape ECO202-Fall2026-Exam1-PracticeA.tex
 pdflatex -no-shell-escape ECO202-Fall2026-Exam1-PracticeA.tex
 ```
 
-Use `ECO202-Fall2026-Exam1-PracticeB.tex` for Version B. For a worked solution, run the same two commands inside `solutions/` with `ECO202-Fall2026-Exam1-PracticeA-Solutions.tex` or `ECO202-Fall2026-Exam1-PracticeB-Solutions.tex`. For another module, use its exam number in the filename. Download the complete practice folder, including `exam-style.tex`, `solutions/`, and any module-specific dependencies; Exam 2 also includes `ECO202-Fall2026-Exam2-FormulaSupport.tex`. A lone question file is not enough.
+Use `ECO202-Fall2026-Exam1-PracticeB.tex` for Version B. For a worked solution, run the same two commands inside `solutions/` with `ECO202-Fall2026-Exam1-PracticeA-Solutions.tex` or `ECO202-Fall2026-Exam1-PracticeB-Solutions.tex`. For another module, use its exam number in the filename. Download the complete practice folder, including `exam-style.tex`, `exam-cover.tex`, `solutions/`, and any module-specific dependencies; Exam 2 also includes `ECO202-Fall2026-Exam2-FormulaSupport.tex`. A lone question file is not enough.
 
 To rebuild and automatically clean all eight practice exams and their solutions from the repository root, use Python 3 and the supplied [build script](build-practice.py):
 

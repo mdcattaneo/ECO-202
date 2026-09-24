@@ -1,5 +1,18 @@
 \documentclass[11pt]{article}
 \input{exam-style.tex}
+\input{exam-cover.tex}
+\practicecover
+\newcommand{\examcontents}{%
+  \examcontentsrow{1}{Voluntary-response sampling}{5}{2.5}
+  \examcontentsrow{2}{Assigned offers and participation}{5}{2.5}
+  \examcontentsrow{3}{Event complements}{5}{2.5}
+  \examcontentsrow{4}{Conditional probability}{5}{2.5}
+  \examcontentsrow{5}{Unequal representation in a probability sample}{20}{15}
+  \examcontentsrow{6}{Designing an encouragement experiment}{20}{15}
+  \examcontentsrow{7}{Conditional probabilities remain probabilities}{20}{15}
+  \examcontentsrow{8}{Applications, waitlists, and admission}{20}{15}
+}
+\renewcommand{\examcontentsnote}{Reference formulas and scratch work: page~\pageref{reference-formulas}.}
 \begin{document}
 \examheader{Practice Exam 2 --- Version B}{Fall 2026}{6--9}
 \mcq{An online poll attracts one million voluntary responses. Which claim is justified solely by that large response count?}
@@ -23,6 +36,7 @@
 {$1/6$.}
 {$3/8$.}
 \input{ECO202-Fall2026-Exam2-FormulaSupport.tex}
+\label{reference-formulas}
 
 \written{5}{Unequal representation in a probability sample}
 A finite population contains two small firms $S_1,S_2$ and four large firms $L_1,L_2,L_3,L_4$. A design uniformly selects one small firm and, independently, one large firm. There are 15 unordered pairs among all six firms.

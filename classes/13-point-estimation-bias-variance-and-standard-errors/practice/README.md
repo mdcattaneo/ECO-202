@@ -1,7 +1,7 @@
 # ECO 202 Practice 13: Point Estimation, Bias, Variance, and Standard Errors
 
 **Status:** Complete ungraded practice  
-**Last updated:** September 6, 2026<br>
+**Last updated:** September 24, 2026  
 **Class guide:** [Class 13: Point Estimation, Bias, Variance, and Standard Errors](../)  
 **Worked solutions:** [Complete solutions for study after your attempt](solutions/)  
 **Suggested completion:** After Class 13 and before In-Class Exam 3
@@ -215,9 +215,9 @@ The small reported standard error describes variability only under whatever mode
 
 [Back to the problem map](#problem-map)
 
-## Additional project estimand-selection transfer
+## Additional estimand-selection transfer
 
-Allow 10–15 additional minutes beyond the core route. Write a one-sentence candidate question for your individual empirical project, then identify the observational unit, target population or model, estimand, proposed estimator, and source of repeated-sampling uncertainty. State whether the target is descriptive, predictive, or causal and name the design argument that would be required for that interpretation. If the available data identify only a descriptive quantity, retain that target rather than upgrading the language. This planning exercise is ungraded and not a separate closed-book exam topic.
+Allow 10–15 additional minutes beyond the core route. Using the historical `wage1` class data, write a one-sentence descriptive question about mean hourly wages, then identify the observational unit, target population or model, estimand, proposed estimator, and source of repeated-sampling uncertainty. State whether the target is descriptive, predictive, or causal and name the design argument that would be required for that interpretation. If the available data identify only a descriptive quantity, retain that target rather than upgrading the language. This additional class-data exercise is ungraded.
 
 <a id="problem-6"></a>
 

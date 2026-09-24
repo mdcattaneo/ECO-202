@@ -60,8 +60,9 @@ def build_practice(numbers):
     result = []
     for number in numbers:
         practice = ROOT / f"{number:02d}-in-class-exam-{number}" / "practice"
-        # The local copy lets a downloaded practice folder compile on its own.
-        shutil.copyfile(ROOT / "exam-style.tex", practice / "exam-style.tex")
+        # Local copies let a downloaded practice folder compile on its own.
+        for dependency in ("exam-style.tex", "exam-cover.tex"):
+            shutil.copyfile(ROOT / dependency, practice / dependency)
         for version in ("A", "B"):
             stem = f"{OFFERING}-Exam{number}-Practice{version}"
             result.append(build_document(practice / f"{stem}.tex"))

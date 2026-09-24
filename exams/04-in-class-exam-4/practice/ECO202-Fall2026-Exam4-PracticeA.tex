@@ -1,5 +1,17 @@
 \documentclass[11pt]{article}
 \input{exam-style.tex}
+\input{exam-cover.tex}
+\practicecover
+\newcommand{\examcontents}{%
+  \examcontentsrow{1}{Statistical power}{5}{2.5}
+  \examcontentsrow{2}{Testing a population proportion}{5}{2.5}
+  \examcontentsrow{3}{Confidence interval width}{5}{2.5}
+  \examcontentsrow{4}{Regression controls}{5}{2.5}
+  \examcontentsrow{5}{Changes within the same household}{20}{15}
+  \examcontentsrow{6}{One employment proportion, two variance choices}{20}{15}
+  \examcontentsrow{7}{A complete joint distribution}{20}{15}
+  \examcontentsrow{8}{Group means and a regression prediction}{20}{15}
+}
 \begin{document}
 \examheader{Practice Exam 4 --- Version A}{Fall 2026}{14--18}
 \mcq{Two independent Bernoulli outcomes have success probability $p$. A test of $H_0:p=1/10$ against $p>1/10$ rejects when at least one success occurs. What is its power at $p=1/2$?}

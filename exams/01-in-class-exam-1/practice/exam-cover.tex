@@ -1,0 +1,67 @@
+% Shared opt-in exam cover; load after exam-style.tex.
+% Contains generic formatting and the public pledge, not questions or keys.
+% Official pledge and write/sign requirement verified September 24, 2026:
+% https://honor.princeton.edu/faq
+% https://faculty.princeton.edu/rules-and-procedures-faculty-princeton-university-and-other-provisions-concern-faculty/chapter-vi-9
+% The paper supplies eight contents rows; this file contains no questions or keys.
+\newcommand{\examcontentsrow}[4]{#1 & #2 & \pageref{question:#1} & #3 & #4\\}
+\newcommand{\examcontentsnote}{}
+\newcommand{\covertiming}{Suggested working time: 70 minutes. The times below are pacing guides. Follow the announced start and end times within the 80-minute meeting.}
+\newcommand{\coverconditions}{No books, notes, calculators, AI, or other electronics; University-authorized accommodations apply. Fractions, radicals, and equivalent exact expressions are acceptable. Show reasoning in written answers. Data are teaching examples unless identified otherwise.}
+\newcommand{\coverhonorinstructions}{At the end of the examination, write the pledge in full below and sign your name.}
+% Practice remains ungraded; the pledge is optional rehearsal for a timed attempt.
+\newcommand{\practicecover}{%
+  \renewcommand{\covertiming}{For a timed unaided attempt, set a 70-minute timer. The times below are pacing guides. This practice exam is ungraded and is not submitted.}%
+  \renewcommand{\coverconditions}{For a timed unaided attempt, use no books, notes, calculators, AI, or other electronics; University-authorized accommodations apply. Fractions, radicals, and equivalent exact expressions are acceptable. Show reasoning in written answers. Data are teaching examples unless identified otherwise.}%
+  \renewcommand{\coverhonorinstructions}{Optional exam-day rehearsal: at the end of an unaided practice attempt, write the pledge in full below and sign your name.}%
+}
+\renewcommand{\examheader}[3]{%
+  \renewcommand{\paperlabel}{#1}%
+  \begin{center}
+  {\Large\bfseries ECO 202 --- #1}\\[4pt]
+  Statistics and Data Analysis for Economics \textbar\ Princeton University\\[3pt]
+  #2 \textbar\ Classes #3 \textbar\ 100 points
+  \end{center}
+  \medskip
+  Name: \rule{2.6in}{0.4pt}\hfill Student ID: \rule{1.3in}{0.4pt}\par
+  \medskip
+  {\small
+  \textbf{Timing.} \covertiming
+
+  \textbf{Conditions.} \coverconditions
+
+  \textbf{Points.} Questions 1--4: one answer A--D, 5 points each, no negative marking. Questions 5--8: 20 points each; subpart points are shown. Label any continuation clearly.\par}
+
+  \medskip
+  \textbf{Contents and suggested pacing}\par
+  {\small\renewcommand{\arraystretch}{1.12}%
+  \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}p{3.65in}rrr@{}}\toprule
+  Question & Topic & Page & Points & Minutes\\\midrule
+  \examcontents
+  \midrule
+  \multicolumn{3}{@{}l}{Total} & 100 & 70\\\bottomrule
+  \end{tabular*}\par
+  \examcontentsnote\par}
+
+  \medskip
+  \textbf{Princeton University Honor Code}\par
+  \coverhonorinstructions
+
+  \emph{``I pledge my honor that I have not violated the Honor Code during this examination.''}\par
+  \vspace{0.14in}
+  \rule{\linewidth}{0.4pt}\par\vspace{0.15in}
+  \rule{\linewidth}{0.4pt}\par\vspace{0.15in}
+  \rule{\linewidth}{0.4pt}\par\vspace{0.18in}
+  Signature: \rule{3.4in}{0.4pt}\par
+  \clearpage
+  \section*{Multiple choice \normalfont\small(20 points; about 10 minutes)}
+}
+% Labels are inside the question blocks so page references follow pagination.
+\let\uncoveredmcq\mcq
+\renewcommand{\mcq}[5]{%
+  \uncoveredmcq{\label{question:\themcquestion}#1}{#2}{#3}{#4}{#5}%
+}
+\let\uncoveredwritten\written
+\renewcommand{\written}[2]{%
+  \uncoveredwritten{#1}{#2}\label{question:#1}%
+}

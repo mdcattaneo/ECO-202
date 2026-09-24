@@ -159,7 +159,7 @@ Conversation memory is not a dependable semester-long record. Durable correction
 ## Privacy, access, and assessment boundaries
 
 - Do not request, expose, or retain student names, grades, accommodations, or other personal information.
-- Do not submit private student work to a public repository, issue, discussion, or external service.
+- Do not submit private student work to a public repository, issue, or discussion. Share your own nonconfidential code or draft excerpts with an AI service only when the activity permits it, after removing identifying or sensitive information; follow its documentation rules. Never share another student’s work.
 - Do not send confidential, licensed, or restricted data to an AI system.
 - Do not make required learning depend on a paid AI system or third-party account; provide a non-AI route.
 - Follow the syllabus and instructor directions concerning AI, collaboration, disclosure, and unaided assessments.

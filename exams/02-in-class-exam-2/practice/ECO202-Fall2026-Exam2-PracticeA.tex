@@ -1,5 +1,18 @@
 \documentclass[11pt]{article}
 \input{exam-style.tex}
+\input{exam-cover.tex}
+\practicecover
+\newcommand{\examcontents}{%
+  \examcontentsrow{1}{Population parameters}{5}{2.5}
+  \examcontentsrow{2}{Matched-pair experiments}{5}{2.5}
+  \examcontentsrow{3}{Probability axioms}{5}{2.5}
+  \examcontentsrow{4}{Disjoint events and independence}{5}{2.5}
+  \examcontentsrow{5}{A workforce survey}{20}{15}
+  \examcontentsrow{6}{Blocking a training experiment}{20}{15}
+  \examcontentsrow{7}{A small sample space}{20}{15}
+  \examcontentsrow{8}{A card with a hidden side}{20}{15}
+}
+\renewcommand{\examcontentsnote}{Reference formulas and scratch work: page~\pageref{reference-formulas}.}
 \begin{document}
 \examheader{Practice Exam 2 --- Version A}{Fall 2026}{6--9}
 \mcq{A city wants the proportion of all its residents who use public transit. Which quantity is the population parameter?}
@@ -23,6 +36,7 @@
 {They are independent because they have no outcomes in common.}
 {Their conditional probabilities must both be undefined.}
 \input{ECO202-Fall2026-Exam2-FormulaSupport.tex}
+\label{reference-formulas}
 
 \written{5}{A workforce survey}
 A firm wants the mean weekly overtime hours among the 100 people who worked for it at any time last year. Its current roster contains 80 of those people; the other 20 have left. It randomly selects 40 people from the current roster, receives 20 responses, and records 120 total weekly overtime hours from respondents. Assume reports are accurate. A separate complete record establishes that current employees averaged 5 hours and former employees averaged 15 hours. Among selected current employees, those with longer overtime are more likely to respond.

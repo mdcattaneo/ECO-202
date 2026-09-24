@@ -59,7 +59,7 @@ These guides form the student-facing learning spine for Fall 2026. Each numbered
 **Nov 23 and 25 · Thanksgiving recess week—no class**
 
 17. [Nov 30 · Conditional Distributions, Expectations, and Simple Regression](17-conditional-distributions-expectations-and-simple-regression/)
-18. [Dec 2 · Multiple Regression, Causal Interpretation, and Project Workshop](18-multiple-regression-causal-interpretation-and-project-workshop/)
+18. [Dec 2 · Multiple Regression and Causal Interpretation](18-multiple-regression-causal-interpretation-and-project-workshop/)
 
 **Dec 7 · In-Class Exam 4**
 

@@ -1,5 +1,5 @@
 # ECO 202, Class 18
-# Multiple regression, causal interpretation, and project workshop.
+# Multiple regression and causal interpretation.
 # Open the Class 18 folder as the working folder before running this script.
 
 # Read the historical wage data from the class-local data folder.
