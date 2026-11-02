@@ -2,7 +2,7 @@
 
 **Date:** Monday, November 2, 2026  
 **Status:** Complete first version  
-**Last updated:** August 30, 2026
+**Last updated:** November 2, 2026
 
 [← Class 11](../11-sampling-distributions-for-counts-proportions-and-means/) · [Practice 12](practice/) · [Course syllabus](../../ECO202-Fall2026-Syllabus.pdf) · [Class 13 →](../13-point-estimation-bias-variance-and-standard-errors/)
 
@@ -150,9 +150,20 @@ Center and scale the sample mean, then compare the simulated standardized sampli
 The LLN describes concentration but does not provide the shape of the remaining error. Under independent, identically distributed sampling with finite positive variance, the **central limit theorem** states
 
 $$
-Z_n=\frac{\bar X_n-\mu}{\sigma/\sqrt n}
+Z_n=\frac{\bar X_n-\mathbb E[\bar X_n]}{\sqrt{\mathrm{Var}(\bar X_n)}}
+=\frac{\bar X_n-\mu}{\sigma/\sqrt n}
 \xrightarrow{d}\mathsf N(0,1).
 $$
+
+Standardization gives the exact identities
+
+$$
+\mathbb E[Z_n]=0,
+\qquad
+\mathrm{Var}(Z_n)=1.
+$$
+
+These identities hold for every sample size under the stated assumptions. The CLT adds the limiting Normal shape; standardization alone does not establish Normality.
 
 Thus, for sufficiently large $n$, we use the approximation
 
@@ -216,6 +227,16 @@ $$
 
 > [!IMPORTANT]
 > **Board work 2 — Approximate $\mathbb P(\bar W_n>6.5)$**
+>
+> First write $Z_n=(\bar W_n-\mu)/(\sigma/\sqrt n)$ for the standardized wage mean. Transform the event exactly, then apply the Normal approximation:
+>
+> $$
+> \mathbb P(\bar W_n>6.5)
+> =\mathbb P\left(Z_n>\frac{6.5-\mu}{\sigma/\sqrt n}\right)
+> \approx1-\Phi\left(\frac{6.5-\mu}{\sigma/\sqrt n}\right).
+> $$
+>
+> The equality is exact algebra; the approximation uses the CLT.
 >
 > For $n=25$,
 >
