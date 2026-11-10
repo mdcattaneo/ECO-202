@@ -2,7 +2,8 @@
 
 **Module:** Classes 10–13<br>
 **Scheduled date:** November 9, 2026<br>
-**Status:** Practice exams and worked solutions released September 6, 2026; real exam not released
+**Status:** Actual exam and worked solutions released November 10, 2026; practice resources released September 6, 2026<br>
+**Last updated:** November 10, 2026
 
 [All exams](../) · [Practice exams](practice/) · [Class index](../../classes/)
 
@@ -18,6 +19,11 @@ Hypothesis tests, confidence intervals, and conditional expectations begin in th
 
 Start with the module’s guides and class-local practice, then use the [two full practice exams](practice/) for timed unaided attempts. Each paper contains four multiple-choice questions and four written problems, totaling 100 points and targeting 70 minutes. Consult the [common conditions and practice sequence](../README.md#common-format-and-conditions).
 
-## Real-exam status
+## Actual exam and worked solutions
 
-The real question paper is not available before administration. It and its worked solutions will appear here only after the corresponding instructor approvals. The practice exams are distinct preparation resources, not advance copies of the real exam.
+Administered November 9, 2026. The instructor approved release of the question paper and its verified worked solutions after administration. Both PDFs are kept together in this folder.
+
+- [In-Class Exam 3 — question paper (PDF)](ECO202-Fall2026-Exam3.pdf)
+- [In-Class Exam 3 — worked solutions (PDF)](ECO202-Fall2026-Exam3-Solutions.pdf)
+
+For review, attempt the question paper before opening the worked solutions. Compare your reasoning, identify any errors, then close the solutions and reconstruct the method independently. The separate [practice exams and their solutions](practice/) remain available for additional study.
